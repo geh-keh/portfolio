@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/* 共通仕様 */
+
+* {
+  box-sizing: border-box;
+  margin:0;
+	padding:0;
+  position:relative;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+ background:#fff;
+ font-family:;
+ color:#333;
+ line-height:1.6;
+}
+
+a:link {  /* リンクカラー */
+  color: #333;
+  text-decoration: none;
+}
+
+a:visited {  /* 訪問済みのリンクカラー */
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {　　/* ホバー時のリンクカラー */
+  color: #900;
+  text-decoration: none;
+}
+
+a img {　　/* 画像をリンク設定した時に出るborderの消去 */
+  border-width: 0px;
+  border-style: none;
+  border-color: #fff;
+  background: transparent;
+}
+
+ul,ol,li {　　/*  */
+  list-style-type:none;
+　}
