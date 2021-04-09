@@ -14,43 +14,46 @@
   </head>
 
   <body>
-    <header class="header">
-      <p>分かりやすいホームページ制作</p>
-      <h1 class="header-logo">
-        <a href=""><img src="img/logo-01.png" alt="サイトロゴ" /></a>
-      </h1>
-      <!-- 後でフォルダとロゴ作成-->
-      <!-- メニューボタン -->
-      <input type="checkbox" class="check" id="checked" />
-      <!-- inputを一番上に置く事で間接セレクタを利用できるようにしているらしい-->
-      <label class="menu_btn bgc_amairo" for="checked">
-        <span class="bar top"></span>
-        <span class="bar middle"></span>
-        <span class="bar bottom"></span>
-        <span class="menu_btn__txt">MENU</span>
-      </label>
-      <!-- menuバーclickで開き -->
-      <label class="close_menu2 close_menu" for="checked"> </label>
-      <!-- nav-menu部分clickで閉じる -->
-      <!-- ドロワー -->
-      <nav class="header-nav drawer-menu bgc-amairo">
-        <!-- ここにjqueryでis_fixedが追加される -->
-        <ul id="nav_menu" class="nav_items">
-          <li class="nav_item"><a href="#" class="link-close">3つの特徴</a></li>
-          <li class="nav_item"><a href="#" class="link-close">ごあいさつ</a></li>
-          <li class="nav_item"><a href="#" class="link-close">サービス内容</a></li>
-          <li class="nav_item"><a href="#" class="link-close">作品例</a></li>
-          <li class="nav_item"><a href="#" class="link-close">Tsumugu-Designについて</a></li>
-          <li class="nav_item"><a href="#" class="link-close">お問い合わせ</a></li>
-        </ul>
-      </nav>
-      <!-- header-nav -->
+    <header class="ly_header">
+      <div class="ly_header_inner">
+        <p>分かりやすいホームページ制作</p>
+        <h1 class="header_logo">
+          <a href=""><img src="img/logo-01.png" alt="サイトロゴ" /></a>
+        </h1>
+        <!-- 後でフォルダとロゴ作成-->
+        <!-- メニューボタン -->
+        <input type="checkbox" class="check" id="checked" />
+        <!-- inputを一番上に置く事で間接セレクタを利用できるようにしているらしい-->
+        <label class="menu_btn bgc_amairo" for="checked">
+          <span class="bar top"></span>
+          <span class="bar middle"></span>
+          <span class="bar bottom"></span>
+          <span class="menu_btn__txt">MENU</span>
+        </label>
+        <!-- menuバーclickで開き -->
+        <label class="close_menu2 close_menu" for="checked"> </label>
+        <!-- nav-menu部分clickで閉じる -->
+        <!-- ドロワー -->
+        <nav class="header_nav drawer_menu bgc_amairo">
+          <!-- ここにjqueryでis_fixedが追加される -->
+          <ul id="nav_menu" class="nav_items">
+            <li class="nav_item"><a href="#" class="link-close">3つの特徴</a></li>
+            <li class="nav_item"><a href="#" class="link-close">ごあいさつ</a></li>
+            <li class="nav_item"><a href="#" class="link-close">サービス内容</a></li>
+            <li class="nav_item"><a href="#" class="link-close">作品例</a></li>
+            <li class="nav_item"><a href="#" class="link-close">Tsumugu-Designについて</a></li>
+            <li class="nav_item"><a href="#" class="link-close">お問い合わせ</a></li>
+          </ul>
+        </nav>
+        <!-- header-nav -->
+      </div>
+      <!-- .ly_header_inner -->
     </header>
 
     <main class="content">
       <!-- mainVisual -->
       <div class="mainVisual">
-        <div class="bg-mainVisual"><img src="img/bg-mainVisual.jpeg" /></div>
+        <div class="bg_mainVisual"><img src="img/bg-mainVisual.jpeg" width="100%" height="auto" /></div>
         　
         <div class="mvtxt">
           <p>想いがきちんと伝わる<br />シンプルで管理しやすい<br />みんなが快適に使える<br />そんなホームページを<br />ご提案いたします</p>
@@ -61,32 +64,35 @@
       <!-- introduction -->
 
       <section class="introduction">
-        <p class="intro_ttl">最近、こんな声をよく聞きます</p>
-        <h2 class="intro_section">サイト運営者の声</h2>
-        <div class="flex_box">
-          <div><img src="img/30代男性.png" alt="サイト運営者青年" /></div>
-          <div class="introVoice"><p>お店（商品やサービス）の魅力や強みをターゲットに向けてしっかりと、効果的に伝えて集客につなげたい。</p></div>
-        </div>
-        <div class="flex_box">
-          <div><img src="img/50代女性.png" alt="サイト運営者女性" /></div>
-          <div class="introVoice">
-            <p>定期的にホームページの情報を更新したいけど、パソコンが苦手なの。<br />更新が手軽にできて、管理方法もシンプルだと助かるわ。</p>
+        <div class="ly_content">
+          <p class="intro_ttl">最近、こんな声をよく聞きます</p>
+          <h2 class="intro_section">サイト運営者の声</h2>
+          <div class="flex_box">
+            <div><img src="img/30代男性.png" alt="サイト運営者青年" /></div>
+            <div class="introVoice"><p>お店（商品やサービス）の魅力や強みをターゲットに向けてしっかりと、効果的に伝えて集客につなげたい。</p></div>
+          </div>
+          <div class="flex_box">
+            <div><img src="img/50代女性.png" alt="サイト運営者女性" /></div>
+            <div class="introVoice">
+              <p>定期的にホームページの情報を更新したいけど、パソコンが苦手なの。<br />更新が手軽にできて、管理方法もシンプルだと助かるわ。</p>
+            </div>
+          </div>
+          <h2 class="intro_section">インターネット利用者の声</h2>
+          <div class="flex_box">
+            <div><img src="img/20代女性.png" alt="インターネット利用者20代女性" /></div>
+            <div class="introVoice">
+              <p>気になっているお店があるんだけど、公式ホームページはないのかな？<br />口コミサイトの情報だけでなく、公式情報があると安心できるんだけどなぁ・・・</p>
+            </div>
+          </div>
+          <div class="flex_box">
+            <div><img src="img/30代女性.png" alt="インターネット利用者30代女性" /></div>
+            <div class="introVoice">
+              <p>調べ物をする時は、仕事や家事の合間にスマホを使うことが多いわ。<br />時間をかけずに知りたい情報にサッと辿り着けると助かるわ。</p>
+            </div>
           </div>
         </div>
-        <h2 class="intro_section">インターネット利用者の声</h2>
-        <div class="flex_box">
-          <div><img src="img/20代女性.png" alt="インターネット利用者20代女性" /></div>
-          <div class="introVoice">
-            <p>気になっているお店があるんだけど、公式ホームページはないのかな？<br />口コミサイトの情報だけでなく、公式情報があると安心できるんだけどなぁ・・・</p>
-          </div>
-        </div>
-        <div class="flex_box">
-          <div><img src="img/30代女性.png" alt="インターネット利用者30代女性" /></div>
-          <div class="introVoice">
-            <p>調べ物をする時は、仕事や家事の合間にスマホを使うことが多いわ。<br />時間をかけずに知りたい情報にサッと辿り着けると助かるわ。</p>
-          </div>
-        </div>
-        <div class="bg-introduction"><img src="img/bg-introduction.jpeg" alt="白い部屋の写真" /></div>
+        <!-- ly_cont -->
+        <div class="bg_introduction"><img src="img/bg-introduction.jpeg" width="100%" alt="白い部屋の写真" /></div>
         <div class="intro_message">
           <p>Tsumugu Designは、それぞれの思いに寄り添い、双方の「思いを紡ぐ」<br />そんなホームページをご提案いたします。</p>
         </div>
@@ -198,7 +204,7 @@
       <!-- works -->
       <section class="works">
         <h2>WORKS</h2>
-        <div class="bg-works"><img src="img/bg-works.jpeg" /></div>
+        <div class="bg_works"><img src="img/bg-works.jpeg" /></div>
         <div class="work_items">
           <div class="work_item">
             <img src="" alt="" />
@@ -242,7 +248,7 @@
           <dl class="contactForm">
             <dt>貴社名</dt>
             <dd>
-              <span><input type="text" name="company-name" value size="40" placeholder="Tsumugu- Design" class="input_box" required /></span>
+              <span><input type="text" name="company-name" value size="40" placeholder="Tsumugu-Design" class="input_box" required /></span>
             </dd>
             <dt>お名前<span class="required">必須</span></dt>
             <dd>
@@ -250,7 +256,7 @@
             </dd>
             <dt>メールアドレス<span class="required">必須</span></dt>
             <dd>
-              <span><input type="text" name="mail-adress" value size="40" placeholder="tsumugu-desing@yoho.co.jp" class="input_box" required /></span>
+              <span><input type="text" name="mail-adress" value size="40" placeholder="tsumugu-design@yoho.co.jp" class="input_box" required /></span>
             </dd>
             <dt>電話番号</dt>
             <dd>
@@ -268,21 +274,24 @@
     </main>
     <!-- content -->
 
-    <footer class="footer">
-      <p class="footer-logo">
-        <a href=""><img src="img/logo-01.png" alt="サイトロゴ" /></a>
-      </p>
-      <ul class="footer-nav nav_items">
-        <li class="nav_item"><a href="#" class="">3つの特徴</a></li>
-        <li class="nav_item"><a href="#" class="">ごあいさつ</a></li>
-        <li class="nav_item"><a href="#" class="">サービス内容</a></li>
-        <li class="nav_item"><a href="#" class="">作品例</a></li>
-        <li class="nav_item"><a href="#" class="">Tsumugu-Designについて</a></li>
-        <li class="nav_item"><a href="#" class="">お問い合わせ</a></li>
-      </ul>
-      <p>
-        <small>&copy; 2021　○○○○　All Rights Reserved.</small>
-      </p>
+    <footer class="ly_footer">
+      <div class="ly_footer_innner">
+        <p class="footer-logo">
+          <a href=""><img src="img/logo-01.png" alt="サイトロゴ" /></a>
+        </p>
+        <ul class="footer_nav nav_items">
+          <li class="nav_item"><a href="#" class="">3つの特徴</a></li>
+          <li class="nav_item"><a href="#" class="">ごあいさつ</a></li>
+          <li class="nav_item"><a href="#" class="">サービス内容</a></li>
+          <li class="nav_item"><a href="#" class="">作品例</a></li>
+          <li class="nav_item"><a href="#" class="">Tsumugu-Designについて</a></li>
+          <li class="nav_item"><a href="#" class="">お問い合わせ</a></li>
+        </ul>
+        <p>
+          <small>&copy; 2021　○○○○　All Rights Reserved.</small>
+        </p>
+      </div>
+      <!-- ly_footer_innner -->
     </footer>
   </body>
 </html>

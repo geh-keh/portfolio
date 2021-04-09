@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* 共通仕様 */
+/* 共通仕様 */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,9 +14,15 @@ html {
 
 body {
   background: #fff;
-  font-family: Gothic;
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
   color: #333;
-  line-height: 1.6;
+  line-height: 1.8;
+}
+
+a img {
+  /* 画像をリンク設定した時に出るborderの消去 */
+  border: 0px none #fff;
+  background: transparent;
 }
 
 a:link {
@@ -36,21 +43,15 @@ a:hover {
   text-decoration: none;
 }
 
-a img {
-  /* 画像をリンク設定した時に出るborderの消去 */
-  border-width: 0px;
-  border-style: none;
-  border-color: #fff;
-  background: transparent;
-}
-
-ul, ol, li {
+ul,
+ol,
+li {
   /*  */
   list-style-type: none;
 }
 
 /* -------- mainVisual --------- */
-.mvText p {
+.mvtxt p {
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
   color: tomato;
@@ -70,4 +71,24 @@ ul, ol, li {
 
 #main small {
   font-size: small;
+}
+
+.ly-header {
+  padding-top: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.ly_content {
+  max-width: 320px;
+  padding: 60px 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.bg_mainVisual {
+  width: 100%;
+}
+
+.bg_introduction {
+  width: 100%;
 }
