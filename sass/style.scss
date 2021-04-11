@@ -1,3 +1,10 @@
 @charset "UTF-8";
 /* 共通仕様 */
-@import "bass/_base.scss", "layout/_header", "layout/_content", "layout/_footer";
+@import "bass/**";
+@import "layout/**";
+@import "block/**";
+@import "element/**";
+@import "modifire/**";
+@import "helper/**";
+@import "unique/**";
+@import "program/**";

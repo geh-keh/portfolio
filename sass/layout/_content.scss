@@ -3,12 +3,59 @@
   padding: 60px 15px;
   margin-right: auto;
   margin-left: auto;
+  & > h2 {
+    text-align: center;
+  }
 }
 
-.bg_mainVisual {
+.ly_bgFullWidth {
+  width: 100%;
+  height: auto;
+}
+
+/* WORK */
+.ly_workContent {
+  position: relative;
+}
+
+.ly_workItems {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+}
+
+/*  About  */
+.ly_aboutList {
+  display: flex;
+  flex-flow: row wrap;
   width: 100%;
 }
 
-.bg_introduction {
+.ly_AL_left {
+  flex-basis: 30%;
+  border-bottom: 1px solid #ccc;
+}
+
+.ly_AL_right {
+  flex-basis: 70%;
+  border-bottom: 1px solid #ccc;
+}
+
+/*  コンタクトフォーム  */
+.ly_contactList {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
   width: 100%;
+}
+
+.ly_CL_left {
+  flex-basis: 25%;
+}
+
+.ly_CL_right {
+  flex-basis: 60%;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
