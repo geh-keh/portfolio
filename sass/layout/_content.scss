@@ -1,3 +1,11 @@
+.ly_header,
+.ly_footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+// header,footer及びfullwidthのimg以外のレイアウト
 .ly_content {
   max-width: 320px;
   padding: 60px 15px;
@@ -8,21 +16,93 @@
   }
 }
 
+.ly_sectTtl {
+  margin-bottom: 5rem;
+  font-size: 1.9rem;
+}
+
 .ly_bgFullWidth {
   width: 100%;
   height: auto;
 }
 
-/* WORK */
-.ly_workContent {
-  position: relative;
+/* introduction */
+
+.ly_media {
+  margin-bottom: 3rem;
+}
+.ly_introSectObject {
+  margin-bottom: 4rem;
 }
 
-.ly_workItems {
+.ly_introSectTtl {
+  margin-bottom: 2rem;
+}
+
+
+/* main visual */
+
+.ly_mvBtn {
   position: absolute;
-  top: 0;
-  left: 0;
-  margin: 0 auto;
+  top: 84%;
+  left: 16%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  padding: 0.2rem 0.8rem;
+}
+
+/* feature */
+
+.ly_featureItems,
+.ly_serviceItems {
+  margin-bottom: 4rem;
+}
+
+.ly_featureItem,
+.ly_serviceItem {
+  margin-bottom: 9rem;
+}
+
+.ly_featureSectTtl,
+.ly_serviceSectTtl {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.ly_featureImg,
+.ly_serviceImg {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.ly_featureTxt,
+.ly_serviceTxt {
+  margin-bottom: 1.5rem;
+}
+
+/* WORK */
+
+// .ly_workContent {
+//   padding: 60px 15px;
+//   // margin-right: auto;
+//   // margin-left: auto;
+//   & > h2 {
+//     text-align: center;
+//   }
+// }
+
+.ly_workItems {
+  padding: 60px 15px;
+  background-image: url(../img/bg-works.jpeg);
+  & > h2 {
+    text-align: center;
+  }
+}
+
+.ly_workItem {
+  text-align: center;
+  padding: 6%;
 }
 
 /*  About  */
@@ -35,14 +115,21 @@
 .ly_AL_left {
   flex-basis: 30%;
   border-bottom: 1px solid #ccc;
+  margin-bottom: 5%;
 }
 
 .ly_AL_right {
   flex-basis: 70%;
   border-bottom: 1px solid #ccc;
+  padding-bottom: 2%;
+  margin-bottom: 5%;
 }
 
 /*  コンタクトフォーム  */
+.ly_contactTxt {
+  margin-bottom: 8%;
+}
+
 .ly_contactList {
   display: flex;
   flex-flow: row wrap;
@@ -51,11 +138,27 @@
 }
 
 .ly_CL_left {
-  flex-basis: 25%;
+  flex-basis: 50%;
+  margin-bottom: 5%;
 }
 
 .ly_CL_right {
   flex-basis: 60%;
   border: 1px solid #ccc;
   border-radius: 3px;
+  margin-bottom: 5%;
+}
+
+.ly_contactBtn {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* footer */
+.ly_footerNav {
+  margin: 3% 5%;
+}
+
+.ly_copyright {
+  text-align: center;
 }

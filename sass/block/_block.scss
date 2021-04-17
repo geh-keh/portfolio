@@ -13,7 +13,7 @@
 // グローバルナビ設定
 
 .bl_menuBtn {
-  display: none; /* ナビメニューが常時表示されるので、メニューボタンは不要に→非表示 */
+  display: none; /* ナビメニューが常時表示されるので、メニューボタンは不要に→非表示　らしいが、blockでもよくない？ */
   transition: 1;
 }
 
@@ -200,7 +200,7 @@
   z-index: 5;
 }
 
-/* mainVisual */
+/* ---- mainVisual ---- */
 .bl_mainVisual {
   position: relative;
 }
@@ -216,12 +216,43 @@
   height: 100%;
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   // & p {
   //   -ms-writing-mode: tb-rl;
   //   writing-mode: vertical-rl;
   //   font-size: 1.4rem;
   // }
+}
+
+/*フェードイン表示の指定*/
+.fadeIn {
+  opacity: 0;
+  animation: fadein 6s ease forwards;
+}
+@keyframes fadein {
+  100% {
+    opacity: 1;
+  }
+}
+
+/*以下遅延の指定*/
+.bl_mvTxtt01 {
+  animation-delay: 1s;
+}
+.bl_mvTxt02 {
+  animation-delay: 3s;
+}
+.bl_mvTxt03 {
+  animation-delay: 5s;
+}
+.bl_mvTxt04 {
+  animation-delay: 7s;
+}
+.bl_mvTxt05 {
+  animation-delay: 9s;
+}
+.bl_mvTxt06 {
+  animation-delay: 11s;
 }
 
 .bl_introImgBox {
@@ -241,27 +272,19 @@
 }
 
 .bl_mvBtn {
-  position: absolute;
-  top: 80%;
-  left: 20%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  & p {
-    font-size: 1.2rem;
-  }
+  border: solid 0.1rem #333;
+  border-radius: 8px;
+  font-size: 1.2rem;
 }
 
-.bl_serviceImg,
-.bl_serviceTtl {
-  text-align: center;
-}
+// --------About---------
 
-.bl_featureImg,
-.bl_featureTtl {
-  text-align: center;
-}
+// .bl_ALBorder {
+//   border-bottom: none;
+// }
 
+// ---------WORK---------
 .bl_workItemImg {
-  max-width: 160px;
+  // background-image: url(../img/bg-works.jpg);
+  max-width: 200px;
 }
