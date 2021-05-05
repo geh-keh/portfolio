@@ -2,7 +2,7 @@
 .ly_footer {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 4%;
+  padding: 1% 4%;
 }
 
 // header,footer及びfullwidthのimg以外のレイアウト
@@ -16,29 +16,7 @@
   }
 }
 
-.ly_sectTtl {
-  margin-bottom: 5rem;
-  font-size: 1.9rem;
-}
-
-.ly_bgFullWidth {
-  width: 100%;
-  height: auto;
-}
-
 /* introduction */
-
-.ly_media {
-  margin-bottom: 3rem;
-}
-.ly_introSectObject {
-  margin-bottom: 4rem;
-}
-
-.ly_introSectTtl {
-  margin-bottom: 2rem;
-}
-
 
 /* main visual */
 
@@ -49,36 +27,12 @@
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  padding: 0.2rem 0.8rem;
 }
 
 /* feature */
 
-.ly_featureItems,
-.ly_serviceItems {
-  margin-bottom: 4rem;
-}
-
-.ly_featureItem,
-.ly_serviceItem {
-  margin-bottom: 9rem;
-}
-
-.ly_featureSectTtl,
-.ly_serviceSectTtl {
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.ly_featureImg,
-.ly_serviceImg {
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.ly_featureTxt,
-.ly_serviceTxt {
-  margin-bottom: 1.5rem;
+.ly_ftContactTxt {
+  margin-bottom: 8rem;
 }
 
 /* WORK */
@@ -138,15 +92,15 @@
 }
 
 .ly_CL_left {
-  flex-basis: 50%;
-  margin-bottom: 5%;
+  flex-basis: 100%; //pcサイズの時に要変更
 }
 
 .ly_CL_right {
-  flex-basis: 60%;
+  flex-basis: 60%; //pcサイズの時に要変更
   border: 1px solid #ccc;
   border-radius: 3px;
   margin-bottom: 5%;
+  width: 100%;
 }
 
 .ly_contactBtn {
@@ -155,6 +109,10 @@
 }
 
 /* footer */
+.ly_footer {
+  padding-top: 3%;
+}
+
 .ly_footerNav {
   margin: 3% 5%;
 }

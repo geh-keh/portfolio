@@ -2,7 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <title>tsumugu-design</title>
+    <title>Tsumugiya</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="format-detection" content="telephone=no" />
@@ -18,20 +18,21 @@
       <div class="ly_header_inner">
         <p>分かりやすいホームページ制作</p>
         <h1 class="header_logo">
-          <a href=""><img src="img/HP_title.png" alt="サイトロゴ" /></a>
+          <a href=""><img src="img/text32.png" alt="サイトロゴ" /></a>
         </h1>
         <!-- 後でフォルダとロゴ作成-->
         <!-- メニューボタン -->
         <input type="checkbox" class="bl_check" id="checked" />
         <!-- inputを一番上に置く事で間接セレクタを利用できるようにしている-->
         <label class="bl_menuBtn" for="checked">
+          <!-- forにチェックボックスのid名を指定→ボタン要素を押すと連動してチェックボックスをオンオフしてくれる。-->
           <span class="bar top"></span>
           <span class="bar middle"></span>
           <span class="bar bottom"></span>
           <span class="bl_menuBtnTxt">MENU</span>
         </label>
         <!-- menuバーclickで開き -->
-        <label class="bl_close_menu" for="checked"> </label>
+        <label class="bl_closeMenu" for="checked"> </label>
         <!-- nav-menu部分clickで閉じる -->
         <!-- ドロワー -->
         <nav class="bl_drawerMenu">
@@ -39,9 +40,9 @@
           <ul id="nav_menu" class="bl_navItems">
             <li class="bl_navItem"><a href="#partFeature" class="link-close">3つの特徴</a></li>
             <li class="bl_navItem"><a href="#" class="link-close">ごあいさつ</a></li>
-            <li class="bl_navItem"><a href="#" class="link-close">サービス内容</a></li>
+            <li class="bl_navItem"><a href="#" class="link-close">サービス・料金</a></li>
             <li class="bl_navItem"><a href="#" class="link-close">作品例</a></li>
-            <li class="bl_navItem"><a href="#" class="link-close">Tsumugu-Designについて</a></li>
+            <li class="bl_navItem"><a href="#" class="link-close">Tsumugiyaについて</a></li>
             <li class="bl_navItem"><a href="#" class="link-close">お問い合わせ</a></li>
           </ul>
         </nav>
@@ -51,122 +52,134 @@
     </header>
 
     <main class="content">
-
       <!-- mainVisual -->
       <div class="bl_mainVisual">
-        <div class="ly_bgFullWidth">
+        <div class="bl_bgFullWidth">
           <img src="img/bg-mainVisual.jpeg" width="100%" height="auto" />
         </div>
-        <div class="bl_mvTxt">
-          <p class="bl_mvTxt01 fadeIn">想いがきちんと伝わる</p>
-          <p class="bl_mvTxt02 fadeIn">シンプルで扱いやすい</p>
-          <p class="bl_mvTxt03 fadeIn">みんなが快適に使える</p>
-          <p class="bl_mvTxt04 fadeIn">そんなホームページを</p>
-          <p class="bl_mvTxt05 fadeIn">ご提案いたします</p>
-        </div> <!-- bl_mvTxt-->
-        <div class="bl_mvBtn ly_mvBtn bl_mvTxt06 fadeIn">お問い合わせ<br>はコチラ >></div>
+        <div class="bl_mvTxts">
+          <p class="bl_mvTxt bl_mvTxt01 fadeIn">想いがきちんと伝わる</p>
+          <p class="bl_mvTxt bl_mvTxt02 fadeIn">シンプルで扱いやすい</p>
+          <p class="bl_mvTxt bl_mvTxt03 fadeIn">みんなが快適に使える</p>
+          <p class="bl_mvTxt bl_mvTxt04 fadeIn">そんなホームページを</p>
+          <p class="bl_mvTxt bl_mvTxt05 fadeIn">ご提案いたします</p>
+        </div>
+        <!-- bl_mvTxt-->
+        <a class="bl_mvTxt bl_mvBtn ly_mvBtn bl_mvTxt06 fadeIn"><p>お問い合わせはコチラ</p></a>
       </div>
 
       <!-- introduction -->
 
       <section class="introduction">
         <div class="ly_content">
-          <h2 class="ly_sectTtl">最近、こんな声をよく聞きます</h2>
-          <div class="ly_introSectObject">
-          <h3 class="ly_introSectTtl">サイト運営者の声</h2>
-          <div class="bl_media ly_media  flex_box">
-            <div class="bl_media_imgWrapper"><img src="img/30代男性.png" alt="サイト運営者青年" /></div>
-            <div class="introVoice"><p>お店（商品やサービス）の魅力や強みをターゲットに向けてしっかりと、効果的に伝えて集客につなげたい。</p></div>
-          </div>
-          <div class="bl_media ly_media flex_box">
-            <div class="bl_media_imgWrapper"><img src="img/50代女性.png" alt="サイト運営者女性" /></div>
-            <div class="introVoice">
-              <p>定期的にホームページの情報を更新したいけど、パソコンが苦手なの。<br />更新が手軽にできて、管理方法もシンプルだと助かるわ。</p>
+          <h2 class="bl_sectTtl">最近、こんな声をよく聞きます</h2>
+          <div class="bl_introSectObject">
+            <h3 class="bl_introSectTtl">サイト運営者の声</h3>
+            <div class="bl_introVoiceItem flex_box">
+              <p class="bl_introVoiceItem_img">
+                <img src="img/30代男性.png" alt="サイト運営者青年" />
+              </p>
+              <div><p class="bl_introVoiceTxt">お店（商品やサービス）の魅力や強みをターゲットに向けてしっかりと、効果的に伝えて集客につなげたい。</p></div>
+            </div>
+            <div class="bl_introVoiceItem flex_box">
+              <p class="bl_introVoiceItem_img">
+                <img src="img/50代女性.png" alt="サイト運営者女性" />
+              </p>
+              <div>
+                <p class="bl_introVoiceTxt">定期的にホームページを更新したいけど、パソコンは得意じゃないし、なかなか続かないの・・・<br />更新が手軽にできて、管理方法もシンプルだと助かるわ。</p>
+              </div>
+            </div>
+            <h3 class="bl_introSectTtl bl_introSectTtlRight">インターネット利用者の声</h3>
+            <div class="bl_introVoiceItem bl_introVoiceItemRight flex_box">
+              <p class="bl_introVoiceItem_img">
+                <img src="img/20代女性.png" alt="インターネット利用者20代女性" />
+              </p>
+              <div>
+                <p class="bl_introVoiceTxt">気になっているお店があるんだけど、公式ホームページはないみたい。<br />口コミサイトの情報だけでなく、公式情報があると安心できるんだけどなぁ・・・</p>
+              </div>
+            </div>
+            <div class="bl_introVoiceItem bl_introVoiceItemRight flex_box">
+              <p class="bl_introVoiceItem_img">
+                <img src="img/30代女性.png" alt="インターネット利用者30代女性" />
+              </p>
+              <div>
+                <p class="bl_introVoiceTxt">調べ物をする時は、仕事や家事の合間にスマホを使うことが多いわ。<br />時間をかけずに知りたい情報にサッと辿り着けると助かるわ。</p>
+              </div>
             </div>
           </div>
-        </div>
-          <div class="ly_introSectObject">
-          <h3 class="ly_introSectTtl">インターネット利用者の声</h2>
-          <div class="bl_media ly_media flex_box">
-            <div class="bl_media_imgWrapper"><img src="img/20代女性.png" alt="インターネット利用者20代女性" /></div>
-            <div class="introVoice">
-              <p>気になっているお店があるんだけど、公式ホームページはないのかな？<br />口コミサイトの情報だけでなく、公式情報があると安心できるんだけどなぁ・・・</p>
-            </div>
-          </div>
-        </div>
-          <div class="bl_media ly_media flex_box">
-            <div class="bl_media_imgWrapper"><img src="img/30代女性.png" alt="インターネット利用者30代女性" /></div>
-            <div class="introVoice">
-              <p>調べ物をする時は、仕事や家事の合間にスマホを使うことが多いわ。<br />時間をかけずに知りたい情報にサッと辿り着けると助かるわ。</p>
-            </div>
-          </div>
+          <!-- bl_introSectObject -->
         </div>
         <!-- ly_content -->
         <div class="bl_introImgBox">
-          <div class="ly_bgFullWidth"><img src="img/bg-introduction.jpeg" width="100%" alt="白い部屋の写真" /></div>
+          <div class="bl_bgFullWidth"><img src="img/bg-introduction.jpeg" width="100%" alt="白い部屋の写真" /></div>
           <!-- <div class="bl_introImgTxt"> -->
           <p class="bl_introImgTxt fadeIn">Tsumugu Designは、それぞれの思いに寄り添い、双方の「思いを紡ぐ」<br />そんなホームページをご提案いたします。</p>
           <!-- </div> -->
         </div>
         <!-- bl_introImgBox -->
       </section>
+      <!-- introduction -->
+
       <!-- feature -->
       <section class="feature">
-        <a name="partFeature">
-          <div class="ly_content">
-            <h2 class="ly_sectTtl">Tsumugu-designの３つの特徴</h2>
-            <div class="ly_featureItems">
-              <div class="ly_featureItem">
-                <div class="bl_featureImg ly_featureImg">
-                  <img src="img/feature-img01.png" width="80%" alt="快適なホームページのイラスト" />
-                </div>
-                <h3 class="ly_featureSectTtl">誰もが快適に使えるホームページ</h3>
-                <p class="ly_featureTxt">ターゲットに向けて伝えたい事を効果的に伝えることのできるデザインと、訪問者の導線を意識した分かりやすい構成で、送り手と受け手の双方の思いがマッチングする、誰もが快適に使えるホームページをデザインします。</p>
-              </div>
-              <div class="ly_featureItem">
-                <div class="ly_featureImg">
-                  <img src="img/feature-img03.png" width="80%" alt="快適な管理更新のイラスト" />
-                </div>
-                <h3 class="ly_featureSectTtl ">管理・更新が簡単</h3>
-                <p class="ly_featureTxt">WordPressというシステムを使用することで、お知らせやブログなどをお客さまご自身で簡単に更新する事ができます。スマホアプリを使用すれば、スマホからでも手軽に更新することができるようになります。</p>
-                <p>WordPress　についてはコチラ</p>
-              </div>
-              <div class="ly_featureItem">
-                <div class="ly_featureImg">
-                  <img src="img/feature-img02.png" width="80%" alt="レスポンシブデザインのイラスト" />
-                </div>
-                <h3 class="ly_featureSectTtl ">断然お得な料金設定</h3>
-                <p class="ly_featureTxt">お客様にとって大きな負担となるのが、ホームページ制作、導入にかかる初期費用ですが、これを最大48回の分割でお支払いいただくことができます。tsumugu-designでは、ホームページ製作費に加え、サーバー、ドメイン使用料、保守費まで全て込みで月1万円（ベーシックプランの場合）〜という、とてもお得な料金プランをご用意しております。</p>
-                <p>サーバー、ドメインについてはコチラ</p>
-              </div>
+        <!-- <a name="partFeature"> -->
+        <div class="ly_content">
+          <h2 class="bl_sectTtl">Tsumugiyaの３つの特徴</h2>
+          <div class="bl_featureItems">
+            <div class="bl_card">
+              <figure class="bl_card_imgWrapper">
+                <img src="img/feature-img01.png" width="80%" alt="快適なホームページのイラスト" />
+              </figure>
+              <h3 class="bl_card_ttl">誰もが快適に使えるホームページ</h3>
+              <p class="bl_card_txt">ターゲットに向けて伝えたい事を効果的に伝えることのできるデザインと、訪問者の導線を意識した分かりやすい構成で、送り手と受け手の双方の思いがマッチングする、誰もが快適に使えるホームページをデザインします。</p>
             </div>
-            <div class="intro_contact">
-              <p class="intro_closing">当社のホームページデザインにご興味をお持ちいただけましたら、お気軽にお問い合わせフォームよりご連Í絡ください。<br />もちろん強引なセールスなどはいたしませんので、ご安心ください！</p>
-              <btn>お問い合わせはコチラ</btn>
+            <div class="bl_card">
+              <figure class="bl_card_imgWrapper">
+                <img src="img/feature-img03.png" width="80%" alt="快適な管理更新のイラスト" />
+              </figure>
+              <h3 class="bl_card_ttl">管理・更新が簡単</h3>
+              <p class="bl_card_txt">WordPressというシステムを使用することで、お知らせやブログなどをお客さまご自身で簡単に更新する事ができます。スマホアプリを利用すれば、スマホから手軽に更新することができるようになります。</p>
+              <a class="bl_pageLink" href="#">WordPressについて</a>
+            </div>
+            <div class="bl_card">
+              <figure class="bl_card_imgWrapper">
+                <img src="img/feature-img02.png" width="80%" alt="レスポンシブデザインのイラスト" />
+              </figure>
+              <h3 class="bl_card_ttl">安心のサービスと料金設定</h3>
+              <p class="bl_card_txt">お客様にとって大きな負担となるのが、ホームページ導入時にかかる初期費用です。Tsgu-Designでは、そのご負担を少しでも和らげるために、月払いの料金を設定いたしました。また、ホームページ作成に加え、サーバー・ドメイン設定、さらに安心の運営サポートまで全て込みで月9千円〜という、とてもお得なプランをご用意いたしました。</p>
+              <a class="bl_pageLink" href="#">サーバー、ドメインについて</a>
+              <a class="bl_pageLink" href="#">プラン・料金詳細</a>
             </div>
           </div>
-          <!-- ly_content -->
-        </a>
+          <!-- bl_featureItems -->
+          <div class="feature_contact">
+            <p class="bl_ftContactTxt ly_ftContactTxt">当社のホームページ制作にご興味をお持ちいただけましたら、お気軽にお問い合わせフォームよりご連絡ください。<br />もちろん強引なセールスなどはいたしませんので、ご安心ください。</p>
+            <div class="bl_btnCopy">お気軽にお問い合わせください！</div>
+            <a href="#" class="bl_ftBtn">お問い合わせはコチラ</a>
+          </div>
+        </div>
+        <!-- ly_content -->
+        <!-- </a> -->
       </section>
       <!-- introduction -->
 
       <!-- greeting -->
       <section class="greeting">
         <div class="ly_content">
-          <h2 class="ly_sectTtl">ごあいさつ</h2>
+          <h2 class="bl_sectTtl">ごあいさつ</h2>
           <p>
-            はじめまして。 Tsumugu-design（ツムグデザイン）のkeh（ケー）と申します。<br />
+            はじめまして。 Tsumugiya（つむぎや）のkeh（ケー）と申します。<br />
             当サイトをご覧いただき、どうもありがとうございます。
           </p>
           <p>まず、昨今のコロナ禍において、コロナに感染された方々、また飲食業をはじめ、コロナの影響により甚大な被害を被っているサービス業や製造業等に携わる方々には、心よりお見舞い申し上げます。</p>
 
           <p>かく言う私自身も、コロナ禍の煽りを大いに受けた一人なのでございますが、家族の協力もあり、プライベートな時間のほとんどをweb制作の勉強に注ぎ込むことで、多くのスキルを身につけることができました。</p>
 
-          <p>Tsumugu-designは、Webサイトの制作を通じて、このような苦境下にある日本、そして苦境に立ち向かう企業様や個人事業主様のお力に少しでもなりたいという思いもあり、2021年より始動いたしました。</p>
+          <p>Tsumugiyaは、Webサイトの制作を通じて、このような苦境下にある日本、そして苦境に立ち向かう企業様や個人事業主様のお力に少しでもなりたいという思いもあり、2021年より始動いたしました。</p>
 
           <p>創業まもなく、まだまだ未熟な点はございますが、お客様のご要望、ご希望に添えるよう誠心誠意を持ってご対応させていただきますので、どうぞよろしくお願いいたいします。</p>
 
-          <p>Tsumugu-designでは、ご依頼主様の目標、目的を達成するためのツールとしてのホームページデザインに主軸を置きながら、時代の流行も取り入れつつ魅力的なホームページをご提案いたします。</p>
+          <p>Tsumugiyaでは、ご依頼主様の目標、目的を達成するためのツールとしてのホームページデザインに主軸を置きながら、時代の流行も取り入れつつ魅力的なホームページをご提案いたします。</p>
 
           <p>世の中にはすでに十何億にも及ぶホームページが存在すると言われておりますが、そのうち本当に効果的な情報発信ができているのは、ほんの一握りに思われます。</p>
 
@@ -182,16 +195,16 @@
           <p>会社や商品、サービスの事を知りたくてホームページに訪問してくれたのに、サイト運営者様の「思い」が届くことなくサイトを離れられてしまったら、こんなに悔しいことはありません・・・</p>
 
           <p>
-            また、せっかくホームページを公開したけれど、管理が大変で更新が滞りそのまま放置状態・・・なんて話もよく聞きます。<br />
+            また、せっかくホームページを公開したけれど、管理が面倒になって更新が滞りそのまま放置状態・・・なんてこともよくある話です。<br />
             ホームページが長い間更新されないままでいると、その分訪問者の信用と信頼を失うことになります。
           </p>
 
           <p>
-            Tsumugu-designでは、見た目が魅力的であるだけのデザインはいたしません。<br />
-            ホームページはご依頼主様が、ある目的、目標を達成するための手段であるということを念頭に、利用者に分かりやすく使いやすいデザインで、それぞれの思いを満たし、その思いを紡いでいく事で、みんなから長く愛されるホームページを作り上げることを目標としております。
+            Tsumugiyaでは、見た目がただ魅力的なだけのデザインはいたしません。<br />
+            ホームページは運営者様のある目的、目標を達成するための手段であるということに主眼を置き、利用者に分かりやすく使いやすいデザインで、それぞれの思いを満たしていく事で、みんなから長く愛されるホームページを作り上げることを目標としております。<br />また、ホームページの運営に慣れていない方を想定し、制作プランの共通サービスに1年間の保守サービスを含めておりますので、そのような方にも安心してホームページを運営していただけるのではないかと思っております。
           </p>
 
-          <p>微力ながら、運営者様の思いとサイト訪問者様の思いを「紡ぐ」そのお手伝いをさせていただければ幸いと存じます。</p>
+          <p>微力ながら、運営者様の思いとサイト訪問者の思いを「紡ぐ」そのお手伝いをさせていただければ幸いと存じます。</p>
 
           <p>このサイトでお伝えしきれない点もあるかと思いますので、ご不明な点がございましたら、どんな些細な事でも結構ですので、お気軽にお問合せフォームからお問合せください。</p>
         </div>
@@ -202,36 +215,37 @@
       <!-- service -->
       <section class="service">
         <div class="ly_content">
-          <h2 class="ly_sectTtl">Service</h2>
-          <div class="ly_serviceItems">
-            <div class="ly_serviceItem">
-              <div class="ly_serviceImg">
+          <h2 class="bl_sectTtl">Service</h2>
+          <div class="bl_serviceItems">
+            <div class="bl_card">
+              <figure class="bl_card_imgWrapper">
                 <img src="img/service-img01.png" width="80%" alt="web-designのイラスト" />
-              </div>
-              <h3 class="ly_serviceSectTtl">デザイン</h3>
-              <p class="ly_serviceTxt">お客様のご要望に合わせてホームページをお作りします。ヒアリングを行いながらお客様が頭の中に描かれているイメージを少しずつ形にしていきますので、ぼんやりとしたイメージしかないというお客様もご安心ください。スマホやパソコン等、各端末に合わせて見やすく表示されるレスポンシブデザインやSEO対策（検索順位対策）、セキュリティ対策などのほか、スクロールに合わせて動きのあるデザインなどもお任せください。</p>
+              </figure>
+              <h3 class="bl_card_ttl">デザイン</h3>
+              <p class="bl_card_txt">
+                お客様のご要望に合わせてホームページをお作りします。ヒアリングを行いながらお客様が頭の中に描かれているイメージを少しずつ形にしていきますので、ぼんやりとしたイメージしかないというお客様もご安心ください。スマホやパソコン等、各端末に合わせて見やすく表示されるレスポンシブデザインやSEO対策（検索順位対策）、セキュリティ対策などのほか、スクロールに合わせて動きのあるデザインなどもお任せください。
+              </p>
             </div>
-            <div class="ly_serviceItem">
-              <div class="ly_serviceImg">
+            <div class="bl_card">
+              <figure class="bl_card_imgWrapper">
                 <img src="img/service-img02.png" width="80%" alt="コーディングのイラスト" />
-              </div>
-              <h3 class="ly_serviceSectTtl">コーディング</h3>
-              <p class="ly_serviceTxt">
+              </figure>
+              <h3 class="bl_card_ttl">コーディング</h3>
+              <p class="bl_card_txt">
                 デザインがすでに決まっている場合、デザインデータからのコーディングを承ります。<br />
                 Sassを用いながら、分かりやすく、管理のしやすいコーディングをいたします。
               </p>
             </div>
-            <div class="ly_serviceItem">
-              <div class="ly_serviceImg">
+            <div class="bl_card">
+              <figure class="bl_card_imgWrapper">
                 <img src="img/service-img03.png" width="80%" alt="ホームページ修正のイラスト" />
-              </div>
-              <h3 class="ly_serviceSectTtl">ホームページ修正</h3>
-              <p class="ly_serviceTxt">
-                お客様が運営されているホームページの画像や文章の差し替えなどの修正を承ります。<br />
-                Tsumugu-designでホームページを作成いただいたお客様には、特別価格で修正作業を承っております。
-              </p>
+              </figure>
+              <h3 class="bl_card_ttl">ホームページ修正</h3>
+              <p class="bl_card_txt">お客様が運営されているホームページの画像や文章の差し替えなどの修正を承ります。<br /></p>
             </div>
           </div>
+          <!-- bl_serviceItems -->
+          <p class="ly_pageLink"><a href="#">プラン・料金詳細 ></a></p>
         </div>
         <!-- ly_content -->
       </section>
@@ -239,44 +253,47 @@
 
       <!-- works -->
       <section class="works">
-          <div class="ly_workContent ly_workItems">
-            <h2 class="ly_sectTtl">WORKS</h2>
-            <div class="ly_workItem">
-              <div>
-              <img src="img/owada-img.jpg" alt=""  class="bl_workItemImg"/></div>
-              <p class="work_txt">筑西市の個人ピアノ教室ホームページ</p>
+        <div class="ly_workContent ly_workItems">
+          <h2 class="bl_sectTtl">WORKS</h2>
+          <p>これまでに携わってきたお仕事やデモで作成したホームページです。</p>
+          <div class="ly_workItem">
+            <div>
+              <img src="img/owada-img.jpg" alt="" class="bl_workItemImg" />
             </div>
-            <div class="ly_workItem">
-              <div>
-              <img src="img/isara-img.jpg" alt=""  class="bl_workItemImg"/>
-              </div>
-              <p class="work_txt">isaraホームページの模写</p>
+            <p class="work_txt">筑西市の個人ピアノ教室ホームページ</p>
+          </div>
+          <div class="ly_workItem">
+            <div>
+              <img src="img/isara-img.jpg" alt="" class="bl_workItemImg" />
             </div>
-            <div class="ly_workItem">
-              <div>
-              <img src="img/jin-img.jpg" alt=""  class="bl_workItemImg"/>
-              </div>
-              <p class="work_txt">airbnbホームページの模写</p>
+            <p class="work_txt">isaraホームページの模写</p>
+          </div>
+          <div class="ly_workItem">
+            <div>
+              <img src="img/jin-img.jpg" alt="" class="bl_workItemImg" />
             </div>
-          </div> <!-- ly_workItems -->
+            <p class="work_txt">airbnbホームページの模写</p>
+          </div>
+        </div>
+        <!-- ly_workItems -->
       </section>
       <!-- works -->
 
       <!-- about -->
       <section class="about">
         <div class="ly_content">
-          <h2 class="ly_sectTtl">About</h2>
+          <h2 class="bl_sectTtl">About</h2>
           <dl class="ly_aboutList">
             <dt class="ly_AL_left">名称</dt>
-            <dd class="ly_AL_right">Tsumugu-Design</dd>
+            <dd class="ly_AL_right">Tsumugiya</dd>
             <dt class="ly_AL_left">デザイナー</dt>
             <dd class="ly_AL_right">keh</dd>
             <dt class="ly_AL_left">経歴</dt>
             <dd class="ly_AL_right">1979年生まれ<br />大学卒業後、地方公務員、サラリーマンを経て2021年より茨城にてフリーランスのWeb制作をしております。</dd>
             <dt class="ly_AL_left">スキル</dt>
-            <dd class="ly_AL_right"> HTML5/CSS3/JavaScript<br>/jQuery/PHP/ WordPress</dd>
+            <dd class="ly_AL_right">HTML5/CSS3/JavaScript<br />/jQuery/PHP/ WordPress</dd>
             <dt class="ly_AL_left">コンセプト</dt>
-            <dd class="ly_AL_right">分かりやすさと使いやすさに軸をおいて、サイト運営者とサイト訪問者の気持ちがホーページ上で交わることのできるホームページ作りを目指しております。<br />人々の思いが紡がれる事によってできる「糸」のようなホームページを作りたいという思いを「Tsumugu-Design（紡ぐデザイン）」という社名に込めました。</dd>
+            <dd class="ly_AL_right">分かりやすさと使いやすさに軸をおいて、サイト運営者とサイト訪問者の気持ちがホーページ上で交わることのできるホームページ作りを目指しております。<br />人々の思いが紡がれる事によってできる「糸」のようなホームページを作りたいという思いを「Tsumugiya（紡ぐデザイン）」という社名に込めました。</dd>
           </dl>
         </div>
         <!-- ly_content -->
@@ -285,33 +302,33 @@
 
       <!-- contact -->
       <section class="contact">
-        <div class="ly_content">
-          <h2 class="ly_sectTtl">Contact</h2>
+        <div class="ly_content bl_contact_wrapper">
+          <h2 class="bl_sectTtl">Contact</h2>
           <p class="ly_contactTxt">web制作のご依頼は下記フォームよりお申し込みください。<br />また、web制作に関する事で分からない事がありましたら、お気軽にご相談ください。</p>
           <form action=" .php" method="post" name="contact-form" class="input_box_wrapper">
             <dl class="ly_contactList">
               <dt class="ly_CL_left">貴社名</dt>
               <dd class="ly_CL_right">
-                <span><input type="text" name="company-name" value size="40" placeholder="Tsumugu-Design" class="input_box" required /></span>
+                <span><input type="text" name="company-name" value size="40" placeholder="Tsumugiya" class="bl_inputbox" required /></span>
               </dd>
               <dt class="ly_CL_left">お名前<span class="required">必須</span></dt>
               <dd class="ly_CL_right">
-                <span><input type="text" name="your-name" value size="40" placeholder="出座印　紡" class="input_box" required /></span>
+                <span><input type="text" name="your-name" value size="40" placeholder="出座印　紡" class="bl_inputbox" required /></span>
               </dd>
               <dt class="ly_CL_left">メールアドレス<span class="required">必須</span></dt>
               <dd class="ly_CL_right">
-                <span><input type="text" name="mail-adress" value size="40" placeholder="tsumugu-design@yoho.co.jp" class="input_box" required /></span>
+                <span><input type="text" name="mail-adress" value size="40" placeholder="Tsumugiya@yahoo.co.jp" class="bl_inputbox" required /></span>
               </dd>
               <dt class="ly_CL_left">電話番号</dt>
               <dd class="ly_CL_right">
-                <span><input type="text" name="phone-number" value size="40" placeholder="09012345678" class="input_box" required /></span>
+                <span><input type="text" name="phone-number" value size="40" placeholder="半角で入力" class="bl_inputbox" required /></span>
               </dd>
-              <dt class="ly_CL_left">お問い合わせ<br>内容<span class="required">必須</span></dt>
+              <dt class="ly_CL_left">お問い合わせ内容<span class="required">必須</span></dt>
               <dd class="ly_CL_right">
-                <span><textarea name="your-message" placeholder="メッセージを入力" cols="40" rows="8" class="input_box" required></textarea></span>
+                <span><textarea name="your-message" placeholder="メッセージを入力" cols="40" rows="8" class="bl_inputbox" required></textarea></span>
               </dd>
             </dl>
-            <p class="ly_contactBtn"><input type="submit" value="入力内容を確認" class="sent_btn input_box" /></p>
+            <p class="ly_contactBtn"><input type="submit" value="入力内容を確認" class="sent_btn bl_inputbox" /></p>
           </form>
         </div>
         <!-- ly_content -->
@@ -323,14 +340,14 @@
     <footer class="ly_footer">
       <div class="ly_footer_innner">
         <p class="footer-logo">
-          <a href=""><img src="img/HP_title.png" alt="サイトロゴ" /></a>
+          <a href=""><img src="img/text32.png" alt="サイトロゴ" /></a>
         </p>
         <ul class="ly_footerNav navItems">
           <li class="nav_item"><a href="#" class="">3つの特徴</a></li>
           <li class="nav_item"><a href="#" class="">ごあいさつ</a></li>
           <li class="nav_item"><a href="#" class="">サービス内容</a></li>
           <li class="nav_item"><a href="#" class="">作品例</a></li>
-          <li class="nav_item"><a href="#" class="">Tsumugu-Designについて</a></li>
+          <li class="nav_item"><a href="#" class="">Tsumugiyaについて</a></li>
           <li class="nav_item"><a href="#" class="">お問い合わせ</a></li>
         </ul>
         <p class="ly_copyright">
