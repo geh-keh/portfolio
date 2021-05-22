@@ -1,7 +1,7 @@
 //--------------------------スクロールボタン設定--------------------
 
-$(function () {
-  var scrollBtn = $(".scroll_btn");
+$(function ($) {
+  var scrollBtn = $(".bl_scroll_btn");
   scrollBtn.hide();
   $(window).scroll(function () {
     if ($(this).scrollTop() > 300) {

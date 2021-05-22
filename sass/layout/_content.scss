@@ -5,13 +5,18 @@
   padding: 1% 4%;
 }
 
+.ly_header {
+  height: 8rem;
+}
+
 // header,footer及びfullwidthのimg以外のレイアウト
 .ly_content {
   max-width: 320px;
   padding: 60px 15px;
   margin-right: auto;
   margin-left: auto;
-  & > h2 {
+  & > h1,
+  h2 {
     text-align: center;
   }
 }
@@ -37,16 +42,7 @@
 
 /* WORK */
 
-// .ly_workContent {
-//   padding: 60px 15px;
-//   // margin-right: auto;
-//   // margin-left: auto;
-//   & > h2 {
-//     text-align: center;
-//   }
-// }
-
-.ly_workItems {
+.ly_workContent {
   padding: 60px 15px;
   background-image: url(../img/bg-works.jpeg);
   & > h2 {
@@ -56,7 +52,7 @@
 
 .ly_workItem {
   text-align: center;
-  padding: 6%;
+  padding: 10%;
 }
 
 /*  About  */
@@ -110,7 +106,7 @@
 
 /* footer */
 .ly_footer {
-  padding-top: 3%;
+  padding: 5%;
 }
 
 .ly_footerNav {
@@ -119,4 +115,19 @@
 
 .ly_copyright {
   text-align: center;
+}
+
+/* faq price compare */
+
+.ly_PC_left {
+  flex-basis: 70%;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 5%;
+}
+
+.ly_PC_right {
+  flex-basis: 30%;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 2%;
+  margin-bottom: 5%;
 }

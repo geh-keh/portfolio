@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tsumugiya</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="txt/javascript" src="jquery.js"></script>
+    <script type="text/javascript"src="../../script.js"></script>
+  </head>
+
+  <body>
+    <header class="ly_header">
+      <div class="ly_header_inner">
+        <p>分かりやすいホームページ制作</p>
+        <p class="bl_header_logo">
+          <a href=""><img src="../../img/text32.png" alt="サイトロゴ" /></a>
+        </p>
+        <!-- 後でフォルダとロゴ作成-->
+        <!-- メニューボタン -->
+        <input type="checkbox" class="bl_check" id="checked" />
+        <!-- inputを一番上に置く事で間接セレクタを利用できるようにしている-->
+        <label class="bl_menuBtn" for="checked">
+          <!-- forにチェックボックスのid名を指定→ボタン要素を押すと連動してチェックボックスをオンオフしてくれる。-->
+          <span class="bar top"></span>
+          <span class="bar middle"></span>
+          <span class="bar bottom"></span>
+          <span class="bl_menuBtnTxt">MENU</span>
+        </label>
+        <!-- menuバーclickで開き -->
+        <label class="bl_closeMenu" for="checked"> </label>
+        <!-- nav-menu部分clickで閉じる -->
+        <!-- ドロワー -->
+        <!-- <input id="Button1" type="button" value="button" onclick="onButtonClick();" /> -->
+        <!-- 仮 -->
+        <nav class="bl_drawerMenu" id="frame1" for="checked">
+          <!-- ここにjqueryでis_fixedが追加される -->
+          <ul id="nav_menu" class="bl_navItems">
+            <li class="bl_navItem"><a href="#partFeature" class="link-close">3つの特徴</a></li>
+            <li class="bl_navItem"><a href="#partGreeting" class="link-close">ごあいさつ</a></li>
+            <li class="bl_navItem"><a href="#partService" class="link-close">サービス・料金</a></li>
+            <li class="bl_navItem"><a href="#partWorks" class="link-close">作品例</a></li>
+            <li class="bl_navItem"><a href="#partAbout" class="link-close">Tsumugiyaについて</a></li>
+            <li class="bl_navItem"><a href="#partContact" class="link-close">お問い合わせ</a></li>
+          </ul>
+        </nav>
+        <!-- header-nav -->
+      </div>
+      <!-- .ly_header_inner -->
+    </header>
+
+    <main class="content">
+      <!-- service -->
+      <section class="service" id="partService">
+        <div class="ly_content">
+          <h2 class="bl_sectTtl">用語解説</h2>
+          <div class="bl_serviceItems">
+            <div class="bl_card">
+              <h3 class="bl_WF_card_ttl">WordPress（ワードプレス）について</h3>
+              <figure class="bl_card_imgWrapper">
+                <img src="../../img/commentary_WordPress_img.png" width="80%" alt="web-designのイラスト" />
+              </figure>
+              <p class="bl_WF_card_txt">
+                本来、ホームページを編集する時にはhtmlやcss,JavaScript,PHPなどといったプログラミング言語の専門知識が必要となります。<br />WordPressは、それらの知識がなくとも、facebookやTwitterなどを更新するのと同じような感覚で、記事コンテンツ（「お知らせ」や「ブログ」など）を編集することができる優秀なソフトです。（レイアウトを編集したり、記事コンテンツ以外の部分を編集するには、やはり専門知識が必要となります。）<br />このようなソフトを総称してCMS（コンテンツ　マネジメント　システム）と呼び、国内Webサイトの6割以上が、このCMSを使って作られています。<br />WordPressは、2020年時点で国内のCMSにおけるシェア率が83％以上と、圧倒的に多くのユーザーがホームページの作成にWordPressを選んでいます。
+              </p>
+            </div>
+            <div class="bl_card">
+              <h3 class="bl_WF_card_ttl">サーバー、ドメインについて</h3>
+              <figure class="bl_card_imgWrapper">
+                <img src="../../img/commentary_server_img.png" width="80%" alt="web-designのイラスト" />
+              </figure>
+              <p class="bl_WF_card_txt">
+                Webサイト（ホームページ）をインターネット上に公開する時に、作成したWebサイトのデータの他に用意しなければならないものが、２つあります。<br />それが「Webサーバー」と「ドメイン」です。<br />Webサーバーは、作成したWebサイトのデータをWeb上に保管する場所のことで、ドメインは、Webサイトがインターネット上のどこにあるのかを識別するための名前のことです。<br />ホームページを「家」に例えた場合、家を建てる「土地」に当たるのがサーバーで、「住所」に当たるのがドメインになります。<br />この２つは、オンラインでレンタル業者と月（年）契約するのが一般的で、登録時に、ドメインとサーバー、WordPressの紐付けなどの作業が必要になります。
+              </p>
+            </div>
+            <div class="bl_card">
+              <h3 class="bl_WF_card_ttl">下層ページについて</h3>
+              <figure class="bl_card_imgWrapper">
+                <img src="../../img/workFlow_img3.png" width="80%" alt="web-designのイラスト" />
+              </figure>
+              <p class="bl_WF_card_txt">
+                下層ページとは、トップページとは別に作る、商品情報、お知らせ、お問い合わせなどの個別のページのことです。トップページだけでは説明しきれない内容や、詳細な説明を必要とする物を下層ページに記述します。<br />本サイトで言えば、今ご覧いただいているこのページも下層ページで、この他「プラン・料金詳細」「お申し込みから納品までの流れ」「Q&A」「お問い合わせ」も下層ページということになります。<br />例として、以下のようなコンテンツを下層ページに設定するケースがあります。<br />注意しなければならないのは、個別ページは多ければ良いというわけではなく、サイトの目的や訪問者の導線を考えて、適切に配置しなければならないということです。<br />Tsunagiyaでは、その辺りも含めてご相談を承りますので、サイト設計に不安がある方もどうぞご安心ください。
+              </p>
+              <ul>
+                <li>会社案内</li>
+                <li>代表あいさつ</li>
+                <li>商品・サービス紹介</li>
+                <li>お知らせ</li>
+                <li>採用情報</li>
+                <li>お問い合わせ</li>
+                <li>プライバシーポリシー</li>
+                <li>etc</li>
+              </ul>
+            </div>
+          </div>
+          <!-- bl_serviceItems -->
+          <p class="ly_pageLink"><a href="#">プラン・料金詳細 ></a></p>
+        </div>
+        <!-- ly_content -->
+      </section>
+      <!-- service -->
+
+      <!-- contact -->
+      <section class="contact" id="partContact">
+        <div class="ly_content bl_contact_wrapper">
+          <h2 class="bl_sectTtl">Contact</h2>
+          <p class="ly_contactTxt">web制作のご依頼は下記フォームよりお申し込みください。<br />また、web制作に関する事で分からない事がありましたら、お気軽にご相談ください。</p>
+          <form action=" .php" method="post" name="contact-form" class="input_box_wrapper">
+            <dl class="ly_contactList">
+              <dt class="ly_CL_left">貴社名</dt>
+              <dd class="ly_CL_right">
+                <span><input type="text" name="company-name" value size="40" placeholder="Tsumugiya" class="bl_inputbox" required /></span>
+              </dd>
+              <dt class="ly_CL_left">お名前<span class="required">必須</span></dt>
+              <dd class="ly_CL_right">
+                <span><input type="text" name="your-name" value size="40" placeholder="出座印　紡" class="bl_inputbox" required /></span>
+              </dd>
+              <dt class="ly_CL_left">メールアドレス<span class="required">必須</span></dt>
+              <dd class="ly_CL_right">
+                <span><input type="text" name="mail-adress" value size="40" placeholder="Tsumugiya@yahoo.co.jp" class="bl_inputbox" required /></span>
+              </dd>
+              <dt class="ly_CL_left">電話番号</dt>
+              <dd class="ly_CL_right">
+                <span><input type="text" name="phone-number" value size="40" placeholder="半角で入力" class="bl_inputbox" required /></span>
+              </dd>
+              <dt class="ly_CL_left">お問い合わせ内容<span class="required">必須</span></dt>
+              <dd class="ly_CL_right">
+                <span><textarea name="your-message" placeholder="メッセージを入力" cols="40" rows="8" class="bl_inputbox" required></textarea></span>
+              </dd>
+            </dl>
+            <p class="ly_contactBtn"><input type="submit" value="入力内容を確認" class="sent_btn bl_inputbox" /></p>
+          </form>
+        </div>
+        <!-- ly_content -->
+      </section>
+      <!-- contact -->
+    </main>
+    <!-- content -->
+
+    <footer class="ly_footer">
+      <div class="ly_footer_innner">
+        <p class="footer-logo">
+          <a href=""><img src="../../img/text32.png" alt="サイトロゴ" /></a>
+        </p>
+        <ul class="ly_footerNav navItems">
+          <li class="nav_item"><a href="#" class="">3つの特徴</a></li>
+          <li class="nav_item"><a href="#" class="">ごあいさつ</a></li>
+          <li class="nav_item"><a href="#" class="">サービス内容</a></li>
+          <li class="nav_item"><a href="#" class="">作品例</a></li>
+          <li class="nav_item"><a href="#" class="">Tsumugiyaについて</a></li>
+          <li class="nav_item"><a href="#" class="">お問い合わせ</a></li>
+        </ul>
+        <p class="ly_copyright">
+          <small>&copy; 2021　○○○○　All Rights Reserved.</small>
+        </p>
+      </div>
+      <!-- ly_footer_innner -->
+    </footer>
+  </body>
+</html>

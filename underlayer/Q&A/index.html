@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tsumugiya</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="txt/javascript" src="jquery.js"></script>
+  </head>
+
+  <body>
+    <header class="ly_header">
+      <div class="ly_header_inner">
+        <p>分かりやすいホームページ制作</p>
+        <p class="bl_header_logo">
+          <a href=""><img src="../../img/text32.png" alt="サイトロゴ" /></a>
+        </p>
+        <!-- 後でフォルダとロゴ作成-->
+        <!-- メニューボタン -->
+        <input type="checkbox" class="bl_check" id="checked" />
+        <!-- inputを一番上に置く事で間接セレクタを利用できるようにしている-->
+        <label class="bl_menuBtn" for="checked">
+          <!-- forにチェックボックスのid名を指定→ボタン要素を押すと連動してチェックボックスをオンオフしてくれる。-->
+          <span class="bar top"></span>
+          <span class="bar middle"></span>
+          <span class="bar bottom"></span>
+          <span class="bl_menuBtnTxt">MENU</span>
+        </label>
+        <!-- menuバーclickで開き -->
+        <label class="bl_closeMenu" for="checked"> </label>
+        <!-- nav-menu部分clickで閉じる -->
+        <!-- ドロワー -->
+        <!-- <input id="Button1" type="button" value="button" onclick="onButtonClick();" /> -->
+        <!-- 仮 -->
+        <nav class="bl_drawerMenu" id="frame1" for="checked">
+          <!-- ここにjqueryでis_fixedが追加される -->
+          <ul id="nav_menu" class="bl_navItems">
+            <li class="bl_navItem"><a href="#partFeature" class="link-close">3つの特徴</a></li>
+            <li class="bl_navItem"><a href="#partGreeting" class="link-close">ごあいさつ</a></li>
+            <li class="bl_navItem"><a href="#partService" class="link-close">サービス・料金</a></li>
+            <li class="bl_navItem"><a href="#partWorks" class="link-close">作品例</a></li>
+            <li class="bl_navItem"><a href="#partAbout" class="link-close">Tsumugiyaについて</a></li>
+            <li class="bl_navItem"><a href="#partContact" class="link-close">お問い合わせ</a></li>
+          </ul>
+        </nav>
+        <!-- header-nav -->
+      </div>
+      <!-- .ly_header_inner -->
+    </header>
+
+    <main class="content">
+      <!-- service -->
+      <section class="faq" id="partFaq">
+        <div class="ly_content">
+          <h1 class="bl_sectTtl">よくあるご質問（FAQ）</h1>
+          <div class="bl_faq_list_wrapper">
+            <div class="bl_faq_list">
+              <input type="checkbox" class="bl_faq_check" id="faq-label1">
+              <dl class="bl_faq">
+               <dt>
+                  <label for="faq-label1" class="test1">1．インターネット初心者で、何からしてよいのか分かりません。</label>
+               </dt>
+               <dd class="bl_faq_answ">
+                  <div class="bl_faq_answ_lay">
+                    <span class="bl_faq_answ_arrow"></span>
+                    <div class="bl_faq_answ_txt">
+                      <p>どうぞ、ご安心ください。<br>そのような方にもきちんとご理解いただけるように、資料などを用いながら分かりやすくご説明いたします。<br>また、もし分からないことがあれば、些細な事でも良いので、何度でもご質問ください。</p>
+                    </div> <!---- bl_faq_answ_txt --->
+                 </div> <!---- bl_faq_answ_lay --->
+               </dd>
+              </dl>
+            </div> <!---- bl_faq_list --->
+            <div class="bl_faq_list">
+              <input type="checkbox" class="bl_faq_check" id="faq-label2">
+              <dl class="bl_faq">
+               <dt>
+                  <label for="faq-label2" class="test1">2．ぼんやりとしたイメージしかありませんが、大丈夫でしょうか？</label>
+               </dt>
+               <dd class="bl_faq_answ">
+                <div class="bl_faq_answ_lay">
+                  <span class="bl_faq_answ_arrow"></span>
+                  <div class="bl_faq_answ_txt">
+                    <p>もちろん大丈夫です。むしろ、そのようなお客様が大半かと思います。<br>例えば、同業者様のホームページでイメージの近いものを探してみるのも一つの手で、そのホームページのどんな所が良いと思うのかを拾い上げていくと、目指すものが少しずつはっきりしていくかと思います。<br>参考資料やワイヤーフレームなどを用いながら、お客様のイメージを少しずつ「ぼんやり」から「はっきり」へと変わっていくように最善の努力をさせていただきます。<br>制作作業に入った後は、定期的に制作の進捗状況を報告し、お客様のイメージを確認をしながら進めていきますので、ご安心ください。</p>
+                 </div> <!---- bl_faq_answ_txt --->
+                </div>  <!---- bl_faq_answ_lay --->
+               </dd>
+              </dl>
+            </div> <!---- bl_faq_list --->
+            <div class="bl_faq_list">
+              <input type="checkbox" class="bl_faq_check" id="faq-label3">
+              <dl class="bl_faq">
+               <dt>
+                  <label for="faq-label3" class="test1">3．見積りには料金がかかりますか？</label>
+               </dt>
+               <dd class="bl_faq_answ">
+                <div class="bl_faq_answ_lay">
+                  <span class="bl_faq_answ_arrow"></span>
+                  <div class="bl_faq_answ_txt">
+                    <p>A.見積りは無料です。</p>
+                 </div> <!---- bl_faq_answ_txt --->
+                </div> <!---- bl_faq_answ_lay --->
+               </dd>
+              </dl>
+            </div> <!---- bl_faq_list --->
+            <div class="bl_faq_list">
+              <input type="checkbox" class="bl_faq_check" id="faq-label4">
+              <dl class="bl_faq">
+               <dt>
+                  <label for="faq-label4" class="test4">4．料金はいくらくらいになりますか？</label>
+               </dt>
+               <dd class="bl_faq_answ">
+                <div class="bl_faq_answ_lay">
+                  <span class="bl_faq_answ_arrow"></span>
+                  <div class="bl_faq_answ_txt">
+                    <p>オリジナルデザインであれば8万円～、コーディングのみであれば8千円～、ホームページの部分的な修正作業であれば3千円～承っております。<br>詳細な料金については、こちらをご参照ください。</p>
+                 </div> <!---- bl_faq_answ_txt --->
+                </div> <!---- bl_faq_answ_lay --->
+               </dd>
+              </dl>
+            </div> <!---- bl_faq_list --->
+            <div class="bl_faq_list">
+              <input type="checkbox" class="bl_faq_check" id="faq-label5">
+              <dl class="bl_faq">
+               <dt>
+                  <label for="faq-label5">5.自分で用意しなければならないものはありますか？</label>
+               </dt>
+               <dd class="bl_faq_answ">
+                <div class="bl_faq_answ_lay">
+                  <span class="bl_faq_answ_arrow"></span>
+                  <div class="bl_faq_answ_txt">
+                    <p>ホームページに掲載するテキスト（文章）や画像（写真やイラスト、ロゴ）などの素材のご用意をお願いします。<br>（上記は、プラン料金に含まれておりませんのでご注意ください。）<br>このように申しますと、中には不安に感じるお客様もいらっしゃると思いますが、既にサイトイメージが出来上がってらっしゃる場合は別として、確かに、何もない状態から素材をご用意いただくのは難しく感じられる事と思います。<br>ですが、どうかご安心ください。<br>ホームページのどこにどんな内容を掲載するか、しっかりとイメージを共有したうえで、ワイヤーフレームと呼ばれる配置図を用いながら、分かりやすくサポートいたします。<br>また、ご用意いただいたテキストの簡易的な校正は行わせていただきます。<br>それでも、やはり文章を書いたり、写真やイラストデータを用意するのが難しいという場合には、お気軽にご相談ください。<br>別途費用は発生してしまいますが、しっかりとご対応させていただきます。</p>
+                 </div> <!---- bl_faq_answ_txt --->
+                </div> <!---- bl_faq_answ_lay --->
+               </dd>
+              </dl>
+            </div> <!---- bl_faq_list --->
+            <div class="bl_faq_list">
+              <input type="checkbox" class="bl_faq_check" id="faq-label6">
+              <dl class="bl_faq">
+               <dt>
+                  <label for="faq-label6">6.ほかに費用はかかりませんか？</label>
+               </dt>
+               <dd class="bl_faq_answ">
+                <div class="bl_faq_answ_lay">
+                  <span class="bl_faq_answ_arrow"></span>
+                  <div class="bl_faq_answ_txt">
+                    <p>まず、弊社に支払う費用とは別に、レンタルサーバーやドメインの使用料等が必要となります。<br>レンタルサーバー会社はいくつもありますが、月額500〜3000円が一般的なようです。<br>最近は低価格で高機能なサーバーが増えてきており、月額1000円くらいのものでも十分です。<br>レンタルサーバー選びにお困りの方には、4社ほどおすすめのものをご提案させていただきますので、ご相談ください。<br>また、２つ目として、各プランのサービス範囲外の作業（例えば、文章、画像をこちらで用意して欲しい場合など）に関しては、追加オプションにより別途費用を頂戴しております。</p>
+                    <a class="bl_pageLink" href="#">サーバー、ドメインについて</a>
+                 </div> <!---- bl_faq_answ_txt --->
+                </div> <!---- bl_faq_answ_lay --->
+               </dd>
+              </dl>
+            </div> <!---- bl_faq_list --->
+            <div class="bl_faq_list">
+              <input type="checkbox" class="bl_faq_check" id="faq-label7">
+              <dl class="bl_faq">
+               <dt>
+                  <label for="faq-label7">7.キャンセルは可能ですか？また、キャンセル料はかかりますか？</label>
+               </dt>
+               <dd class="bl_faq_answ">
+                <div class="bl_faq_answ_lay">
+                  <span class="bl_faq_answ_arrow"></span>
+                  <div class="bl_faq_answ_txt">
+                    <p>ご契約前のキャンセルは可能です。ご契約後のお客様ご都合のキャンセルにつきましては、すでに発生している工程分については、料金をご請求させていただきますので、何卒ご了承ください。</p>
+                 </div> <!---- bl_faq_answ_txt --->
+                </div> <!---- bl_faq_answ_lay --->
+               </dd>
+              </dl>
+            </div> <!---- bl_faq_list --->
+            <div class="bl_faq_list">
+              <input type="checkbox" class="bl_faq_check" id="faq-label8">
+              <dl class="bl_faq">
+               <dt>
+                  <label for="faq-label8">8.内部SEO対策とはどのようなものですか？</label>
+               </dt>
+               <dd class="bl_faq_answ">
+                <div class="bl_faq_answ_lay">
+                  <span class="bl_faq_answ_arrow"></span>
+                  <div class="bl_faq_answ_txt">
+                    <p>SEO対策とは、yahooやgoogleなどの「検索エンジン」でキーワード検索をした時に、お客様のホームページが上位に表示されやすいように行う対策の事です。<br>SEO対策にも色々あり、そのうち「内部SEO対策」とは、Webサイトの制作段階で行えるSEO対策のことで、以下のような対策を実施します。</p>
+                    <ul class="bl_faq_seoList_wrapper">
+                      <li class="bl_faq_seoList">metaタグの最適化</li>
+                      <li class="bl_faq_seoList">意味性を持たせたマークアップ</li>
+                      <li class="bl_faq_seoList">画像の最適化</li>
+                      <li class="bl_faq_seoList">CSSの外部化</li>
+                      <li class="bl_faq_seoList">レスポンシブ化（モバイルフレンドリー）</li>
+                      <li class="bl_faq_seoList">HTTPS (SSL/TLS) 化</li>
+                    </ul><br>聞き慣れない専門用語が並んでおりますが、いずれも、お客様のホームページが上位表示されやすくするための対策です。<br>ただし、これらの対策が、必ずしも検索結果の上位表示をお約束するものではないという事はご承知おきください。<br>ホームページ公開後も適切に管理更新してホームページのコンテンツを充実させていく事が上位表示への早道となります。</p>
+                 </div> <!---- bl_faq_answ_txt --->
+                </div> <!---- bl_faq_answ_lay --->
+               </dd>
+              </dl>
+            </div> <!---- bl_faq_list --->
+            <div class="bl_faq_list">
+              <input type="checkbox" class="bl_faq_check" id="faq-label9">
+              <dl class="bl_faq">
+               <dt>
+                  <label for="faq-label9">9.月額では安いかもしれないけど、結局高くついちゃうんじゃ？</label>
+               </dt>
+               <dd class="bl_faq_answ">
+                <div class="bl_faq_answ_lay">
+                  <span class="bl_faq_answ_arrow"></span>
+                  <div class="bl_faq_answ_txt">
+                    <p>参考までに、他のWeb制作会社で当社のベーシックプランと同様のサービスをお願いした場合の料金を記載します。<br>一目瞭然で当社のお得さがお分かりいただけるのではないでしょうか。</p>
+
+                    <div>
+                      <h3>Tsunagiya</h3>
+                      <h4>ベーシックプラン</h4>
+                      <dl>
+                        <dt>トップページ</dt>
+                        <dd></dd>
+                        <dt>下層5ページ</dt>
+                        <dd></dd>
+                        <dt>打ち合わせ　回</dt>
+                        <dd></dd>
+                        <dt>ワイヤーフレーム作成</dt>
+                        <dd></dd>
+                        <dt>デザインカンプ作成</dt>
+                        <dd></dd>
+                        <dt>レスポンシブデザイン</dt>
+                        <dd></dd>
+                        <dt>お問い合わせフォーム</dt>
+                        <dd></dd>
+                        <dt>ハンバーガーメニュー</dt>
+                        <dd></dd>
+                        <dt>スムーススクロール</dt>
+                        <dd></dd>
+                        <dt>WordPress導入</dt>
+                        <dd></dd>
+                        <dt>内部SEO対策</dt>
+                        <dd></dd>
+                        <dt>SSL導入</dt>
+                        <dd></dd>
+                        <dt>ドメイン・サーバー手続き代行</dt>
+                        <dd></dd>
+                        <dt>WordPressバックアップ</dt>
+                        <dd></dd>
+                        <dt>WordPressプラグイン導入</dt>
+                        <dd></dd>
+                        <dt>画像・テキスト・リンク編集×月3箇所</dt>
+                        <dd></dd>
+                      </dl>
+                    <div>
+                      <h3>Tsunagiya</h3>
+                      <h4>ベーシックプラン</h4>
+                      <dl class="bl_priceCompare_wrapper">
+                        <dt class="ly_PC_left ">トップページ</dt>
+                        <dd class="ly_PC_right ">55,000円</dd>
+                        <dt class="ly_PC_left ">下層5ページ</dt>
+                        <dd class="ly_PC_right ">22,000円×5ページ</dd>
+                        <dt class="ly_PC_left ">ディレクション</dt>
+                        <dd class="ly_PC_right ">55,000円</dd>
+                        <dt class="ly_PC_left ">ワイヤーフレーム作成</dt>
+                        <dd class="ly_PC_right "></dd>
+                        <dt class="ly_PC_left ">デザインカンプ作成</dt>
+                        <dd class="ly_PC_right "></dd>
+                        <dt class="ly_PC_left ">レスポンシブデザイン</dt>
+                        <dd class="ly_PC_right ">33,000円</dd>
+                        <dt class="ly_PC_left ">お問い合わせフォーム</dt>
+                        <dd class="ly_PC_right ">11,000円</dd>
+                        <dt class="ly_PC_left ">ハンバーガーメニュー</dt>
+                        <dd class="ly_PC_right "></dd>
+                        <dt class="ly_PC_left ">スムーススクロール</dt>
+                        <dd class="ly_PC_right "></dd>
+                        <dt class="ly_PC_left ">WordPress導入</dt>
+                        <dd class="ly_PC_right ">55,000円</dd>
+                        <dt class="ly_PC_left ">内部SEO対策</dt>
+                        <dd class="ly_PC_right ">11,000円</dd>
+                        <dt class="ly_PC_left ">SSL導入</dt>
+                        <dd class="ly_PC_right "></dd>
+                        <dt class="ly_PC_left ">ドメイン・サーバー手続き代行</dt>
+                        <dd class="ly_PC_right "></dd>
+                        <dt class="ly_PC_left ">WordPressバックアップ</dt>
+                        <dd class="ly_PC_right "></dd>
+                        <dt class="ly_PC_left ">WordPressプラグイン導入</dt>
+                        <dd class="ly_PC_right "></dd>
+                        <dt class="ly_PC_left ">画像・テキスト・リンク編集×月3箇所</dt>
+                        <dd class="ly_PC_right "></dd>
+                      </dl>
+
+                    </div>
+
+                    <p>
+
+                      <br>また、Web制作会社に制作依頼された場合の大きなデメリットとして、営業担当者と制作担当者が別なため、スムーズに意思疎通が計れないといった話や、それに加えて、人の入れ替わりが早いため、Webサイト公開後のサポート対応が良くないという話を良く聞きます。<br>その点、Tsumugiyaでは営業窓口
+
+                    </p>
+
+                 </div> <!---- bl_faq_answ_txt --->
+                </div> <!---- bl_faq_answ_lay --->
+               </dd>
+              </dl>
+            </div> <!---- bl_faq_list --->
+            <div class="bl_faq_list">
+              <input type="checkbox" class="bl_faq_check" id="faq-label10">
+              <dl class="bl_faq">
+               <dt>
+                  <label for="faq-label10">10.デザインが決まった後に、デザインの修正はお願いできますか？？</label>
+               </dt>
+               <dd class="bl_faq_answ">
+                <div class="bl_faq_answ_lay">
+                  <span class="bl_faq_answ_arrow"></span>
+                  <div class="bl_faq_answ_txt">
+                    <p>デザイン決定後の大幅な修正は、申し訳ございませんがお断りしています。デザイン決定前であれば、2回まで修正を承ります。<br>レイアウトが変わらないような軽微な変更（画像の修正やテキストの変更）はお受けできます。<br>ホームページ全体の規模が大きく仕様が複雑になるほど、制作途中での確認と修正作業も必要になるので、修正回数が基本を超えそうな案件の場合は、前もって別に修正回数を定めます。もちろん、こちらに原因がある修正は数に含みませんのでご安心ください。</p>
+                 </div> <!---- bl_faq_answ_txt --->
+                </div> <!---- bl_faq_answ_lay --->
+               </dd>
+              </dl>
+            </div> <!---- bl_faq_list --->
+
+
+          </div> <!-- bl_faq_list_wrapper -->
+          <p class="faq_txt">
+            上記のほかに、当ホームページを見て疑問に思ったこと、わからなかったこと、レッスンについて聞いてみたいことなどがございましたら、下記の電話に直接ご連絡いただくか、下記リンク先のフォーム入力によりお問合せください。
+          </p>
+          <p class="faq_txt">電話でのご連絡の場合、レッスン中は留守電になってしまいますが、メッセージを残していただければ、後ほど、こちらから折り返しご連絡させていただきます。</p>
+          <p class="faq_phone_no">電話：０２９６－２４－７９０５</p>
+          <p class="trial_lesson_btn btn bgc_green"><a href="contact/index.html #contact_article"
+              class="contact_link">メールによるお問い合わせはコチラ</a></p>
+      </div>
+        </div>
+        <!-- ly_content -->
+      </section>
+      <!-- service -->
+
+      <!-- contact -->
+      <section class="contact" id="partContact">
+        <div class="ly_content bl_contact_wrapper">
+          <h2 class="bl_sectTtl">Contact</h2>
+          <p class="ly_contactTxt">web制作のご依頼は下記フォームよりお申し込みください。<br />また、web制作に関する事で分からない事がありましたら、お気軽にご相談ください。</p>
+          <form action=" .php" method="post" name="contact-form" class="input_box_wrapper">
+            <dl class="ly_contactList">
+              <dt class="ly_CL_left">貴社名</dt>
+              <dd class="ly_CL_right">
+                <span><input type="text" name="company-name" value size="40" placeholder="Tsumugiya" class="bl_inputbox" required /></span>
+              </dd>
+              <dt class="ly_CL_left">お名前<span class="required">必須</span></dt>
+              <dd class="ly_CL_right">
+                <span><input type="text" name="your-name" value size="40" placeholder="出座印　紡" class="bl_inputbox" required /></span>
+              </dd>
+              <dt class="ly_CL_left">メールアドレス<span class="required">必須</span></dt>
+              <dd class="ly_CL_right">
+                <span><input type="text" name="mail-adress" value size="40" placeholder="Tsumugiya@yahoo.co.jp" class="bl_inputbox" required /></span>
+              </dd>
+              <dt class="ly_CL_left">電話番号</dt>
+              <dd class="ly_CL_right">
+                <span><input type="text" name="phone-number" value size="40" placeholder="半角で入力" class="bl_inputbox" required /></span>
+              </dd>
+              <dt class="ly_CL_left">お問い合わせ内容<span class="required">必須</span></dt>
+              <dd class="ly_CL_right">
+                <span><textarea name="your-message" placeholder="メッセージを入力" cols="40" rows="8" class="bl_inputbox" required></textarea></span>
+              </dd>
+            </dl>
+            <p class="ly_contactBtn"><input type="submit" value="入力内容を確認" class="sent_btn bl_inputbox" /></p>
+          </form>
+        </div>
+        <!-- ly_content -->
+      </section>
+      <!-- contact -->
+    </main>
+    <!-- content -->
+
+    <footer class="ly_footer">
+      <div class="ly_footer_innner">
+        <p class="footer-logo">
+          <a href=""><img src="../../img/text32.png" alt="サイトロゴ" /></a>
+        </p>
+        <ul class="ly_footerNav navItems">
+          <li class="nav_item"><a href="#" class="">3つの特徴</a></li>
+          <li class="nav_item"><a href="#" class="">ごあいさつ</a></li>
+          <li class="nav_item"><a href="#" class="">サービス内容</a></li>
+          <li class="nav_item"><a href="#" class="">作品例</a></li>
+          <li class="nav_item"><a href="#" class="">Tsumugiyaについて</a></li>
+          <li class="nav_item"><a href="#" class="">お問い合わせ</a></li>
+        </ul>
+        <p class="ly_copyright">
+          <small>&copy; 2021　○○○○　All Rights Reserved.</small>
+        </p>
+      </div>
+      <!-- ly_footer_innner -->
+    </footer>
+  </body>
+</html>

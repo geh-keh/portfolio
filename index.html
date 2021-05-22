@@ -11,13 +11,19 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script type="txt/javascript" src="jquery.js"></script>
+    <!-- <script type="text/javascript">
+      function onButtonClick() {
+        var elem = document.getElementById("frame1");
+        elem.classList.add("hide");
+      }
+    </script> -->
   </head>
 
   <body>
     <header class="ly_header">
       <div class="ly_header_inner">
         <p>分かりやすいホームページ制作</p>
-        <h1 class="header_logo">
+        <h1 class="bl_header_logo">
           <a href=""><img src="img/text32.png" alt="サイトロゴ" /></a>
         </h1>
         <!-- 後でフォルダとロゴ作成-->
@@ -35,15 +41,17 @@
         <label class="bl_closeMenu" for="checked"> </label>
         <!-- nav-menu部分clickで閉じる -->
         <!-- ドロワー -->
-        <nav class="bl_drawerMenu">
+        <!-- <input id="Button1" type="button" value="button" onclick="onButtonClick();" /> -->
+        <!-- 仮 -->
+        <nav class="bl_drawerMenu" id="frame1" for="checked">
           <!-- ここにjqueryでis_fixedが追加される -->
           <ul id="nav_menu" class="bl_navItems">
             <li class="bl_navItem"><a href="#partFeature" class="link-close">3つの特徴</a></li>
-            <li class="bl_navItem"><a href="#" class="link-close">ごあいさつ</a></li>
-            <li class="bl_navItem"><a href="#" class="link-close">サービス・料金</a></li>
-            <li class="bl_navItem"><a href="#" class="link-close">作品例</a></li>
-            <li class="bl_navItem"><a href="#" class="link-close">Tsumugiyaについて</a></li>
-            <li class="bl_navItem"><a href="#" class="link-close">お問い合わせ</a></li>
+            <li class="bl_navItem"><a href="#partGreeting" class="link-close">ごあいさつ</a></li>
+            <li class="bl_navItem"><a href="#partService" class="link-close">サービス・料金</a></li>
+            <li class="bl_navItem"><a href="#partWorks" class="link-close">作品例</a></li>
+            <li class="bl_navItem"><a href="#partAbout" class="link-close">Tsumugiyaについて</a></li>
+            <li class="bl_navItem"><a href="#partContact" class="link-close">お問い合わせ</a></li>
           </ul>
         </nav>
         <!-- header-nav -->
@@ -55,8 +63,10 @@
       <!-- mainVisual -->
       <div class="bl_mainVisual">
         <div class="bl_bgFullWidth">
-          <img src="img/bg-mainVisual.jpeg" width="100%" height="auto" />
+          <img src="img/bg-mainVisual.jpeg" width="100%" height="344rem" />
         </div>
+        <!-- <div class="bl_mvBackMemo"><img src="img/mv_paper.png" width="100%"" height="auto" class="fadeIn"></div> よくない　-->
+
         <div class="bl_mvTxts">
           <p class="bl_mvTxt bl_mvTxt01 fadeIn">想いがきちんと伝わる</p>
           <p class="bl_mvTxt bl_mvTxt02 fadeIn">シンプルで扱いやすい</p>
@@ -113,7 +123,7 @@
         <div class="bl_introImgBox">
           <div class="bl_bgFullWidth"><img src="img/bg-introduction.jpeg" width="100%" alt="白い部屋の写真" /></div>
           <!-- <div class="bl_introImgTxt"> -->
-          <p class="bl_introImgTxt fadeIn">Tsumugu Designは、それぞれの思いに寄り添い、双方の「思いを紡ぐ」<br />そんなホームページをご提案いたします。</p>
+          <p class="bl_introImgTxt bl_sa">Tsumugiyaは、それぞれの思いに寄り添い、双方の「思いを紡ぐ」<br />そんなホームページをご提案いたします。</p>
           <!-- </div> -->
         </div>
         <!-- bl_introImgBox -->
@@ -121,7 +131,7 @@
       <!-- introduction -->
 
       <!-- feature -->
-      <section class="feature">
+      <section id="partFeature">
         <!-- <a name="partFeature"> -->
         <div class="ly_content">
           <h2 class="bl_sectTtl">Tsumugiyaの３つの特徴</h2>
@@ -146,16 +156,18 @@
                 <img src="img/feature-img02.png" width="80%" alt="レスポンシブデザインのイラスト" />
               </figure>
               <h3 class="bl_card_ttl">安心のサービスと料金設定</h3>
-              <p class="bl_card_txt">お客様にとって大きな負担となるのが、ホームページ導入時にかかる初期費用です。Tsgu-Designでは、そのご負担を少しでも和らげるために、月払いの料金を設定いたしました。また、ホームページ作成に加え、サーバー・ドメイン設定、さらに安心の運営サポートまで全て込みで月9千円〜という、とてもお得なプランをご用意いたしました。</p>
+              <p class="bl_card_txt">お客様にとって大きな負担となるのが、ホームページ導入時にかかる初期費用です。Tsumugiyaでは、そのご負担を少しでも和らげるために、月払いの料金プランをご用意いたしました。しかも、ホームページ作成に加え、サーバー・ドメイン設定、さらに安心の運営サポートまで全て込みで月9千9百円〜という、とてもお得なプランとなっております。</p>
               <a class="bl_pageLink" href="#">サーバー、ドメインについて</a>
               <a class="bl_pageLink" href="#">プラン・料金詳細</a>
             </div>
           </div>
           <!-- bl_featureItems -->
           <div class="feature_contact">
-            <p class="bl_ftContactTxt ly_ftContactTxt">当社のホームページ制作にご興味をお持ちいただけましたら、お気軽にお問い合わせフォームよりご連絡ください。<br />もちろん強引なセールスなどはいたしませんので、ご安心ください。</p>
-            <div class="bl_btnCopy">お気軽にお問い合わせください！</div>
-            <a href="#" class="bl_ftBtn">お問い合わせはコチラ</a>
+            <p class="bl_ftContact_txt ly_ftContactTxt">当社のホームページ制作にご興味をお持ちいただけましたら、お気軽にお問い合わせフォームよりご連絡ください。<br />もちろん強引なセールスなどはいたしませんので、ご安心ください。</p>
+            <div class="bl_ftBtn_wrapper bl_sa bl_sa_down">
+              <div class="bl_ftBtn_copy">お気軽にお問い合わせください！</div>
+              <a href="#partContact" class="bl_ftBtn">お問い合わせはコチラ</a>
+            </div>
           </div>
         </div>
         <!-- ly_content -->
@@ -164,7 +176,7 @@
       <!-- introduction -->
 
       <!-- greeting -->
-      <section class="greeting">
+      <section class="greeting" id="partGreeting">
         <div class="ly_content">
           <h2 class="bl_sectTtl">ごあいさつ</h2>
           <p>
@@ -173,11 +185,9 @@
           </p>
           <p>まず、昨今のコロナ禍において、コロナに感染された方々、また飲食業をはじめ、コロナの影響により甚大な被害を被っているサービス業や製造業等に携わる方々には、心よりお見舞い申し上げます。</p>
 
-          <p>かく言う私自身も、コロナ禍の煽りを大いに受けた一人なのでございますが、家族の協力もあり、プライベートな時間のほとんどをweb制作の勉強に注ぎ込むことで、多くのスキルを身につけることができました。</p>
-
           <p>Tsumugiyaは、Webサイトの制作を通じて、このような苦境下にある日本、そして苦境に立ち向かう企業様や個人事業主様のお力に少しでもなりたいという思いもあり、2021年より始動いたしました。</p>
 
-          <p>創業まもなく、まだまだ未熟な点はございますが、お客様のご要望、ご希望に添えるよう誠心誠意を持ってご対応させていただきますので、どうぞよろしくお願いいたいします。</p>
+          <p>まだまだ未熟な点はございますが、お客様のご要望、ご希望に誠心誠意を持ってお応えいたしますので、どうぞよろしくお願いいたいします。</p>
 
           <p>Tsumugiyaでは、ご依頼主様の目標、目的を達成するためのツールとしてのホームページデザインに主軸を置きながら、時代の流行も取り入れつつ魅力的なホームページをご提案いたします。</p>
 
@@ -195,7 +205,7 @@
           <p>会社や商品、サービスの事を知りたくてホームページに訪問してくれたのに、サイト運営者様の「思い」が届くことなくサイトを離れられてしまったら、こんなに悔しいことはありません・・・</p>
 
           <p>
-            また、せっかくホームページを公開したけれど、管理が面倒になって更新が滞りそのまま放置状態・・・なんてこともよくある話です。<br />
+            また、せっかくホームページを公開したけれど、更新が滞りそのまま放置状態・・・なんてこともよくある話です。<br />
             ホームページが長い間更新されないままでいると、その分訪問者の信用と信頼を失うことになります。
           </p>
 
@@ -213,7 +223,7 @@
       <!-- greeting -->
 
       <!-- service -->
-      <section class="service">
+      <section class="service" id="partService">
         <div class="ly_content">
           <h2 class="bl_sectTtl">Service</h2>
           <div class="bl_serviceItems">
@@ -252,48 +262,80 @@
       <!-- service -->
 
       <!-- works -->
-      <section class="works">
-        <div class="ly_workContent ly_workItems">
+      <section class="works" id="partWorks">
+        <div class="ly_workContent">
           <h2 class="bl_sectTtl">WORKS</h2>
           <p>これまでに携わってきたお仕事やデモで作成したホームページです。</p>
-          <div class="ly_workItem">
-            <div>
-              <img src="img/owada-img.jpg" alt="" class="bl_workItemImg" />
+          <div class="ly_workItem_wrapper bl_sa">
+            <div class="ly_workItem">
+              <a href="#modal01">
+                <img src="img/owada-img.jpg" alt="" class="bl_workItemImg" />
+
+                <p class="work_txt">筑西市の個人ピアノ教室ホームページ</p>
+              </a>
+              <div class="modal_wrapper" id="modal01">
+                <a href="#!" class="modal_overlay"></a>
+                <div class="modal_window">
+                  <div class="modal_cont">
+                    <img src="img/owada-big-img.jpg" width="100%" />
+                  </div>
+                  <a href="#!" class="modal_close">×</a>
+                </div>
+              </div>
             </div>
-            <p class="work_txt">筑西市の個人ピアノ教室ホームページ</p>
-          </div>
-          <div class="ly_workItem">
-            <div>
-              <img src="img/isara-img.jpg" alt="" class="bl_workItemImg" />
+            <div class="ly_workItem">
+              <a href="#modal02">
+                <img src="img/isara-img.jpg" alt="" class="bl_workItemImg" />
+
+                <p class="work_txt">isaraホームページの模写</p>
+              </a>
+              <div class="modal_wrapper" id="modal02">
+                <a href="#!" class="modal_overlay"></a>
+                <div class="modal_window">
+                  <div class="modal_cont">
+                    <img src="img/isara-big-img.jpg" width="100%" />
+                  </div>
+                  <a href="#!" class="modal_close">×</a>
+                </div>
+              </div>
             </div>
-            <p class="work_txt">isaraホームページの模写</p>
-          </div>
-          <div class="ly_workItem">
-            <div>
-              <img src="img/jin-img.jpg" alt="" class="bl_workItemImg" />
+            <div class="ly_workItem">
+              <a href="#modal03">
+                <img src="img/jin-img.jpg" alt="" class="bl_workItemImg" />
+
+                <p class="work_txt">airbnbホームページの模写</p>
+              </a>
+              <div class="modal_wrapper" id="modal03">
+                <a href="#!" class="modal_overlay"></a>
+                <div class="modal_window">
+                  <div class="modal_cont">
+                    <img src="img/airbnb-big-img.jpg" width="100%" />
+                  </div>
+                  <a href="#!" class="modal_close">×</a>
+                </div>
+              </div>
             </div>
-            <p class="work_txt">airbnbホームページの模写</p>
           </div>
+          <!-- ly_workItem_wrapper -->
         </div>
-        <!-- ly_workItems -->
+        <!-- ly_workContent -->
       </section>
       <!-- works -->
 
-      <!-- about -->
-      <section class="about">
+      <section class="about" id="partAbout">
         <div class="ly_content">
           <h2 class="bl_sectTtl">About</h2>
           <dl class="ly_aboutList">
             <dt class="ly_AL_left">名称</dt>
-            <dd class="ly_AL_right">Tsumugiya</dd>
+            <dd class="ly_AL_right">Tsumugiya（つむぎや）</dd>
             <dt class="ly_AL_left">デザイナー</dt>
             <dd class="ly_AL_right">keh</dd>
             <dt class="ly_AL_left">経歴</dt>
-            <dd class="ly_AL_right">1979年生まれ<br />大学卒業後、地方公務員、サラリーマンを経て2021年より茨城にてフリーランスのWeb制作をしております。</dd>
+            <dd class="ly_AL_right">1979年生まれ<br />大学卒業後、地方公務員、製板会社を経て2021年より茨城にてフリーランスのWeb制作をしております。<br />趣味は音楽とアウトドアです。</dd>
             <dt class="ly_AL_left">スキル</dt>
             <dd class="ly_AL_right">HTML5/CSS3/JavaScript<br />/jQuery/PHP/ WordPress</dd>
             <dt class="ly_AL_left">コンセプト</dt>
-            <dd class="ly_AL_right">分かりやすさと使いやすさに軸をおいて、サイト運営者とサイト訪問者の気持ちがホーページ上で交わることのできるホームページ作りを目指しております。<br />人々の思いが紡がれる事によってできる「糸」のようなホームページを作りたいという思いを「Tsumugiya（紡ぐデザイン）」という社名に込めました。</dd>
+            <dd class="ly_AL_right">分かりやすさと使いやすさに軸をおいて、サイト運営者とサイト訪問者の気持ちがホーページ上で交わることのできるホームページ作りを目指しております。<br />人々の思いを紡ぐ事のできるホームページ作りをしたいという思いを「Tsumugiya（つむぎや）」という屋号に込めました。</dd>
           </dl>
         </div>
         <!-- ly_content -->
@@ -301,7 +343,7 @@
       <!-- about -->
 
       <!-- contact -->
-      <section class="contact">
+      <section class="contact" id="partContact">
         <div class="ly_content bl_contact_wrapper">
           <h2 class="bl_sectTtl">Contact</h2>
           <p class="ly_contactTxt">web制作のご依頼は下記フォームよりお申し込みください。<br />また、web制作に関する事で分からない事がありましたら、お気軽にご相談ください。</p>
@@ -334,6 +376,10 @@
         <!-- ly_content -->
       </section>
       <!-- contact -->
+      <div class="el_scroll_btn">
+        <p>↑</p>
+        <p>TOP</p>
+      </div>
     </main>
     <!-- content -->
 
@@ -356,5 +402,7 @@
       </div>
       <!-- ly_footer_innner -->
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

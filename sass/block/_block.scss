@@ -1,4 +1,13 @@
-// セクション共通
+.bl_header_logo {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  a {
+    display: block;
+  }
+}
+
+// トップページセクション共通
 
 .bl_sectTtl {
   margin-bottom: 5rem;
@@ -13,29 +22,22 @@
 
 // グローバルナビ設定
 
-.bl_menuBtn {
-  display: none; /* ナビメニューが常時表示されるので、メニューボタンは不要に→非表示　らしいが、blockでもよくない？ */
-  transition: 1;
-}
+// .bl_menuBtn {
+//   display: none;
+//   transition: 1;
+// }/* ナビメニューが常時表示されるので、メニューボタンは不要に→非表示らしいが、blockでもよくない？ → スマホ版作成時現在は不要。だが、PC版で必要になるかも*/
 
 .bl_drawerMenu {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 4;
+  z-index: 5;
   width: 100%;
   height: auto;
-  // color: #fff;
-  // opacity: 0.94;
   overflow-x: hidden;
   text-align: center;
   box-shadow: 0 10px 8px -8px gray;
   background-color: #fff;
-  // transition-property: opacity;
-  // transition-duration: 1s;
-  // opacity: 0;
-  animation: fadeOut 2s ease 0s 1 normal;
-  -webkit-animation: fadeOut 2s ease 0s 1 normal;
   display: none;
 
   & ul {
@@ -43,15 +45,33 @@
     width: 100%;
   }
 }
+// 開いたメニューを閉じるときにfadeOutさせるにはJS設定が必要
 
-@keyframes fadeOut {
-  /*「fadeIn(任意の名前)」と名前をそろえる※cssによるfadeOutアニメーション 参考：https://q-az.net/fadein-open-only-css*/
-  100% {
-    opacity: 1;
-  } /*アニメーション開始時は完全に透過*/
+/* checked */
+.bl_check:checked ~ .bl_drawerMenu {
+  /* checkがonになっている時bl_drawerMenuを開く */
+  display: block;
+  animation: fadeIn 2s ease 0s 1 normal;
+  -webkit-animation: fadeIn 2s ease 0s 1 normal;
+  transition: 1s;
+}
+
+@keyframes fadeIn {
   0% {
     opacity: 0;
-  } /*アニメーション終了時は透過しない*/
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 // .bl_navItems {  スマホファーストなのでひとまずコメントアウト
@@ -149,46 +169,48 @@
 }
 
 /* ここからコピペ */
+
+/* メニュー表示時に画面のどこを押してもメニューを閉じるようにする為に画面一杯に要素を広げる */
+
 .bl_closeMenu {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%; /* 画面一杯に要素を広げるために100%指定 */
+  width: 100%;
   height: 100%;
   visibility: hidden; /*---通常は非表示(以下のcheck:checkedでcheckboxを✔した時だけ表示するよう設定)display:noneでもOK---*/
-  opacity: 0;
+  // opacity: 0;
   z-index: 4;
 }
 
 /* checked */
-.bl_check:checked ~ .bl_drawerMenu {
-  /* checkがonになっている時bl_drawerMenuを開く */
-  display: block;
-  animation: fadeIn 2s ease 0s 1 normal; /*cssによるfadeInアニメーション 参考：https://q-az.net/fadein-open-only-css*/
-  -webkit-animation: fadeIn 2s ease 0s 1 normal;
+.bl_check:checked ~ .bl_closeMenu {
+  visibility: visible;
+  animation: fadeOut 2s ease 0s 1 normal;
+  -webkit-animation: fadeOut 2s ease 0s 1 normal;
   transition: 1s;
   opacity: 1;
-  z-index: 5;
+  z-index: 5; /* ピアノサイトの場合、この階層設定でメニュー閉じまで機能するが・・・
 }
 
-@keyframes fadeIn {
-  /*「fadeIn(任意の名前)」と名前をそろえる※cssによるfadeInアニメーション 参考：https://q-az.net/fadein-open-only-css*/
+@keyframes fadeOut {
   0% {
-    opacity: 0;
-  } /*アニメーション開始時は完全に透過*/
-  100% {
     opacity: 1;
-  } /*アニメーション終了時は透過しない*/
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
+  } /*アニメーション開始時は透過しない*/
   100% {
-    opacity: 1;
-  }
+    opacity: 0;
+    display: none;
+  } /*アニメーション終了時は透過*/
 }
+// @-webkit-keyframes fadeOut { 上と重複するので多分削除して問題ないはず
+//   0% {
+//     opacity: 1;
+//   }
+//   100% {
+//     opacity: 0;
+//     display: none;
+//   }
+// }
 
 .bl_check:checked ~ .bl_menuBtn .bl_menuBtnText {
   visibility: hidden;
@@ -214,38 +236,6 @@
   transform: rotate(-45deg); /* 線を斜めに */
 }
 
-.bl_check:checked ~ .bl_closeMenu {
-  // -webkit-transition-duration: 1s;
-  // transition-duration: 1s;
-  // -webkit-transition-delay: 0.3s;
-  // transition-delay: 0.3s;
-  visibility: visible;
-  // opacity: 1;
-  // z-index: 5;
-  animation: fadeOut 2s ease 0s 1 normal;
-  -webkit-animation: fadeOut 2s ease 0s 1 normal;
-  transition: 1s;
-  opacity: 1;
-  z-index: 5;
-}
-
-@keyframes fadeOut {
-  100% {
-    opacity: 1;
-  } /*アニメーション開始時は透過しない*/
-  0% {
-    opacity: 0;
-  } /*アニメーション終了時は透過*/
-}
-@-webkit-keyframes fadeIn {
-  100% {
-    opacity: 1;
-  }
-  0% {
-    opacity: 0;
-  }
-}
-
 /* ---- mainVisual ---- */
 .bl_mainVisual {
   position: relative;
@@ -259,7 +249,7 @@
   -webkit-transform: translate(-50%, -38%);
   -ms-transform: translate(-50%, -38%);
   // width: 100%;
-  height: 100%;
+  height: 72%;
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
   font-size: 1.4rem;
@@ -270,6 +260,7 @@
   // }
   .bl_mvTxt {
     margin: 0 0.5rem;
+    font-size: 1.5rem;
   }
 }
 /*フェードイン表示の指定*/
@@ -284,23 +275,31 @@
 }
 
 /*以下遅延の指定*/
+// .bl_mvBackMemo {  よくない
+//   position: absolute;
+//   top: 10%;
+//   left: 20%;
+//   z-index: 1;
+//   animation-delay: 0.5s;
+// }
+
 .bl_mvTxt01 {
-  animation-delay: 0.3s;
+  animation-delay: 0.8s;
 }
 .bl_mvTxt02 {
-  animation-delay: 1.8s;
+  animation-delay: 2.3s;
 }
 .bl_mvTxt03 {
-  animation-delay: 3.8s;
+  animation-delay: 4.3s;
 }
 .bl_mvTxt04 {
-  animation-delay: 5.6s;
+  animation-delay: 6.3s;
 }
 .bl_mvTxt05 {
-  animation-delay: 5.6s;
+  animation-delay: 8.3s;
 }
 .bl_mvTxt06 {
-  animation-delay: 7.5s;
+  animation-delay: 9.3s;
   line-height: 1.4;
   background-color: #cab6a0;
   color: #fff;
@@ -363,13 +362,10 @@
 
 .bl_introImgTxt {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-47%, -110%);
-  -webkit-transform: translate(-47%, -110%);
-  -ms-transform: translate(-47%, -110%);
-  width: 84%;
+  top: 10%;
+  left: 10%;
   font-size: 1.4rem;
+  width: 84%;
 }
 
 // --------Feature-------
@@ -397,10 +393,6 @@
 
 .bl_card_txt {
   margin-bottom: 1.5rem;
-}
-
-.bl_ftContactTxt {
-  font-size: 1.6rem;
 }
 
 // 説明ページ遷移btn
@@ -438,6 +430,27 @@ a.bl_pageLink {
   text-align: end;
 }
 
+.bl_ftContact_txt {
+  font-size: 1.6rem;
+}
+
+// お問い合わせはコチラbtnのフェードイン
+//初期状態を設定、.showが追加されたら、正常な状態に戻す
+
+.bl_sa {
+  opacity: 0;
+  transition: all 4s ease;
+}
+
+.bl_sa.show {
+  opacity: 1;
+  transform: none;
+}
+
+.bl_sa_down {
+  transform: translate(0, -100px);
+}
+
 //お問い合わせはコチラbtn
 
 a {
@@ -463,7 +476,7 @@ a {
   }
 }
 
-.bl_btnCopy {
+.bl_ftBtn_copy {
   font-size: 1.5rem;
   font-weight: bold;
   position: relative;
@@ -471,12 +484,12 @@ a {
   text-align: center;
 }
 
-.bl_btnCopy:before {
+.bl_ftBtn_copy:before {
   margin-right: 1rem;
   content: "＼";
 }
 
-.bl_btnCopy:after {
+.bl_ftBtn_copy:after {
   margin-left: 1rem;
   content: "／";
 }
@@ -489,7 +502,6 @@ a {
 
 // ---------WORK---------
 .bl_workItemImg {
-  // background-image: url(../img/bg-works.jpg);
   max-width: 200px;
 }
 
@@ -509,4 +521,351 @@ a {
 
 .bl_inputbox {
   padding: 0.4rem;
+}
+
+//モーダルテスト1
+
+//モーダル部分
+// .bl_modal_check {
+//   // display: none;
+// }
+
+// .bl_modal_check:checked ~ .bl_modal_bg {
+//   display: block;
+// }
+
+// .bl_modal_check:checked ~ .port_modal {
+//   display: block;
+// }
+
+/* --------モーダルウィンドウ------- */
+
+// .port-modal {
+//   height: auto; /* モーダル～の高さを設定 */
+//   padding: 32px;
+//   background-color: #fff;
+//   // position: fixed; /* これのせいで表示されたり、されなかったり・・・ */
+//   overflow-y: scroll; /* モーダルの高さを超えた分はスクロールに */
+//   top: 0;
+//   left: 0;
+//   z-index: 101;
+//   display: none;
+// }
+
+// .pm-img {
+//   width: 100%;
+//   height: auto;
+// }
+
+/*-----------モーダルバックグラウンド-----------*/
+// .bl_modal_bg {
+/*---jqueryでイベント発生時にhtmlに追加、または削除される。ので、htmlファイル上に記述はない---*/
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(0, 0, 0, 0.5);
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   z-index: 100;
+//   display: none;
+// }
+
+//モーダルテスト1ここまで
+
+// モーダルテスト2
+
+/* --------モーダルウィンドウ------- */
+
+.modal_wrapper {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 60px 10px;
+  text-align: center;
+  &:not(:target) {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+  &:target {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.4s, visibility 0.4s;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.4s, visibility 0.4s;
+  }
+  &::after {
+    display: inline-block;
+    height: 100%;
+    margin-left: -0.05em;
+    vertical-align: middle;
+    content: "";
+  }
+}
+
+// .modal_wrapper:not(:target) {
+//   opacity: 0;
+//   visibility: hidden;
+//   transition: opacity 0.3s, visibility 0.3s;
+// }
+
+// .modal_wrapper:target {
+//   opacity: 1;
+//   visibility: visible;
+//   transition: opacity 0.4s, visibility 0.4s;
+// }
+
+// .modal_wrapper::after {
+//   display: inline-block;
+//   height: 100%;
+//   margin-left: -0.05em;
+//   vertical-align: middle;
+//   content: "";
+// }
+
+.modal_wrapper .modal_window {
+  box-sizing: border-box;
+  display: inline-block;
+  z-index: 20;
+  position: relative;
+  width: 70%;
+  max-width: 600px;
+  padding: 30px 30px 15px;
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+  vertical-align: middle;
+  overflow-y: scroll; //heigth指定が必要（auto以外）
+  height: 100%;
+}
+
+.modal_wrapper .modal_window .modal-content {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/*-----------モーダルバックグラウンド-----------*/
+.modal_overlay {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal_wrapper .modal_close {
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35px;
+  color: #95979c !important;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 35px;
+  text-align: center;
+  text-decoration: none;
+  text-indent: 0;
+}
+
+.modal_wrapper .modal_close:hover {
+  color: #2b2e38 !important;
+}
+
+// モーダルテスト2 ここまで
+
+// ------- 下層ページ共通 ------- //
+
+.bl_headlineTtl {
+  margin-bottom: 5rem;
+  // font-size: 1.9rem;
+}
+
+// ---------WorkFlow --------- //
+.bl_WF_card_ttl {
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.bl_WF_card_txt {
+  margin-bottom: 1.5rem;
+  padding: 0 3rem;
+}
+
+// --------- lawer_page --------- //
+.bl_sectIntro_article {
+  margin-bottom: 4rem;
+}
+
+// --------- ServicePrice --------- //
+
+.bl_serviceSection_wrapper {
+  margin-bottom: 7.2rem;
+  h2 {
+    margin-bottom: 2.4rem;
+  }
+}
+
+.bl_servicePlan {
+  margin-bottom: 3.2rem;
+}
+
+.bl_servicePlan_name {
+  margin-bottom: 2rem;
+}
+
+.bl_servicePlan_contents {
+  list-style-type: disc;
+}
+
+.bl_priceCompare_wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.bl_basicMenu_homepage,
+.bl_basicMenu_maintenance {
+  margin-bottom: 4rem;
+  h3 {
+    margin-bottom: 2.4rem;
+  }
+}
+
+// ------- faq --------- //
+
+.bl_faq_check {
+  display: none; /*チェックボックス非表示*/
+}
+
+.bl_faq {
+  & label {
+    display: block;
+    padding: 11px 12px;
+    color: #2f8fcf;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:hover {
+      color: #e69494;
+    }
+  }
+}
+
+.bl_faq_answ {
+  width: 100%;
+  height: 0; /*---height～で非表示設定することでdisplay:noneより滑らかな動きを表現できる---*/
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.8s;
+}
+
+/*--- clickでanswerを表示 ---*/
+
+.bl_faq_check:checked ~ dl .bl_faq_answ {
+  height: auto; /*--- heightを0→autoにして表示させる ---*/
+  padding: 0 0 2rem;
+  // background-color: rgba(214, 198, 175, 0.2);
+  opacity: 1;
+} //dl外あるいは内にinputを置き、ddの子のdivにクラス付与すれば成功
+
+/* -- 表示されたnavメニューを閉じる設定。普段は非表示（label） -- */
+
+.faq_txt {
+  margin: 24px auto 0 auto;
+  width: 94%;
+}
+
+// --------test--------
+// .bl_faq {
+//   & label {
+//     display: block;
+//     margin: 1.5px 0;
+//     padding: 11px 12px;
+//     cursor: pointer;
+//     transition: all 0.5s;
+//   }
+//   & input {
+//     display: none;
+//   }
+// }
+
+// .bl_faq_check {
+//   display: none;
+// }
+
+// .bl_faq_answ {
+//   height: 0;
+//   padding: 0;
+//   overflow: hidden;
+//   opacity: 0;
+//   transition: 0.8s;
+// }
+
+/*--- clickでanswerを表示 ---*/
+
+// .bl_faq_check:checked ~ dl .bl_faq_answ {
+//   height: auto;
+//   opacity: 1;
+// } //dl外あるいは内にinputを置き、ddの子のdivにクラス付与すれば成功
+
+// .bl_faq_check:checked ~ .test1 {
+//   color: tomato;
+//   font-size: 1.6rem;
+// }
+
+// .bl_faq_check:checked ~ .test2 {
+//   color: tomato;
+//   font-size: 1.6rem;
+// }
+
+// .bl_faq_check:checked ~ .test3 {
+//   color: tomato;
+//   font-size: 1.6rem;
+// }
+
+//------testここまで---------
+
+/*--- clickでanswerを表示 ---*/
+
+.bl_faq_answ_lay {
+  position: relative;
+}
+
+.bl_faq_answ_arrow {
+  width: 0;
+  height: 0;
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
+  border-top: 1rem solid #707070;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+.bl_faq_answ_txt {
+  background-color: rgba(214, 198, 175, 0.2);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.bl_faq_seoList_wrapper {
+  margin-top: 2rem;
+}
+
+.bl_faq_seoList {
+  list-style-type: disc;
+  margin-left: 2rem;
+}
+
+.bl_priceCompare_wrapper {
+  display: flex;
+  flex-flow: row wrap;
 }

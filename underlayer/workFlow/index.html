@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tsumugiya</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="txt/javascript" src="jquery.js"></script>
+  </head>
+
+  <body>
+    <header class="ly_header">
+      <div class="ly_header_inner">
+        <p>分かりやすいホームページ制作</p>
+        <p class="bl_header_logo">
+          <a href=""><img src="../../img/text32.png" alt="サイトロゴ" /></a>
+        </p>
+        <!-- 後でフォルダとロゴ作成-->
+        <!-- メニューボタン -->
+        <input type="checkbox" class="bl_check" id="checked" />
+        <!-- inputを一番上に置く事で間接セレクタを利用できるようにしている-->
+        <label class="bl_menuBtn" for="checked">
+          <!-- forにチェックボックスのid名を指定→ボタン要素を押すと連動してチェックボックスをオンオフしてくれる。-->
+          <span class="bar top"></span>
+          <span class="bar middle"></span>
+          <span class="bar bottom"></span>
+          <span class="bl_menuBtnTxt">MENU</span>
+        </label>
+        <!-- menuバーclickで開き -->
+        <label class="bl_closeMenu" for="checked"> </label>
+        <!-- nav-menu部分clickで閉じる -->
+        <!-- ドロワー -->
+        <!-- <input id="Button1" type="button" value="button" onclick="onButtonClick();" /> -->
+        <!-- 仮 -->
+        <nav class="bl_drawerMenu" id="frame1" for="checked">
+          <!-- ここにjqueryでis_fixedが追加される -->
+          <ul id="nav_menu" class="bl_navItems">
+            <li class="bl_navItem"><a href="#partFeature" class="link-close">3つの特徴</a></li>
+            <li class="bl_navItem"><a href="#partGreeting" class="link-close">ごあいさつ</a></li>
+            <li class="bl_navItem"><a href="#partService" class="link-close">サービス・料金</a></li>
+            <li class="bl_navItem"><a href="#partWorks" class="link-close">作品例</a></li>
+            <li class="bl_navItem"><a href="#partAbout" class="link-close">Tsumugiyaについて</a></li>
+            <li class="bl_navItem"><a href="#partContact" class="link-close">お問い合わせ</a></li>
+          </ul>
+        </nav>
+        <!-- header-nav -->
+      </div>
+      <!-- .ly_header_inner -->
+    </header>
+
+    <main class="content">
+      <!-- service -->
+      <section class="service" id="partService">
+        <div class="ly_content">
+          <h2 class="bl_sectTtl">お申し込みから納品までの流れ</h2>
+          <div class="bl_serviceItems">
+            <div class="bl_card">
+              <h3 class="bl_WF_card_ttl">1.お申し込み</h3>
+              <figure class="bl_card_imgWrapper">
+                <img src="../../img/workFlow_img1.png" width="80%" alt="web-designのイラスト" />
+              </figure>
+              <p class="bl_WF_card_txt">当ホームページのお問い合わせフォームより、ご希望のプランを選択し、必要事項を入力のうえ、お申し込みください。<br />また、サービス内容等について、ご質問、ご意見等がございましたら、同じくお問い合わせフォームにてお問い合わせください。</p>
+            </div>
+            <div class="bl_card">
+              <h3 class="bl_WF_card_ttl">2.ヒアリング</h3>
+              <figure class="bl_card_imgWrapper">
+                <img src="../../img/workFlow_img2.png" width="80%" alt="web-designのイラスト" />
+              </figure>
+              <p class="bl_WF_card_txt">
+                お申し込みをいただけましたら、こちらからヒアリングシートを送らせていただきます。<br />ヒアリングシートは、お客様が描かれているホームページのイメージや方向性を共有するためのアンケートになります。<br />具体的なデザインのイメージがない場合にも、設問に沿ってご回答いただくことで、少しずつイメージが形になっていくようにできておりますので、ご安心ください。
+              </p>
+            </div>
+            <div class="bl_card">
+              <h3 class="bl_WF_card_ttl">３.打ち合わせ・見積書の提示</h3>
+              <figure class="bl_card_imgWrapper">
+                <img src="../../img/workFlow_img3.png" width="80%" alt="web-designのイラスト" />
+              </figure>
+              <p class="bl_WF_card_txt">
+                ご回答いただいたヒアリングシートをもとに、オンラインにて打ち合わせを行わせていただきます。<br />ホームページのイメージや方向性に行き違いのないよう、またお客様が抱かれている疑問や不安などがございましたら、それを解消していただけますよう、直接お話をさせてください。<br />また、この段階で、お見積書も提示させていただきます。<br />打ち合わせ方法については、現在、コロナウィルスの感染状況を鑑みまして、ZOOMやskypeなどのビデオ通話ツールの使用をお願いしております。<br />今後、コロナの状況が改善し次第、関東近県であれば、対面での打ち合わせができるようにいたします。
+              </p>
+            </div>
+            <div class="bl_card">
+              <h3 class="bl_WF_card_ttl">4.契約</h3>
+              <figure class="bl_card_imgWrapper">
+                <img src="../../img/workFlow_img4.png" width="80%" alt="web-designのイラスト" />
+              </figure>
+              <p class="bl_WF_card_txt">当社のサービス内容と見積もり金額にご納得いただけましたら、契約の運びとなります。<br />双方が安心して最後まで取引ができますよう、契約書にて契約を取り交わします。</p>
+            </div>
+            <div class="bl_card">
+              <h3 class="bl_WF_card_ttl">5.ワイヤーフレーム作成</h3>
+              <figure class="bl_card_imgWrapper">
+                <img src="../../img/workFlow_img5.png" width="80%" alt="web-designのイラスト" />
+              </figure>
+              <p class="bl_WF_card_txt">
+                お客様と打ち合わせた内容をもとにワイヤーフレームを作成します。<br />ワイヤーフレームは、サイトに含まれるコンテンツと、その順序や配置などを大まかに示した設計書のことです。<br />詳細なデザインは、実際の画面幅やこの後、お客様にご提供いただくテキストや写真などの素材によっても変わってきますので、あくまでもサイト構造を示す仮のものとお考えください。
+              </p>
+            </div>
+            <div class="bl_card">
+              <h3 class="bl_WF_card_ttl">6.素材（ロゴ・テキスト・画像）の提出</h3>
+              <figure class="bl_card_imgWrapper">
+                <img src="../../img/workFlow_img6.png" width="80%" alt="web-designのイラスト" />
+              </figure>
+              <p class="bl_WF_card_txt">ワイヤーフレームが決定したら、次にロゴやテキスト（文章）、画像など、実際にWebサイトに使用する素材をお客様ご自身からご提供いただきます。<br />※ロゴ作成、ライティング（文章作成）、写真撮影についてもご依頼されたい場合には、追加オプションをご案内させていただきますので、お気軽にご相談ください。</p>
+            </div>
+            <div class="bl_card">
+              <h3 class="bl_WF_card_ttl">7.デザインカンプ作成</h3>
+              <figure class="bl_card_imgWrapper">
+                <img src="../../img/workFlow_img7.png" width="80%" alt="web-designのイラスト" />
+              </figure>
+              <p class="bl_WF_card_txt">ご提供いただいた素材をワイヤーフレームに当てはめ、サイト全体のバランスを調整しながらデザインカンプ（デザインの見本）を作成します。<br />お客様の抱かれるイメージとの齟齬が生じぬよう、適宜、確認と修正を行いながらデザインを作成していきます。</p>
+            </div>
+            <div class="bl_card">
+              <h3 class="bl_WF_card_ttl">8.コーディング</h3>
+              <figure class="bl_card_imgWrapper">
+                <img src="../../img/workFlow_img8.png" width="80%" alt="web-designのイラスト" />
+              </figure>
+              <p class="bl_WF_card_txt">デザインが決定したら、次にコーディング（htmlやcss、JavaScriptなどの言語を使って実際のWebサイトを作り上げる作業）をしていきます。</p>
+            </div>
+            <div class="bl_card">
+              <h3 class="bl_WF_card_ttl">9.ドメイン・サーバー設定</h3>
+              <figure class="bl_card_imgWrapper">
+                <img src="../../img/workFlow_img9.png" width="80%" alt="web-designのイラスト" />
+              </figure>
+              <p class="bl_WF_card_txt">出来上がったWebサイトをインターネット上に公開するために、ドメイン・サーバーのレンタル会社と契約し、各種設定を行います。</p>
+              <a class="bl_pageLink" href="#">サーバー・ドメインについて</a>
+            </div>
+            <div class="bl_card">
+              <h3 class="bl_WF_card_ttl">10.Web公開・納品</h3>
+              <figure class="bl_card_imgWrapper">
+                <img src="../../img/workFlow_img10.png" width="80%" alt="web-designのイラスト" />
+              </figure>
+              <p class="bl_WF_card_txt">レンタルしたWebサーバー上にWebサイトのデータをアップすることで、インターネット上にWebサイトが公開されます。<br />公開後、動作や見え方に問題がないかを確認したうえで納品となります。</p>
+            </div>
+            <div class="bl_card">
+              <h3 class="bl_WF_card_ttl">11.運営・管理</h3>
+              <figure class="bl_card_imgWrapper">
+                <img src="../../img/workFlow_img11.png" width="80%" alt="web-designのイラスト" />
+              </figure>
+              <p class="bl_WF_card_txt">Web公開後は、「お知らせ」や「ブログ」などのコンテンツをお客様ご自身で更新するく事ができますので、出来上がったホームページをどんどん充実させていっていただきたいと思います。<br />WordPressに関するご質問や、トップページなどのテキストや画像の修正などのご要望がございましたら、どうぞお気軽にご連絡ください。</p>
+            </div>
+          </div>
+          <!-- bl_serviceItems -->
+          <p class="ly_pageLink"><a href="#">プラン・料金詳細 ></a></p>
+        </div>
+        <!-- ly_content -->
+      </section>
+      <!-- service -->
+
+      <!-- contact -->
+      <section class="contact" id="partContact">
+        <div class="ly_content bl_contact_wrapper">
+          <h2 class="bl_sectTtl">Contact</h2>
+          <p class="ly_contactTxt">web制作のご依頼は下記フォームよりお申し込みください。<br />また、web制作に関する事で分からない事がありましたら、お気軽にご相談ください。</p>
+          <form action=" .php" method="post" name="contact-form" class="input_box_wrapper">
+            <dl class="ly_contactList">
+              <dt class="ly_CL_left">貴社名</dt>
+              <dd class="ly_CL_right">
+                <span><input type="text" name="company-name" value size="40" placeholder="Tsumugiya" class="bl_inputbox" required /></span>
+              </dd>
+              <dt class="ly_CL_left">お名前<span class="required">必須</span></dt>
+              <dd class="ly_CL_right">
+                <span><input type="text" name="your-name" value size="40" placeholder="出座印　紡" class="bl_inputbox" required /></span>
+              </dd>
+              <dt class="ly_CL_left">メールアドレス<span class="required">必須</span></dt>
+              <dd class="ly_CL_right">
+                <span><input type="text" name="mail-adress" value size="40" placeholder="Tsumugiya@yahoo.co.jp" class="bl_inputbox" required /></span>
+              </dd>
+              <dt class="ly_CL_left">電話番号</dt>
+              <dd class="ly_CL_right">
+                <span><input type="text" name="phone-number" value size="40" placeholder="半角で入力" class="bl_inputbox" required /></span>
+              </dd>
+              <dt class="ly_CL_left">お問い合わせ内容<span class="required">必須</span></dt>
+              <dd class="ly_CL_right">
+                <span><textarea name="your-message" placeholder="メッセージを入力" cols="40" rows="8" class="bl_inputbox" required></textarea></span>
+              </dd>
+            </dl>
+            <p class="ly_contactBtn"><input type="submit" value="入力内容を確認" class="sent_btn bl_inputbox" /></p>
+          </form>
+        </div>
+        <!-- ly_content -->
+      </section>
+      <!-- contact -->
+    </main>
+    <!-- content -->
+
+    <footer class="ly_footer">
+      <div class="ly_footer_innner">
+        <p class="footer-logo">
+          <a href=""><img src="../../img/text32.png" alt="サイトロゴ" /></a>
+        </p>
+        <ul class="ly_footerNav navItems">
+          <li class="nav_item"><a href="#" class="">3つの特徴</a></li>
+          <li class="nav_item"><a href="#" class="">ごあいさつ</a></li>
+          <li class="nav_item"><a href="#" class="">サービス内容</a></li>
+          <li class="nav_item"><a href="#" class="">作品例</a></li>
+          <li class="nav_item"><a href="#" class="">Tsumugiyaについて</a></li>
+          <li class="nav_item"><a href="#" class="">お問い合わせ</a></li>
+        </ul>
+        <p class="ly_copyright">
+          <small>&copy; 2021　○○○○　All Rights Reserved.</small>
+        </p>
+      </div>
+      <!-- ly_footer_innner -->
+    </footer>
+  </body>
+</html>
