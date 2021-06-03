@@ -1,7 +1,13 @@
 //--------------------------スクロールボタン設定--------------------
+//wordpress組み込み時には、「＄」を「jQuery」に変換すること
 
-$(function ($) {
-  var scrollBtn = $(".bl_scroll_btn");
+// $(function () {
+//   // if document is ready エラーチェック用
+//   alert("jQuery is ready.");
+// });
+
+$(function () {
+  var scrollBtn = $(".el_scroll_btn");
   scrollBtn.hide();
   $(window).scroll(function () {
     if ($(this).scrollTop() > 300) {
@@ -39,6 +45,12 @@ $(function ($) {
     }
   });
 
+  //メニューをゆっくり開閉
+
+  $(".bl_menuBtn").on("click", function (event) {
+    $(".bl_drawerMenu").fadeToggle(500);
+  });
+
   //----------------------nav_menu（=開いたメニュー）クリックすると、menu_btnのclick（→メニューを閉じる）を実行----------------
 
   $("#nav_menu a[href]").on("click", function (event) {
@@ -46,16 +58,23 @@ $(function ($) {
     $(".bl_menuBtn").trigger("click");
   });
 
-  //参考サイト:https://webcre8tor.com/snippets/conditional-branching-jquery.html
-
-  $(".bl_menuBtn").on("click", function (event) {
-    $(".bl_drawerMenu").fadeOut("slow");
+  $(".bl_closeMenu").on("click", function (event) {
+    //参考:https://teratail.com/questions/173001
+    $(".bl_menuBtn").trigger("click");
   });
+
+  //メニューをゆっくり閉じるための記述？
+
+  // $(".bl_menuBtn").on("click", function (event) {
+  //   $(".bl_drawerMenu").fadeOut("slow");
+  // });
   // .click(function) →　.on("click",function) に書き換え
   // $(".bl_menuBtn").click(function () {
   //   $(".bl_drawerMenu").addClass("is_show");
   // });
 });
+
+//参考サイト:https://webcre8tor.com/snippets/conditional-branching-jquery.html
 
 $(function () {
   var $win = $(window),

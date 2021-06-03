@@ -1,18 +1,21 @@
 .ly_header,
 .ly_footer {
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 1% 4%;
+  background-color: #ddd; /* 配置確認用 */
 }
 
+//header
 .ly_header {
   height: 8rem;
 }
 
 // header,footer及びfullwidthのimg以外のレイアウト
 .ly_content {
-  max-width: 320px;
-  padding: 60px 15px;
+  width: 100%;
+  max-width: 90%;
+  padding: 5rem 1rem;
   margin-right: auto;
   margin-left: auto;
   & > h1,
@@ -20,6 +23,36 @@
     text-align: center;
   }
 }
+
+// 768px以上共通設定
+@media screen and (min-width: 768px) {
+  .ly_header {
+    height: 10rem;
+  }
+  .ly_content {
+    max-width: 90%;
+  }
+  .ly_content_col {
+    // display: flex;
+  }
+}
+
+// 960px以上共通設定
+@media screen and (min-width: 960px) {
+  .ly_content {
+    max-width: 70%;
+  }
+}
+
+// // タブレットサイズ設定
+// .ly_content_col {
+//   justify-content: space-between;
+// }
+
+// // PCサイズ設定
+// .ly_content_col {
+//   justify-content: center;
+// }
 
 /* introduction */
 
@@ -37,43 +70,27 @@
 /* feature */
 
 .ly_ftContactTxt {
-  margin-bottom: 8rem;
+  margin-bottom: 6rem;
 }
 
 /* WORK */
 
 .ly_workContent {
-  padding: 60px 15px;
+  max-width: 100%;
   background-image: url(../img/bg-works.jpeg);
-  & > h2 {
-    text-align: center;
+  padding: 5rem 2rem;
+  & p {
+    margin-bottom: 5rem;
   }
 }
 
 .ly_workItem {
   text-align: center;
-  padding: 10%;
+  // justify-content: center;
+  // padding: 10%;
 }
 
 /*  About  */
-.ly_aboutList {
-  display: flex;
-  flex-flow: row wrap;
-  width: 100%;
-}
-
-.ly_AL_left {
-  flex-basis: 30%;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 5%;
-}
-
-.ly_AL_right {
-  flex-basis: 70%;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 2%;
-  margin-bottom: 5%;
-}
 
 /*  コンタクトフォーム  */
 .ly_contactTxt {
@@ -88,11 +105,11 @@
 }
 
 .ly_CL_left {
-  flex-basis: 100%; //pcサイズの時に要変更
+  flex-basis: 35%; //pcサイズの時に要変更
 }
 
 .ly_CL_right {
-  flex-basis: 60%; //pcサイズの時に要変更
+  flex-basis: 65%; //pcサイズの時に要変更
   border: 1px solid #ccc;
   border-radius: 3px;
   margin-bottom: 5%;
@@ -102,6 +119,15 @@
 .ly_contactBtn {
   margin: 0 auto;
   text-align: center;
+}
+
+// 768px以上共通設定
+@media screen and (min-width: 768px) {
+  .ly_contactList {
+    // flex-direction: row;
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 /* footer */

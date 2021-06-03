@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Tsumugiya</title>
+    <meta name="description" content="分かりやすく管理しやすいホームページを安価に制作いたします。ホームページ運営が初めての方にも安心の運営サポート付きで月額2万円からのプランをご用意しました。" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="format-detection" content="telephone=no" />
@@ -10,41 +11,35 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script type="txt/javascript" src="jquery.js"></script>
-    <!-- <script type="text/javascript">
-      function onButtonClick() {
-        var elem = document.getElementById("frame1");
-        elem.classList.add("hide");
-      }
-    </script> -->
+    <script type="text/javascript" src="jquery.js"></script>
   </head>
 
   <body>
     <header class="ly_header">
       <div class="ly_header_inner">
         <p>分かりやすいホームページ制作</p>
-        <h1 class="bl_header_logo">
+        <h1 class="bl_headerLogo_wrapper">
           <a href=""><img src="img/text32.png" alt="サイトロゴ" /></a>
         </h1>
-        <!-- 後でフォルダとロゴ作成-->
+
         <!-- メニューボタン -->
-        <input type="checkbox" class="bl_check" id="checked" />
+        <input type="checkbox" class="bl_checkbox" id="checked" />
         <!-- inputを一番上に置く事で間接セレクタを利用できるようにしている-->
         <label class="bl_menuBtn" for="checked">
           <!-- forにチェックボックスのid名を指定→ボタン要素を押すと連動してチェックボックスをオンオフしてくれる。-->
           <span class="bar top"></span>
           <span class="bar middle"></span>
           <span class="bar bottom"></span>
-          <span class="bl_menuBtnTxt">MENU</span>
+          <span class="bl_menuBtn_txt">MENU</span>
         </label>
-        <!-- menuバーclickで開き -->
-        <label class="bl_closeMenu" for="checked"> </label>
-        <!-- nav-menu部分clickで閉じる -->
+
+        <!-- menuボタンclickで全画面展開 -->
+        <span class="bl_closeMenu" for="checked"> </span>
+        <!-- labelじゃなくspanでfor連携してるけどこれでいい・・・？ -->
+
         <!-- ドロワー -->
-        <!-- <input id="Button1" type="button" value="button" onclick="onButtonClick();" /> -->
         <!-- 仮 -->
         <nav class="bl_drawerMenu" id="frame1" for="checked">
-          <!-- ここにjqueryでis_fixedが追加される -->
           <ul id="nav_menu" class="bl_navItems">
             <li class="bl_navItem"><a href="#partFeature" class="link-close">3つの特徴</a></li>
             <li class="bl_navItem"><a href="#partGreeting" class="link-close">ごあいさつ</a></li>
@@ -56,17 +51,15 @@
         </nav>
         <!-- header-nav -->
       </div>
-      <!-- .ly_header_inner -->
+      <!-- ly_header_inner -->
     </header>
 
     <main class="content">
       <!-- mainVisual -->
       <div class="bl_mainVisual">
         <div class="bl_bgFullWidth">
-          <img src="img/bg-mainVisual.jpeg" width="100%" height="344rem" />
+          <img src="img/bg-mainVisual.jpeg" width="100%" height="260rem" />
         </div>
-        <!-- <div class="bl_mvBackMemo"><img src="img/mv_paper.png" width="100%"" height="auto" class="fadeIn"></div> よくない　-->
-
         <div class="bl_mvTxts">
           <p class="bl_mvTxt bl_mvTxt01 fadeIn">想いがきちんと伝わる</p>
           <p class="bl_mvTxt bl_mvTxt02 fadeIn">シンプルで扱いやすい</p>
@@ -74,12 +67,24 @@
           <p class="bl_mvTxt bl_mvTxt04 fadeIn">そんなホームページを</p>
           <p class="bl_mvTxt bl_mvTxt05 fadeIn">ご提案いたします</p>
         </div>
-        <!-- bl_mvTxt-->
-        <a class="bl_mvTxt bl_mvBtn ly_mvBtn bl_mvTxt06 fadeIn"><p>お問い合わせはコチラ</p></a>
+        <!-- bl_mvTxts-->
+        <a href="#partContact" class="bl_mvTxt bl_mvTxt06 bl_mvBtn ly_mvBtn fadeIn"><p>お問い合わせはコチラ</p></a>
       </div>
 
       <!-- introduction -->
 
+      <section class="information">
+        <div class="ly_content bl_infoContent">
+          <h2 class="bl_sectTtl">新着情報</h2>
+          <dr class="bl_newInfo_list">
+            <dt class="bl_newInfo_left"><span>キャンペーン</span><time>2021.5.1</time></dt>
+            <dd class="bl_newInfo_right">ホームページ公開を記念して、セール開催中です</dd>
+            <dt class="bl_newInfo_left"><span>お知らせ</span><time>2021.4.1</time></dt>
+            <dd class="bl_newInfo_right">ホームページ公開しました</dd>
+          </dr>
+          <a class="bl_pageLink" href="#">全ての記事を見る</a>
+        </div>
+      </section>
       <section class="introduction">
         <div class="ly_content">
           <h2 class="bl_sectTtl">最近、こんな声をよく聞きます</h2>
@@ -133,9 +138,9 @@
       <!-- feature -->
       <section id="partFeature">
         <!-- <a name="partFeature"> -->
-        <div class="ly_content">
+        <div class="ly_content ly_content_col">
           <h2 class="bl_sectTtl">Tsumugiyaの３つの特徴</h2>
-          <div class="bl_featureItems">
+          <div class="bl_cardUnit bl_cardUnit_col3">
             <div class="bl_card">
               <figure class="bl_card_imgWrapper">
                 <img src="img/feature-img01.png" width="80%" alt="快適なホームページのイラスト" />
@@ -143,14 +148,16 @@
               <h3 class="bl_card_ttl">誰もが快適に使えるホームページ</h3>
               <p class="bl_card_txt">ターゲットに向けて伝えたい事を効果的に伝えることのできるデザインと、訪問者の導線を意識した分かりやすい構成で、送り手と受け手の双方の思いがマッチングする、誰もが快適に使えるホームページをデザインします。</p>
             </div>
+            <!-- bl_card -->
             <div class="bl_card">
               <figure class="bl_card_imgWrapper">
-                <img src="img/feature-img03.png" width="80%" alt="快適な管理更新のイラスト" />
+                <img src="img/feature-img03.png" width="80%" height="177px" alt="快適な管理更新のイラスト" />
               </figure>
               <h3 class="bl_card_ttl">管理・更新が簡単</h3>
               <p class="bl_card_txt">WordPressというシステムを使用することで、お知らせやブログなどをお客さまご自身で簡単に更新する事ができます。スマホアプリを利用すれば、スマホから手軽に更新することができるようになります。</p>
               <a class="bl_pageLink" href="#">WordPressについて</a>
             </div>
+            <!-- bl_card -->
             <div class="bl_card">
               <figure class="bl_card_imgWrapper">
                 <img src="img/feature-img02.png" width="80%" alt="レスポンシブデザインのイラスト" />
@@ -160,6 +167,7 @@
               <a class="bl_pageLink" href="#">サーバー、ドメインについて</a>
               <a class="bl_pageLink" href="#">プラン・料金詳細</a>
             </div>
+            <!-- bl_card -->
           </div>
           <!-- bl_featureItems -->
           <div class="feature_contact">
@@ -170,7 +178,7 @@
             </div>
           </div>
         </div>
-        <!-- ly_content -->
+        <!-- ly_content ly_content_col-->
         <!-- </a> -->
       </section>
       <!-- introduction -->
@@ -226,7 +234,7 @@
       <section class="service" id="partService">
         <div class="ly_content">
           <h2 class="bl_sectTtl">Service</h2>
-          <div class="bl_serviceItems">
+          <div class="bl_cardUnit bl_cardUnit_col3">
             <div class="bl_card">
               <figure class="bl_card_imgWrapper">
                 <img src="img/service-img01.png" width="80%" alt="web-designのイラスト" />
@@ -263,15 +271,17 @@
 
       <!-- works -->
       <section class="works" id="partWorks">
-        <div class="ly_workContent">
+        <div class="ly_content ly_workContent">
           <h2 class="bl_sectTtl">WORKS</h2>
           <p>これまでに携わってきたお仕事やデモで作成したホームページです。</p>
-          <div class="ly_workItem_wrapper bl_sa">
-            <div class="ly_workItem">
+          <div class="bl_cardUnit bl_cardUnit_col3 ly_workItem_wrapper bl_sa">
+            <div class="bl_card ly_workItem">
+              <!-- <div class="ly_workItem_wrapper bl_sa">
+               <div class="ly_workItem"> -->
               <a href="#modal01">
-                <img src="img/owada-img.jpg" alt="" class="bl_workItemImg" />
+                <img src="img/owada-img.jpg" alt="" width="80%" class="bl_workItemImg" />
 
-                <p class="work_txt">筑西市の個人ピアノ教室ホームページ</p>
+                <p class="bl_workTxt">筑西市の個人ピアノ教室ホームページ</p>
               </a>
               <div class="modal_wrapper" id="modal01">
                 <a href="#!" class="modal_overlay"></a>
@@ -283,11 +293,12 @@
                 </div>
               </div>
             </div>
-            <div class="ly_workItem">
+            <!-- bl_card ly_workItem -->
+            <div class="bl_card ly_workItem">
               <a href="#modal02">
-                <img src="img/isara-img.jpg" alt="" class="bl_workItemImg" />
+                <img src="img/isara-img.jpg" alt="" width="80%" class="bl_workItemImg" />
 
-                <p class="work_txt">isaraホームページの模写</p>
+                <p class="bl_workTxt">isaraホームページの模写</p>
               </a>
               <div class="modal_wrapper" id="modal02">
                 <a href="#!" class="modal_overlay"></a>
@@ -299,11 +310,12 @@
                 </div>
               </div>
             </div>
-            <div class="ly_workItem">
+            <!-- bl_card ly_workItem -->
+            <div class="bl_card ly_workItem">
               <a href="#modal03">
-                <img src="img/jin-img.jpg" alt="" class="bl_workItemImg" />
+                <img src="img/airbnb-img.jpg" alt="" width="80%" class="bl_workItemImg" />
 
-                <p class="work_txt">airbnbホームページの模写</p>
+                <p class="bl_workTxt">airbnbホームページの模写</p>
               </a>
               <div class="modal_wrapper" id="modal03">
                 <a href="#!" class="modal_overlay"></a>
@@ -315,8 +327,9 @@
                 </div>
               </div>
             </div>
+            <!-- bl_card ly_workItem -->
           </div>
-          <!-- ly_workItem_wrapper -->
+          <!-- bl_cardUnit bl_cardUnit_col3 ly_workItem_wrapper bl_sa -->
         </div>
         <!-- ly_workContent -->
       </section>
@@ -325,17 +338,17 @@
       <section class="about" id="partAbout">
         <div class="ly_content">
           <h2 class="bl_sectTtl">About</h2>
-          <dl class="ly_aboutList">
-            <dt class="ly_AL_left">名称</dt>
-            <dd class="ly_AL_right">Tsumugiya（つむぎや）</dd>
-            <dt class="ly_AL_left">デザイナー</dt>
-            <dd class="ly_AL_right">keh</dd>
-            <dt class="ly_AL_left">経歴</dt>
-            <dd class="ly_AL_right">1979年生まれ<br />大学卒業後、地方公務員、製板会社を経て2021年より茨城にてフリーランスのWeb制作をしております。<br />趣味は音楽とアウトドアです。</dd>
-            <dt class="ly_AL_left">スキル</dt>
-            <dd class="ly_AL_right">HTML5/CSS3/JavaScript<br />/jQuery/PHP/ WordPress</dd>
-            <dt class="ly_AL_left">コンセプト</dt>
-            <dd class="ly_AL_right">分かりやすさと使いやすさに軸をおいて、サイト運営者とサイト訪問者の気持ちがホーページ上で交わることのできるホームページ作りを目指しております。<br />人々の思いを紡ぐ事のできるホームページ作りをしたいという思いを「Tsumugiya（つむぎや）」という屋号に込めました。</dd>
+          <dl class="bl_aboutList">
+            <dt class="bl_AL_left">名称</dt>
+            <dd class="bl_AL_right">Tsumugiya（つむぎや）</dd>
+            <dt class="bl_AL_left">デザイナー</dt>
+            <dd class="bl_AL_right">keh</dd>
+            <dt class="bl_AL_left">経歴</dt>
+            <dd class="bl_AL_right">1979年生まれ<br />大学卒業後、地方公務員、製板会社を経て2021年より茨城にてフリーランスのWeb制作をしております。<br />趣味は音楽とアウトドアです。</dd>
+            <dt class="bl_AL_left">スキル</dt>
+            <dd class="bl_AL_right">HTML5/CSS3/jQuery<br />/JavaScript/PHP/ WordPress</dd>
+            <dt class="bl_AL_left">コンセプト</dt>
+            <dd class="bl_AL_right">分かりやすさと使いやすさに軸をおいて、サイト運営者とサイト訪問者の気持ちがホーページ上で交わることのできるホームページ作りを目指しております。<br />人々の思いを紡ぐ事のできるホームページ作りをしたいという思いを「Tsumugiya（つむぎや）」という屋号に込めました。</dd>
           </dl>
         </div>
         <!-- ly_content -->
@@ -351,23 +364,23 @@
             <dl class="ly_contactList">
               <dt class="ly_CL_left">貴社名</dt>
               <dd class="ly_CL_right">
-                <span><input type="text" name="company-name" value size="40" placeholder="Tsumugiya" class="bl_inputbox" required /></span>
+                <span><input type="text" name="company-name" value size="34" placeholder="Tsumugiya" class="bl_inputbox" required /></span>
               </dd>
               <dt class="ly_CL_left">お名前<span class="required">必須</span></dt>
               <dd class="ly_CL_right">
-                <span><input type="text" name="your-name" value size="40" placeholder="出座印　紡" class="bl_inputbox" required /></span>
+                <span><input type="text" name="your-name" value size="34" placeholder="出座印　紡" class="bl_inputbox" required /></span>
               </dd>
               <dt class="ly_CL_left">メールアドレス<span class="required">必須</span></dt>
               <dd class="ly_CL_right">
-                <span><input type="text" name="mail-adress" value size="40" placeholder="Tsumugiya@yahoo.co.jp" class="bl_inputbox" required /></span>
+                <span><input type="text" name="mail-adress" value size="34" placeholder="Tsumugiya@yahoo.co.jp" class="bl_inputbox" required /></span>
               </dd>
               <dt class="ly_CL_left">電話番号</dt>
               <dd class="ly_CL_right">
-                <span><input type="text" name="phone-number" value size="40" placeholder="半角で入力" class="bl_inputbox" required /></span>
+                <span><input type="text" name="phone-number" value size="34" placeholder="半角で入力" class="bl_inputbox" required /></span>
               </dd>
               <dt class="ly_CL_left">お問い合わせ内容<span class="required">必須</span></dt>
               <dd class="ly_CL_right">
-                <span><textarea name="your-message" placeholder="メッセージを入力" cols="40" rows="8" class="bl_inputbox" required></textarea></span>
+                <span><textarea name="your-message" placeholder="メッセージを入力" cols="34" rows="8" class="bl_inputbox" required></textarea></span>
               </dd>
             </dl>
             <p class="ly_contactBtn"><input type="submit" value="入力内容を確認" class="sent_btn bl_inputbox" /></p>
@@ -377,8 +390,9 @@
       </section>
       <!-- contact -->
       <div class="el_scroll_btn">
-        <p>↑</p>
-        <p>TOP</p>
+        <div><img src="img/arrow_top.png" width="48rem" height="48rem" /></div>
+        <!-- <p>↑</p>
+        <p>TOP</p> -->
       </div>
     </main>
     <!-- content -->
@@ -404,5 +418,23 @@
     </footer>
 
     <script src="script.js"></script>
+    <!-- <script>
+      $(function () {
+        var scrollBtn = $(".el_scroll_btn");
+        scrollBtn.hide();
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 300) {
+            //300より大きい時、フェードインし
+            scrollBtn.fadeIn("slow"); //表示速度を第一引数で"1000"と指定しているが反映されず
+          } else {
+            scrollBtn.fadeOut("slow"); //300以下の場合、フェードアウトする。
+          }
+        });
+      });
+      $(function () {
+        // if document is ready
+        alert("jQuery is ready.");
+      });
+    </script> -->
   </body>
 </html>

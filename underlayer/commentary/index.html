@@ -10,33 +10,33 @@
     <link rel="stylesheet" href="../../css/style.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script type="txt/javascript" src="jquery.js"></script>
-    <script type="text/javascript"src="../../script.js"></script>
+    <script type="text/javascript" src="../../jquery.js"></script>
   </head>
 
   <body>
     <header class="ly_header">
       <div class="ly_header_inner">
         <p>分かりやすいホームページ制作</p>
-        <p class="bl_header_logo">
+        <p class="bl_headerLogo_wrapper">
           <a href=""><img src="../../img/text32.png" alt="サイトロゴ" /></a>
         </p>
         <!-- 後でフォルダとロゴ作成-->
         <!-- メニューボタン -->
-        <input type="checkbox" class="bl_check" id="checked" />
+        <input type="checkbox" class="bl_checkbox" id="checked" />
         <!-- inputを一番上に置く事で間接セレクタを利用できるようにしている-->
         <label class="bl_menuBtn" for="checked">
           <!-- forにチェックボックスのid名を指定→ボタン要素を押すと連動してチェックボックスをオンオフしてくれる。-->
           <span class="bar top"></span>
           <span class="bar middle"></span>
           <span class="bar bottom"></span>
-          <span class="bl_menuBtnTxt">MENU</span>
+          <span class="bl_menuBtn_txt">MENU</span>
         </label>
-        <!-- menuバーclickで開き -->
-        <label class="bl_closeMenu" for="checked"> </label>
-        <!-- nav-menu部分clickで閉じる -->
+
+        <!-- menuボタンclickで全画面展開 -->
+        <span class="bl_closeMenu" for="checked"> </span>
+        <!-- labelじゃなくspanでfor連携してるけどこれでいい・・・？ -->
+
         <!-- ドロワー -->
-        <!-- <input id="Button1" type="button" value="button" onclick="onButtonClick();" /> -->
         <!-- 仮 -->
         <nav class="bl_drawerMenu" id="frame1" for="checked">
           <!-- ここにjqueryでis_fixedが追加される -->

@@ -421,7 +421,7 @@ body {
   font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
   color: #707070;
   line-height: 1.8;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
 a {
@@ -447,37 +447,19 @@ a {
   }
 }
 
-// a:link {
-//   /* リンクカラー */
-//   color: #333;
-//   text-decoration: none;
-// }
-
-// a:visited {
-//   /* 訪問済みのリンクカラー */
-//   color: #333;
-//   text-decoration: none;
-// }
-
-// a:hover {
-//   /* ホバー時のリンクカラー */
-//   color: #900;
-//   text-decoration: none;
-// }
-
-// a img {
-//   /* 画像をリンク設定した時に出るborderの消去 */
-//   border-width: 0px;
-//   border-style: none;
-//   border-color: #fff;
-//   background: transparent;
-// }
-
 ul,
 ol,
 li {
   /*  */
   list-style-type: none;
+}
+
+// 960px以上共通設定
+@media screen and (min-width: 960px) {
+  body {
+    line-height: 2;
+    font-size: 1.8rem;
+  }
 }
 
 /* -------- mainVisual --------- */

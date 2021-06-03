@@ -1,4 +1,4 @@
-.bl_header_logo {
+.bl_headerLogo_wrapper {
   height: 5rem;
   display: flex;
   align-items: center;
@@ -10,8 +10,8 @@
 // トップページセクション共通
 
 .bl_sectTtl {
-  margin-bottom: 5rem;
   font-size: 1.9rem;
+  margin-bottom: 5rem;
 }
 
 // 横幅100％画像共通
@@ -25,10 +25,10 @@
 // .bl_menuBtn {
 //   display: none;
 //   transition: 1;
-// }/* ナビメニューが常時表示されるので、メニューボタンは不要に→非表示らしいが、blockでもよくない？ → スマホ版作成時現在は不要。だが、PC版で必要になるかも*/
+// }/* ナビメニューが常時表示されるので、メニューボタンは不要に → スマホ版作成時現在は不要。だが、PC版で必要*/
 
 .bl_drawerMenu {
-  position: fixed;
+  position: fixed; //bl_以外で設定するよう検討、以下top,right.bottom,rightも
   top: 0;
   left: 0;
   z-index: 5;
@@ -48,7 +48,7 @@
 // 開いたメニューを閉じるときにfadeOutさせるにはJS設定が必要
 
 /* checked */
-.bl_check:checked ~ .bl_drawerMenu {
+.bl_checkbox:checked ~ .bl_drawerMenu {
   /* checkがonになっている時bl_drawerMenuを開く */
   display: block;
   animation: fadeIn 2s ease 0s 1 normal;
@@ -99,7 +99,7 @@
 }
 
 /* -- チェックボックスを非表示 -- */
-.bl_check {
+.bl_checkbox {
   display: none;
 }
 
@@ -108,11 +108,11 @@
 /* ここからコピペ */
 
 .bl_menuBtn {
-  position: fixed;
+  position: fixed; //bl_以外で設定するよう検討、以下top,right.bottom,rightも
   display: block;
   top: 10px;
   right: 8px;
-  width: 64px;
+  width: 64px; //bl_以外で設定するよう検討
   height: 64px;
   background-color: #fff;
   border-radius: 5px;
@@ -123,13 +123,28 @@
   &:hover .bar {
     background: #999;
   }
-  &:hover .bl_menuBtnTxt {
+  &:hover .bl_menuBtn_txt {
     color: #999;
   }
 }
 
+.bl_menuBtn_txt {
+  position: absolute; //bl_以外で設定するよう検討、以下top,right.bottom,rightも
+  top: 42px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-size: 1rem;
+  color: #333;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
 .bar {
-  position: absolute;
+  position: absolute; //bl_以外で設定するよう検討、以下top,right.bottom,rightも
   top: 12px;
   left: 16px;
   display: block;
@@ -153,27 +168,12 @@
   }
 }
 
-.bl_menuBtnTxt {
-  position: absolute;
-  top: 42px;
-  left: 0;
-  right: 0;
-  margin: auto;
-  font-size: 1rem;
-  color: #333;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  display: block;
-  visibility: visible;
-  opacity: 1;
-}
-
 /* ここからコピペ */
 
 /* メニュー表示時に画面のどこを押してもメニューを閉じるようにする為に画面一杯に要素を広げる */
 
 .bl_closeMenu {
-  position: fixed;
+  position: fixed; //bl_以外で設定するよう検討、以下top,right.bottom,rightも
   top: 0;
   left: 0;
   width: 100%;
@@ -184,13 +184,13 @@
 }
 
 /* checked */
-.bl_check:checked ~ .bl_closeMenu {
+.bl_checkbox:checked ~ .bl_closeMenu {
   visibility: visible;
   animation: fadeOut 2s ease 0s 1 normal;
   -webkit-animation: fadeOut 2s ease 0s 1 normal;
   transition: 1s;
   opacity: 1;
-  z-index: 5; /* ピアノサイトの場合、この階層設定でメニュー閉じまで機能するが・・・
+  z-index: 5;
 }
 
 @keyframes fadeOut {
@@ -202,35 +202,26 @@
     display: none;
   } /*アニメーション終了時は透過*/
 }
-// @-webkit-keyframes fadeOut { 上と重複するので多分削除して問題ないはず
-//   0% {
-//     opacity: 1;
-//   }
-//   100% {
-//     opacity: 0;
-//     display: none;
-//   }
-// }
 
-.bl_check:checked ~ .bl_menuBtn .bl_menuBtnText {
+.bl_checkbox:checked ~ .bl_menuBtn .bl_menuBtn_txt {
   visibility: hidden;
   opacity: 0; /* menuテキストを透明に */
 }
 
-.bl_check:checked ~ .bl_menuBtn .bar.top {
-  width: 40px;
+.bl_checkbox:checked ~ .bl_menuBtn .bar.top {
+  width: 4rem;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg); /* 線を斜めに */
 }
 
-.bl_check:checked ~ .bl_menuBtn .bar.middle {
+.bl_checkbox:checked ~ .bl_menuBtn .bar.middle {
   opacity: 0; /* 線を透明に */
 }
 
-.bl_check:checked ~ .bl_menuBtn .bar.bottom {
-  width: 40px;
-  top: 40px;
+.bl_checkbox:checked ~ .bl_menuBtn .bar.bottom {
+  width: 4rem;
+  top: 4rem;
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg); /* 線を斜めに */
@@ -242,8 +233,8 @@
 }
 
 .bl_mvTxts {
-  position: absolute;
-  top: 50%;
+  position: absolute; //bl_以外で設定するよう検討、以下top,right.bottom,rightも
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -38%);
   -webkit-transform: translate(-50%, -38%);
@@ -275,13 +266,6 @@
 }
 
 /*以下遅延の指定*/
-// .bl_mvBackMemo {  よくない
-//   position: absolute;
-//   top: 10%;
-//   left: 20%;
-//   z-index: 1;
-//   animation-delay: 0.5s;
-// }
 
 .bl_mvTxt01 {
   animation-delay: 0.8s;
@@ -309,16 +293,65 @@
 
 .bl_mvBtn {
   display: inline-block;
-  // border: solid 0.1rem #707070;
   border-radius: 8px;
   font-size: 1.2rem;
   padding: 0.2rem 0.8rem;
-  width: 8rem;
+  width: 8rem; //bl_以外で設定するよう検討
   height: 4rem;
   text-align: center;
   opacity: 0;
   align-items: center;
   display: flex; //設定なしだとalign-items:centerが効かない
+}
+
+//information
+
+.bl_infoContent {
+  padding: 2rem 1.5rem;
+  & > h2 {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.bl_newInfo_list {
+  // display: flex;
+  // flex-flow: row wrap;
+  width: 100%;
+}
+
+.bl_newInfo_left {
+  flex-basis: 30%;
+  & span {
+    display: inline-block;
+    font-size: 1.3rem;
+    margin-right: 1rem;
+    padding: 0 6px;
+    background-color: #009688;
+    color: #fff;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 5px;
+  }
+}
+
+.bl_newInfo_right {
+  flex-basis: 70%;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1.5rem;
+}
+
+// 768px以上共通設定
+@media screen and (min-width: 768px) {
+  .bl_newInfo_list {
+    display: flex;
+    flex-flow: row wrap;
+    & .bl_newInfo_left {
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 1.5rem;
+    }
+    // & .bl_newInfo_right {
+    //   border-bottom: 0;
+    // }
+  }
 }
 
 // introduction
@@ -344,7 +377,7 @@
 .bl_introVoiceItem_img {
   margin-right: 3.33333%;
   & > img {
-    width: 11rem;
+    width: 11rem; //bl_以外で設定するよう検討
   }
 }
 
@@ -358,23 +391,35 @@
 
 .bl_introImgBox {
   position: relative;
+  width: 100%;
 }
 
 .bl_introImgTxt {
-  position: absolute;
+  position: absolute; //bl_以外で設定するよう検討、以下top,right.bottom,rightも
   top: 10%;
-  left: 10%;
-  font-size: 1.4rem;
-  width: 84%;
+  left: 6%;
+  width: 92%; //bl_以外で設定するよう検討
 }
 
+// 768px以上共通設定
+@media screen and (min-width: 600px) {
+  .bl_introImgTxt {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    width: 54rem;
+    font-size: 1.8rem;
+  }
+}
 // --------Feature-------
 
-.bl_featureItems,
-.bl_serviceItems {
-  margin-bottom: 4rem;
+.bl_cardUnit {
+  // margin-bottom: 4rem;
   display: flex; /* なくてもいけるがひとまず追加　*/
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .bl_card {
@@ -389,10 +434,44 @@
 .bl_card_imgWrapper {
   margin-bottom: 1.5rem;
   text-align: center;
+  & img {
+    max-width: 25rem;
+  }
 }
 
 .bl_card_txt {
   margin-bottom: 1.5rem;
+}
+
+// 3カラム
+.bl_cardUnit_col3 {
+  margin-bottom: 3rem;
+  & > .bl_card {
+    // width: 30%;
+    // margin-right: 5%;
+    margin-bottom: 8rem; //workItemに影響あり。
+    // &:nth-of-type(3n) {
+    //   margin-right: 0;
+    // }
+  }
+}
+
+// 768以上共通設定？
+@media screen and (min-width: 768px) {
+  .bl_cardUit.bl_cardUnit_col3 {
+    margin-bottom: -2rem;
+  }
+  .bl_cardUnit > .bl_card {
+    width: 30%;
+    margin-right: 5%;
+    margin-bottom: 3rem;
+    &:nth-of-type(3n) {
+      margin-right: 0;
+    }
+  }
+  // .bl_card_imgWrapper {
+  //   width: 25rem;
+  // }
 }
 
 // 説明ページ遷移btn
@@ -407,7 +486,7 @@ a.bl_pageLink {
 
   &:before {
     content: "";
-    position: absolute;
+    position: absolute; //bl_以外で設定するよう検討、以下top,right.bottom,rightも
     right: 5px;
     bottom: 0;
     width: 0;
@@ -438,18 +517,19 @@ a.bl_pageLink {
 //初期状態を設定、.showが追加されたら、正常な状態に戻す
 
 .bl_sa {
+  //sa=scroll animation
   opacity: 0;
-  transition: all 4s ease;
+  transition: all 3s ease;
 }
 
 .bl_sa.show {
   opacity: 1;
-  transform: none;
+  // transform: none; ここで上から下へのtransformを制御している・・・？これがあると、画像内のテキスト位置を上手く配置できない。（クラス名を変えて設定すればOKだと思うが）動きが必要なければ不要
 }
 
-.bl_sa_down {
-  transform: translate(0, -100px);
-}
+// .bl_sa_down {　ボタンの出現位置調整
+//   transform: translate(0, -80px);
+// }
 
 //お問い合わせはコチラbtn
 
@@ -477,7 +557,7 @@ a {
 }
 
 .bl_ftBtn_copy {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: bold;
   position: relative;
   margin-bottom: 0.2em;
@@ -496,19 +576,44 @@ a {
 
 // --------About---------
 
-// .bl_ALBorder {
-//   border-bottom: none;
-// }
+.bl_aboutList {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.bl_AL_left {
+  flex-basis: 35%; // 20%
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 5%;
+}
+
+.bl_AL_right {
+  flex-basis: 65%; // 80%
+  border-bottom: 1px solid #ccc;
+  // padding-bottom: 2%;
+  margin-bottom: 5%;
+}
 
 // ---------WORK---------
 .bl_workItemImg {
-  max-width: 200px;
+  max-width: 320px; //bl_以外で設定するよう検討
+  box-shadow: 2px 4px 8px #585858;
 }
+
+// @media screen and (min-width: 768px) {
+// .bl_workItemImg {
+//   width: 320px; //bl_以外で設定するよう検討
+// }
+// }
 
 //CONTACT
 
 .bl_contact_wrapper {
   background-color: rgb(247, 245, 241);
+  max-width: 100%;
+  padding: 3rem;
 }
 
 .ly_CL_left span.required {
@@ -521,6 +626,12 @@ a {
 
 .bl_inputbox {
   padding: 0.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .bl_contact_wrapper {
+    padding: 6rem;
+  }
 }
 
 //モーダルテスト1
@@ -578,7 +689,7 @@ a {
 
 .modal_wrapper {
   z-index: 999;
-  position: fixed;
+  position: fixed; //bl_以外で設定するよう検討、以下top,right.bottom,rightも
   top: 0;
   left: 0;
   bottom: 0;
@@ -632,8 +743,8 @@ a {
   display: inline-block;
   z-index: 20;
   position: relative;
-  width: 70%;
-  max-width: 600px;
+  width: 70%; //bl_以外で設定するよう検討
+  max-width: 600px; //bl_以外で設定するよう検討
   padding: 30px 30px 15px;
   border-radius: 2px;
   background: #fff;
@@ -651,7 +762,7 @@ a {
 /*-----------モーダルバックグラウンド-----------*/
 .modal_overlay {
   z-index: 10;
-  position: absolute;
+  position: absolute; //bl_以外で設定するよう検討、以下top,right.bottom,rightも
   top: 0;
   right: 0;
   bottom: 0;
@@ -661,10 +772,10 @@ a {
 
 .modal_wrapper .modal_close {
   z-index: 20;
-  position: absolute;
+  position: absolute; //bl_以外で設定するよう検討、以下top,right.bottom,rightも
   top: 0;
   right: 0;
-  width: 35px;
+  width: 35px; //bl_以外で設定するよう検討
   color: #95979c !important;
   font-size: 20px;
   font-weight: 700;
@@ -689,14 +800,14 @@ a {
 
 // ---------WorkFlow --------- //
 .bl_WF_card_ttl {
-  margin-left: 2rem;
+  margin-left: 2rem; //0でもOK?要検討
   margin-bottom: 1.5rem;
   text-align: left;
 }
 
 .bl_WF_card_txt {
   margin-bottom: 1.5rem;
-  padding: 0 3rem;
+  padding: 0 1rem;
 }
 
 // --------- lawer_page --------- //
@@ -781,7 +892,7 @@ a {
 
 .faq_txt {
   margin: 24px auto 0 auto;
-  width: 94%;
+  width: 94%; //bl_以外で設定するよう検討
 }
 
 // --------test--------
