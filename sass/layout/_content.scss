@@ -3,7 +3,7 @@
   width: 100%;
   margin: 0 auto;
   padding: 1% 4%;
-  background-color: #ddd; /* 配置確認用 */
+  // background-color: #ddd; /* 配置確認用 */
 }
 
 //header
@@ -40,7 +40,7 @@
 // 960px以上共通設定
 @media screen and (min-width: 960px) {
   .ly_content {
-    max-width: 70%;
+    max-width: 65%;
   }
 }
 
@@ -123,6 +123,10 @@
 
 // 768px以上共通設定
 @media screen and (min-width: 768px) {
+  .ly_contactTxt {
+    margin-right: 10%;
+    margin-left: 10%;
+  }
   .ly_contactList {
     // flex-direction: row;
     width: 80%;
@@ -133,10 +137,6 @@
 /* footer */
 .ly_footer {
   padding: 5%;
-}
-
-.ly_footerNav {
-  margin: 3% 5%;
 }
 
 .ly_copyright {
@@ -156,4 +156,14 @@
   border-bottom: 1px solid #ccc;
   padding-bottom: 2%;
   margin-bottom: 5%;
+}
+
+.ly_footerNav {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3% 2%;
+}
+
+.ly_footerNav_item {
+  flex-basis: 50%;
 }

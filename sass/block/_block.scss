@@ -20,6 +20,22 @@
   height: auto;
 }
 
+// 768px以上共通設定
+@media screen and (min-width: 768px) {
+  .bl_bgFullWidth img {
+    height: 500px;
+    object-fit: cover;
+    object-position: center bottom;
+  }
+}
+
+// .bl_bgHarfWidth img {
+//   width: 100%;
+//   height: 500px;
+//   object-fit: cover;
+//   object-position: center bottom;
+// }
+
 // グローバルナビ設定
 
 // .bl_menuBtn {
@@ -244,16 +260,28 @@
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
   font-size: 1.4rem;
-  // & p {
-  //   -ms-writing-mode: tb-rl;
-  //   writing-mode: vertical-rl;
-  //   font-size: 1.4rem;
-  // }
+
   .bl_mvTxt {
     margin: 0 0.5rem;
-    font-size: 1.5rem;
+    // font-size: 1.5rem;
   }
 }
+
+// 500px以上共通設定
+@media screen and (min-width: 500px) {
+  .bl_mvTxts {
+    .bl_mvTxt {
+      font-size: 1.7rem;
+    }
+  }
+  .bl_mvBtn {
+    font-size: 1.4rem;
+    padding: 0.4rem 1.2rem;
+    width: 10rem; //bl_以外で設定するよう検討
+    height: 6rem;
+  }
+}
+
 /*フェードイン表示の指定*/
 .fadeIn {
   opacity: 0;
@@ -308,9 +336,6 @@
 
 .bl_infoContent {
   padding: 2rem 1.5rem;
-  & > h2 {
-    margin-bottom: 2.5rem;
-  }
 }
 
 .bl_newInfo_list {
@@ -429,6 +454,9 @@
 .bl_card_ttl {
   margin-bottom: 1.5rem;
   text-align: center;
+  & span {
+    display: inline-block;
+  }
 }
 
 .bl_card_imgWrapper {
@@ -445,6 +473,19 @@
 
 // 3カラム
 .bl_cardUnit_col3 {
+  margin-bottom: 3rem;
+  & > .bl_card {
+    // width: 30%;
+    // margin-right: 5%;
+    margin-bottom: 8rem; //workItemに影響あり。
+    // &:nth-of-type(3n) {
+    //   margin-right: 0;
+    // }
+  }
+}
+
+//2カラム
+.bl_unit_col2 {
   margin-bottom: 3rem;
   & > .bl_card {
     // width: 30%;
@@ -509,10 +550,6 @@ a.bl_pageLink {
   text-align: end;
 }
 
-.bl_ftContact_txt {
-  font-size: 1.6rem;
-}
-
 // お問い合わせはコチラbtnのフェードイン
 //初期状態を設定、.showが追加されたら、正常な状態に戻す
 
@@ -572,6 +609,22 @@ a {
 .bl_ftBtn_copy:after {
   margin-left: 1rem;
   content: "／";
+}
+
+// --------Greeting-------
+
+.bl_greetingTxt_paragraph {
+  margin-bottom: 3rem;
+}
+
+.bl_listStyle_space {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.bl_listStyle_disc {
+  list-style-type: disc;
+  margin-left: 2rem;
 }
 
 // --------About---------
@@ -965,6 +1018,9 @@ a {
   background-color: rgba(214, 198, 175, 0.2);
   margin: 0 auto;
   padding: 1rem;
+  p {
+    margin-bottom: 4rem;
+  }
 }
 
 .bl_faq_seoList_wrapper {
@@ -979,4 +1035,15 @@ a {
 .bl_priceCompare_wrapper {
   display: flex;
   flex-flow: row wrap;
+}
+
+.bl_priceCompare_total {
+  font-size: 2rem;
+  font-weight: 200;
+  text-align: end;
+}
+
+.bl_closingTxt {
+  font-size: 1.6rem;
+  font-weight: bold;
 }
