@@ -274,11 +274,30 @@
       font-size: 1.7rem;
     }
   }
-  .bl_mvBtn {
-    font-size: 1.4rem;
-    padding: 0.4rem 1.2rem;
-    width: 10rem; //bl_以外で設定するよう検討
-    height: 6rem;
+}
+
+// .bl_mvBtn {
+//   font-size: 1.4rem;
+//   padding: 0.4rem 1.2rem;
+//   width: 10rem; //bl_以外で設定するよう検討
+//   height: 6rem;
+// }
+
+// 600px以上共通設定
+@media screen and (min-width: 600px) {
+  .bl_mvTxts {
+    .bl_mvTxt {
+      font-size: 2rem;
+    }
+  }
+}
+
+// 768px以上共通設定
+@media screen and (min-width: 768px) {
+  .bl_mvTxts {
+    .bl_mvTxt {
+      font-size: 2.4rem;
+    }
   }
 }
 
@@ -338,13 +357,17 @@
   padding: 2rem 1.5rem;
 }
 
-.bl_newInfo_list {
+.bl_infoList_wrapper {
+  margin-bottom: 8rem;
+}
+
+.bl_infoList {
   // display: flex;
   // flex-flow: row wrap;
   width: 100%;
 }
 
-.bl_newInfo_left {
+.bl_info_left {
   flex-basis: 30%;
   & span {
     display: inline-block;
@@ -355,25 +378,43 @@
     color: #fff;
     border-bottom: 1px solid #ccc;
     margin-bottom: 5px;
+    width: 9rem;
+    text-align: center;
   }
 }
 
-.bl_newInfo_right {
+.bl_info_right {
   flex-basis: 70%;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1.5rem;
+}
+
+.bl_infoAside_right {
+  flex-basis: 45%;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1.5rem;
+}
+
+.bl_infoAside_left {
+  flex-basis: 40%;
   border-bottom: 1px solid #ccc;
   margin-bottom: 1.5rem;
 }
 
 // 768px以上共通設定
 @media screen and (min-width: 768px) {
-  .bl_newInfo_list {
+  .bl_displayFlex {
+    display: flex;
+  }
+
+  .bl_infoList {
     display: flex;
     flex-flow: row wrap;
-    & .bl_newInfo_left {
+    & .bl_info_left {
       border-bottom: 1px solid #ccc;
       margin-bottom: 1.5rem;
     }
-    // & .bl_newInfo_right {
+    // & .bl_info_right {
     //   border-bottom: 0;
     // }
   }
@@ -613,7 +654,7 @@ a {
 
 // --------Greeting-------
 
-h2.bl_greetingIndex {
+h2.bl_crossHead_Index {
   font-size: 1.7rem;
   text-align: left;
   margin-bottom: 1rem;

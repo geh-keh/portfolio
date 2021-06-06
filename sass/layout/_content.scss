@@ -90,6 +90,12 @@
   // padding: 10%;
 }
 
+@media screen and (min-width: 960px) {
+  .ly_workContent {
+    padding: 6rem 14rem;
+  }
+}
+
 /*  About  */
 
 /*  コンタクトフォーム  */
@@ -166,4 +172,19 @@
 
 .ly_footerNav_item {
   flex-basis: 50%;
+}
+
+.ly_article {
+  flex-basis: 65%;
+}
+
+.ly_aside {
+  flex-basis: 25%;
+}
+
+// 768px以上共通設定
+@media screen and (min-width: 768px) {
+  .ly_article {
+    margin-right: 6rem;
+  }
 }
