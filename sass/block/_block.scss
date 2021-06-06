@@ -613,18 +613,32 @@ a {
 
 // --------Greeting-------
 
+h2.bl_greetingIndex {
+  font-size: 1.7rem;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
 .bl_greetingTxt_paragraph {
   margin-bottom: 3rem;
 }
 
-.bl_listStyle_space {
+.bl_greetingTxt p {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.bl_greetingTxt span {
+  font-weight: bold;
+}
+
+.bl_greetingTxt .bl_listStyle_space {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
 .bl_listStyle_disc {
   list-style-type: disc;
-  margin-left: 2rem;
+  margin-left: 3rem;
 }
 
 // --------About---------

@@ -18,7 +18,7 @@
       <div class="ly_header_inner">
         <p>分かりやすいホームページ制作</p>
         <p class="bl_headerLogo_wrapper">
-          <a href="#"><img src="../../img/text32.png" alt="サイトロゴ" /></a>
+          <a href="../../index.html"><img src="../../img/text32.png" alt="サイトロゴ" /></a>
         </p>
         <!-- 後でフォルダとロゴ作成-->
         <!-- メニューボタン -->
@@ -37,15 +37,16 @@
         <!-- labelじゃなくspanでfor連携してるけどこれでいい・・・？ -->
 
         <!-- ドロワー -->
+        <!-- <input id="Button1" type="button" value="button" onclick="onButtonClick();" /> -->
         <!-- 仮 -->
         <nav class="bl_drawerMenu" id="frame1" for="checked">
           <!-- ここにjqueryでis_fixedが追加される -->
           <ul id="nav_menu" class="bl_navItems">
             <li class="bl_navItem"><a href="../../index.html" class="link-close" class="link-close">ホーム</a></li>
             <li class="bl_navItem"><a href="../information/index.html" class="link-close">お知らせ</a></li>
-            <li class="bl_navItem"><a href="../greeting/index.html" class="link-close">ごあいさつ</a></li>
+            <li class="bl_navItem"><a href="../../index.html#partGreeting" class="link-close">ごあいさつ</a></li>
             <li class="bl_navItem"><a href="../servicePrice/index.html" class="link-close">サービス・料金</a></li>
-            <li class="bl_navItem"><a href="../workFlow/index.html" class="link-close">お見積もり流れ</a></li>
+            <li class="bl_navItem"><a href="../workFlow/index.html" class="link-close">お見積りからの流れ</a></li>
             <li class="bl_navItem"><a href="../../index.html#partWorks" class="link-close">作品紹介</a></li>
             <li class="bl_navItem"><a href="../Q&A/index.html" class="link-close">よくある質問</a></li>
             <li class="bl_navItem"><a href="../../index.html#partAbout" class="link-close">Tsumugiyaについて</a></li>
@@ -60,51 +61,19 @@
 
     <main class="content">
       <!-- service -->
-      <section class="service" id="partService">
+      <section class="faq" id="partFaq">
         <div class="ly_content">
-          <h2 class="bl_sectTtl">用語解説</h2>
-          <div class="bl_serviceItems">
-            <div class="bl_card">
-              <h3 class="bl_WF_card_ttl">WordPress（ワードプレス）について</h3>
-              <figure class="bl_card_imgWrapper">
-                <img src="../../img/commentary_WordPress_img.png" width="80%" alt="web-designのイラスト" />
-              </figure>
-              <p class="bl_WF_card_txt">
-                本来、ホームページを編集する時にはhtmlやcss,JavaScript,PHPなどといったプログラミング言語の専門知識が必要となります。<br />WordPressは、それらの知識がなくとも、facebookやTwitterなどを更新するのと同じような感覚で、記事コンテンツ（「お知らせ」や「ブログ」など）を編集することができる優秀なソフトです。（レイアウトを編集したり、記事コンテンツ以外の部分を編集するには、やはり専門知識が必要となります。）<br />このようなソフトを総称してCMS（コンテンツ
-                マネジメント システム）と呼び、国内Webサイトの6割以上が、このCMSを使って作られています。<br />WordPressは、2020年時点で国内のCMSにおけるシェア率が83％以上と、圧倒的に多くのユーザーがホームページの作成にWordPressを選んでいます。
-              </p>
-            </div>
-            <div class="bl_card">
-              <h3 class="bl_WF_card_ttl">サーバー、ドメインについて</h3>
-              <figure class="bl_card_imgWrapper">
-                <img src="../../img/commentary_server_img.png" width="80%" alt="web-designのイラスト" />
-              </figure>
-              <p class="bl_WF_card_txt">
-                Webサイト（ホームページ）をインターネット上に公開する時に、作成したWebサイトのデータの他に用意しなければならないものが、２つあります。<br />それが「Webサーバー」と「ドメイン」です。<br />Webサーバーは、作成したWebサイトのデータをWeb上に保管する場所のことで、ドメインは、Webサイトがインターネット上のどこにあるのかを識別するための名前のことです。<br />ホームページを「家」に例えた場合、家を建てる「土地」に当たるのがサーバーで、「住所」に当たるのがドメインになります。<br />この２つは、オンラインでレンタル業者と月（年）契約するのが一般的で、登録時に、ドメインとサーバー、WordPressの紐付けなどの作業が必要になります。
-              </p>
-            </div>
-            <div class="bl_card">
-              <h3 class="bl_WF_card_ttl">下層ページについて</h3>
-              <figure class="bl_card_imgWrapper">
-                <img src="../../img/workFlow_img3.png" width="80%" alt="web-designのイラスト" />
-              </figure>
-              <p class="bl_WF_card_txt">
-                下層ページとは、トップページとは別に作る、会社概要、商品情報、お知らせなどの個別のページのことです。トップページだけでは説明しきれない内容や、詳細な説明を必要とする物を下層ページに記述します。<br />本サイトで言えば、今ご覧いただいているこのページも下層ページで、この他「サービス・料金」「お見積りからの流れ」「よくある質問」も下層ページということになります。<br />例として、以下のようなコンテンツを下層ページに設定するケースがあります。<br />注意しなければならないのは、個別ページは多ければ良いというわけではなく、サイトの目的や訪問者の導線を考えて、適切に配置しなければならないということです。<br />Tsunagiyaでは、その辺りも含めてご相談を承りますので、サイト設計に不安がある方もどうぞご安心ください。
-              </p>
-              <ul>
-                <li>会社案内</li>
-                <li>代表あいさつ</li>
-                <li>商品・サービス紹介</li>
-                <li>お知らせ</li>
-                <li>採用情報</li>
-                <li>お問い合わせ</li>
-                <li>プライバシーポリシー</li>
-                <li>etc</li>
-              </ul>
-            </div>
+          <h1 class="bl_sectTtl">お知らせ</h1>
+          <div class="bl_greetingTxt">
+            <h2 class="bl_greetingIndex">Web制作を通して笑顔を</h2>
+            <p>
+              はじめまして。 Tsumugiya（つむぎや）のkeh（けー）と申します。<br />
+              当サイトをご覧いただき、どうもありがとうございます。
+            </p>
+
+            <p>このサイトでお伝えしきれない点もあるかと思いますので、ご不明な点などがございましたら、どんな些細な事でも結構ですので、お気軽に下記のお問合せフォームよりお問合せください。</p>
           </div>
-          <!-- bl_serviceItems -->
-          <p class="ly_pageLink"><a href="#">プラン・料金詳細 ></a></p>
+          <!-- bl_greetingTxt -->
         </div>
         <!-- ly_content -->
       </section>
@@ -154,14 +123,14 @@
         </p>
         <ul class="ly_footerNav navItems">
           <li class="ly_footerNav_item"><a href="../../index.html" class="">ホーム</a></li>
-          <li class="ly_footerNav_item"><a href="../information/index.html" class="">お知らせ</a></li>
-          <li class="ly_footerNav_item"><a href="../greeting/index.html" class="">ごあいさつ</a></li>
+          <li class="ly_footerNav_item"><a href="#">お知らせ</a></li>
+          <li class="ly_footerNav_item"><a href="../greeting/index.html">ごあいさつ</a></li>
           <li class="ly_footerNav_item"><a href="../servicePrice/index.html">サービス・料金</a></li>
           <li class="ly_footerNav_item"><a href="../workFlow/index.html" class="">お見積りからの流れ</a></li>
           <li class="ly_footerNav_item"><a href="../../index.html#partWorks" class="">作品紹介</a></li>
           <li class="ly_footerNav_item"><a href="../Q&A/index.html" class="">よくある質問</a></li>
           <li class="ly_footerNav_item"><a href="../../index.html#partAbout" class="">Tsumugiyaについて</a></li>
-          <li class="ly_footerNav_item"><a href="#">用語解説</a></li>
+          <li class="ly_footerNav_item"><a href="../commentary/index.html">用語解説</a></li>
           <li class="ly_footerNav_item"><a href="#partContact">お問い合わせ</a></li>
         </ul>
         <p class="ly_copyright">
