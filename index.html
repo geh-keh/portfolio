@@ -16,12 +16,14 @@
 
   <body>
     <header class="ly_header">
-      <div class="ly_header_inner">
+      <div class="ly_headerInner">
+        <div class="ly_headerInner_left">
         <p>分かりやすいホームページ制作</p>
         <h1 class="bl_headerLogo_wrapper">
           <a href="../../index.html"><img src="img/text32.png" alt="サイトロゴ" /></a>
         </h1>
-
+      </div><!-- ly_headerInner_left -->
+      <div class="ly_headerInner_right">
         <!-- メニューボタン -->
         <input type="checkbox" class="bl_checkbox" id="checked" />
         <!-- inputを一番上に置く事で間接セレクタを利用できるようにしている-->
@@ -45,16 +47,16 @@
             <li class="bl_navItem"><a href="underlayer/information/index.html" class="link-close" class="link-close">お知らせ</a></li>
             <li class="bl_navItem"><a href="underlayer/greeting/index.html" class="link-close">ごあいさつ</a></li>
             <li class="bl_navItem"><a href="underlayer/servicePrice/index.html" class="link-close">サービス・料金</a></li>
-            <li class="bl_navItem"><a href="underlayer/workFlow/index.html" class="link-close">お見積りからの流れ</a></li>
+            <li class="bl_navItem"><a href="underlayer/workFlow/index.html" class="link-close">発注〜納品の流れ</a></li>
             <li class="bl_navItem"><a href="#partWorks" class="link-close">作品紹介</a></li>
-            <li class="bl_navItem"><a href="underlayer/Q&A/index.html" class="link-close">よくある質問</a></li>
-            <li class="bl_navItem"><a href="#partAbout" class="link-close">Tsumugiyaについて</a></li>
+            <li class="bl_navItem"><a href="underlayer/Q&A/index.html" class="link-close">FAQ</a></li>
             <li class="bl_navItem"><a href="underlayer/commentary/index.html" class="link-close">用語解説</a></li>
 
-            <li class="bl_navItem"><a href="#partContact" class="link-close">お問い合わせ</a></li>
+            <li class="bl_navItem"><a href="#partContact" class="link-close">お問合せ</a></li>
           </ul>
         </nav>
         <!-- header-nav -->
+      </div> <!-- ly_headerInner_right -->
       </div>
       <!-- ly_header_inner -->
     </header>
@@ -73,7 +75,7 @@
           <p class="bl_mvTxt bl_mvTxt05 fadeIn">ご提案いたします</p>
         </div>
         <!-- bl_mvTxts-->
-        <a href="#partContact" class="bl_mvTxt bl_mvTxt06 bl_mvBtn ly_mvBtn fadeIn"><p>お問い合わせはコチラ</p></a>
+        <a href="#partContact" class="bl_mvTxt06 bl_mvBtn ly_mvBtn fadeIn"><p>お問合せはコチラ</p></a>
       </div>
 
       <!-- introduction -->
@@ -152,7 +154,7 @@
               </figure>
               <h3 class="bl_card_ttl">
                 <span>誰もが快適に使える</span>
-                <span>ホームページ</span>
+                <!-- <span>ホームページ</span> -->
               </h3>
               <p class="bl_card_txt">ターゲットに向けて伝えたい事を効果的に伝えることのできるデザインと、訪問者の導線を意識した分かりやすい構成で、送り手と受け手の双方の思いがマッチングする、誰もが快適に使えるホームページをデザインします。</p>
             </div>
@@ -174,18 +176,18 @@
                 <span>安心のサービスと</span>
                 <span>料金設定</span>
               </h3>
-              <p class="bl_card_txt">お客様にとって大きな負担となるのが、ホームページ導入時にかかる初期費用です。Tsumugiyaでは、そのご負担を少しでも和らげるために、月払いの料金プランをご用意いたしました。しかも、ホームページ作成に加え、サーバー・ドメイン設定、さらに安心の運営サポートまで全て込みで月9千9百円〜という、とてもお得なプランとなっております。</p>
+              <p class="bl_card_txt">お客様にとって大きな負担となるのが、ホームページ導入時にかかる初期費用です。Tsumugiyaでは、そのご負担を少しでも和らげるために、月払いの料金プランをご用意いたしました。ホームページ作成に加え、サーバー・ドメイン設定、さらに安心の運営サポートまで全て込みで月9千9百円〜という、とてもお得なプランとなっております。</p>
               <a class="bl_pageLink" href="underlayer/commentary/index.html">サーバー、ドメインについて</a>
               <a class="bl_pageLink" href="underlayer/servicePrice/index.html">サービス・料金について</a>
             </div>
             <!-- bl_card -->
           </div>
           <!-- bl_featureItems -->
-          <div class="feature_contact">
-            <p class="ly_ftContactTxt bl_closingTxt">当社のホームページ制作にご興味をお持ちいただけましたら、お気軽にお問い合わせフォームよりご連絡ください。<br />もちろん強引なセールスなどはいたしませんので、ご安心ください。</p>
+          <div class="bl_feature_contact">
+            <p class="ly_ftContactTxt bl_closingTxt">当社のホームページ制作にご興味をお持ちいただけましたら、お気軽にお問合せフォームよりご連絡ください。<br />もちろん強引なセールスなどはいたしませんので、ご安心ください。</p>
             <div class="bl_ftBtn_wrapper bl_sa bl_sa_down">
-              <div class="bl_ftBtn_copy">お気軽にお問い合わせください！</div>
-              <a href="#partContact" class="bl_ftBtn">お問い合わせはコチラ</a>
+              <div class="bl_ftBtn_copy">お気軽にお問合せください！</div>
+              <a href="#partContact" class="bl_ftBtn">お問合せはコチラ</a>
             </div>
           </div>
         </div>
@@ -196,7 +198,7 @@
 
       <!-- greeting -->
       <section class="greeting" id="partGreeting">
-        <div class="ly_content">
+        <div class="ly_content ly_greeting_content">
           <h2 class="bl_sectTtl">ごあいさつ</h2>
           <div class="bl_greetingTxt">
             <h2 class="bl_crossHead_Index">Web制作を通して笑顔を</h2>
@@ -363,7 +365,7 @@
               <dd class="ly_CL_right">
                 <span><input type="text" name="phone-number" value size="34" placeholder="半角で入力" class="bl_inputbox" required /></span>
               </dd>
-              <dt class="ly_CL_left">お問い合わせ内容<span class="required">必須</span></dt>
+              <dt class="ly_CL_left">お問合せ内容<span class="required">必須</span></dt>
               <dd class="ly_CL_right">
                 <span><textarea name="your-message" placeholder="メッセージを入力" cols="34" rows="8" class="bl_inputbox" required></textarea></span>
               </dd>
@@ -392,12 +394,11 @@
           <li class="ly_footerNav_item"><a href="underlayer/information/index.html" class="">お知らせ</a></li>
           <li class="ly_footerNav_item"><a href="underlayer/greeting/index.html" class="">ごあいさつ</a></li>
           <li class="ly_footerNav_item"><a href="underlayer/servicePrice/index.html" class="">サービス・料金</a></li>
-          <li class="ly_footerNav_item"><a href="underlayer/workFlow/index.html" class="">お見積りからの流れ</a></li>
+          <li class="ly_footerNav_item"><a href="underlayer/workFlow/index.html" class="">発注〜納品の流れ</a></li>
           <li class="ly_footerNav_item"><a href="#partWorks" class="">作品紹介</a></li>
-          <li class="ly_footerNav_item"><a href="underlayer/Q&A/index.html" class="">よくある質問</a></li>
-          <li class="ly_footerNav_item"><a href="#partAbout" class="">Tsumugiyaについて</a></li>
+          <li class="ly_footerNav_item"><a href="underlayer/Q&A/index.html" class="">FAQ</a></li>
           <li class="ly_footerNav_item"><a href="underlayer/commentary/index.html" class="">用語解説</a></li>
-          <li class="ly_footerNav_item"><a href="#partContact" class="">お問い合わせ</a></li>
+          <li class="ly_footerNav_item"><a href="#partContact" class="">お問合せ</a></li>
         </ul>
         <p class="ly_copyright">
           <small>&copy; 2021 Tsumugiya All Rights Reserved.</small>

@@ -15,46 +15,50 @@
 
   <body>
     <header class="ly_header">
-      <div class="ly_header_inner">
-        <p>分かりやすいホームページ制作</p>
-        <p class="bl_headerLogo_wrapper">
-          <a href="../../index.html"><img src="../../img/text32.png" alt="サイトロゴ" /></a>
-        </p>
-        <!-- 後でフォルダとロゴ作成-->
-        <!-- メニューボタン -->
-        <input type="checkbox" class="bl_checkbox" id="checked" />
-        <!-- inputを一番上に置く事で間接セレクタを利用できるようにしている-->
-        <label class="bl_menuBtn" for="checked">
-          <!-- forにチェックボックスのid名を指定→ボタン要素を押すと連動してチェックボックスをオンオフしてくれる。-->
-          <span class="bar top"></span>
-          <span class="bar middle"></span>
-          <span class="bar bottom"></span>
-          <span class="bl_menuBtn_txt">MENU</span>
-        </label>
+      <div class="ly_headerInner">
+        <div class="ly_headerInner_left">
+          <p>分かりやすいホームページ制作</p>
+          <p class="bl_headerLogo_wrapper">
+            <a href="../../index.html"><img src="../../img/text32.png" alt="サイトロゴ" /></a>
+          </p>
+        </div>
+        <!-- ly_headerInner_left -->
+        <div class="ly_headerInner_right">
+          <!-- メニューボタン -->
+          <input type="checkbox" class="bl_checkbox" id="checked" />
+          <!-- inputを一番上に置く事で間接セレクタを利用できるようにしている-->
+          <label class="bl_menuBtn" for="checked">
+            <!-- forにチェックボックスのid名を指定→ボタン要素を押すと連動してチェックボックスをオンオフしてくれる。-->
+            <span class="bar top"></span>
+            <span class="bar middle"></span>
+            <span class="bar bottom"></span>
+            <span class="bl_menuBtn_txt">MENU</span>
+          </label>
 
-        <!-- menuボタンclickで全画面展開 -->
-        <span class="bl_closeMenu" for="checked"> </span>
-        <!-- labelじゃなくspanでfor連携してるけどこれでいい・・・？ -->
+          <!-- menuボタンclickで全画面展開 -->
+          <span class="bl_closeMenu" for="checked"> </span>
+          <!-- labelじゃなくspanでfor連携してるけどこれでいい・・・？ -->
 
-        <!-- ドロワー -->
-        <!-- <input id="Button1" type="button" value="button" onclick="onButtonClick();" /> -->
-        <!-- 仮 -->
-        <nav class="bl_drawerMenu" id="frame1" for="checked">
-          <!-- ここにjqueryでis_fixedが追加される -->
-          <ul id="nav_menu" class="bl_navItems">
-            <li class="bl_navItem"><a href="../../index.html" class="link-close" class="link-close">ホーム</a></li>
-            <li class="bl_navItem"><a href="../information/index.html" class="link-close">お知らせ</a></li>
-            <li class="bl_navItem"><a href="../../index.html#partGreeting" class="link-close">ごあいさつ</a></li>
-            <li class="bl_navItem"><a href="../servicePrice/index.html" class="link-close">サービス・料金</a></li>
-            <li class="bl_navItem"><a href="../workFlow/index.html" class="link-close">お見積りからの流れ</a></li>
-            <li class="bl_navItem"><a href="../../index.html#partWorks" class="link-close">作品紹介</a></li>
-            <li class="bl_navItem"><a href="../Q&A/index.html" class="link-close">よくある質問</a></li>
-            <li class="bl_navItem"><a href="../../index.html#partAbout" class="link-close">Tsumugiyaについて</a></li>
-            <li class="bl_navItem"><a href="../commentary/index.html" class="link-close">用語解説</a></li>
-            <li class="bl_navItem"><a href="#partContact" class="link-close">お問い合わせ</a></li>
-          </ul>
-        </nav>
-        <!-- header-nav -->
+          <!-- ドロワー -->
+          <!-- <input id="Button1" type="button" value="button" onclick="onButtonClick();" /> -->
+          <!-- 仮 -->
+          <nav class="bl_drawerMenu" id="frame1" for="checked">
+            <!-- ここにjqueryでis_fixedが追加される -->
+            <ul id="nav_menu" class="bl_navItems">
+              <li class="bl_navItem"><a href="../../index.html" class="link-close" class="link-close">ホーム</a></li>
+              <li class="bl_navItem"><a href="../information/index.html" class="link-close">お知らせ</a></li>
+              <li class="bl_navItem"><a href="../../index.html#partGreeting" class="link-close">ごあいさつ</a></li>
+              <li class="bl_navItem"><a href="../servicePrice/index.html" class="link-close">サービス・料金</a></li>
+              <li class="bl_navItem"><a href="../workFlow/index.html" class="link-close">発注〜納品の流れ</a></li>
+              <li class="bl_navItem"><a href="../../index.html#partWorks" class="link-close">作品紹介</a></li>
+              <li class="bl_navItem"><a href="../Q&A/index.html" class="link-close">FAQ</a></li>
+              <li class="bl_navItem"><a href="../commentary/index.html" class="link-close">用語解説</a></li>
+              <li class="bl_navItem"><a href="#partContact" class="link-close">お問合せ</a></li>
+            </ul>
+          </nav>
+          <!-- header-nav -->
+        </div>
+        <!-- ly_headerInner_right -->
       </div>
       <!-- .ly_header_inner -->
     </header>
@@ -77,7 +81,7 @@
             <div class="ly_aside">
               <div class="bl_infoList_wrapper">
                 <h2 class="bl_crossHead_Index">アーカイブ</h2>
-                <dr class="bl_infoList">
+                <dr class="bl_infoAsideList">
                   <dt class="bl_infoAside_left"><time>2021.5</time></dt>
                   <dd class="bl_infoAside_right">(1)</dd>
                   <dt class="bl_infoAside_left"><time>2021.4</time></dt>
@@ -86,7 +90,7 @@
               </div>
               <div class="bl_infoList_wrapper">
                 <h2 class="bl_crossHead_Index">カテゴリー</h2>
-                <dr class="bl_infoList">
+                <dr class="bl_infoAsideList">
                   <dt class="bl_infoAside_left"><span>キャンペーン</span></dt>
                   <dd class="bl_infoAside_right">(1)</dd>
                   <dt class="bl_infoAside_left"><span>お知らせ</span></dt>
@@ -124,7 +128,7 @@
               <dd class="ly_CL_right">
                 <span><input type="text" name="phone-number" value size="40" placeholder="半角で入力" class="bl_inputbox" required /></span>
               </dd>
-              <dt class="ly_CL_left">お問い合わせ内容<span class="required">必須</span></dt>
+              <dt class="ly_CL_left">お問合せ内容<span class="required">必須</span></dt>
               <dd class="ly_CL_right">
                 <span><textarea name="your-message" placeholder="メッセージを入力" cols="40" rows="8" class="bl_inputbox" required></textarea></span>
               </dd>
@@ -148,12 +152,11 @@
           <li class="ly_footerNav_item"><a href="#">お知らせ</a></li>
           <li class="ly_footerNav_item"><a href="../greeting/index.html">ごあいさつ</a></li>
           <li class="ly_footerNav_item"><a href="../servicePrice/index.html">サービス・料金</a></li>
-          <li class="ly_footerNav_item"><a href="../workFlow/index.html" class="">お見積りからの流れ</a></li>
+          <li class="ly_footerNav_item"><a href="../workFlow/index.html" class="">発注〜納品の流れ</a></li>
           <li class="ly_footerNav_item"><a href="../../index.html#partWorks" class="">作品紹介</a></li>
-          <li class="ly_footerNav_item"><a href="../Q&A/index.html" class="">よくある質問</a></li>
-          <li class="ly_footerNav_item"><a href="../../index.html#partAbout" class="">Tsumugiyaについて</a></li>
+          <li class="ly_footerNav_item"><a href="../Q&A/index.html" class="">FAQ</a></li>
           <li class="ly_footerNav_item"><a href="../commentary/index.html">用語解説</a></li>
-          <li class="ly_footerNav_item"><a href="#partContact">お問い合わせ</a></li>
+          <li class="ly_footerNav_item"><a href="#partContact">お問合せ</a></li>
         </ul>
         <p class="ly_copyright">
           <small>&copy; 2021 Tsumugiya All Rights Reserved.</small>

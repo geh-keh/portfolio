@@ -15,56 +15,61 @@
 
   <body>
     <header class="ly_header">
-      <div class="ly_header_inner">
-        <p>分かりやすいホームページ制作</p>
-        <p class="bl_headerLogo_wrapper">
-          <a href="#"><img src="../../img/text32.png" alt="サイトロゴ" /></a>
-        </p>
-        <!-- 後でフォルダとロゴ作成-->
-        <!-- メニューボタン -->
-        <input type="checkbox" class="bl_checkbox" id="checked" />
-        <!-- inputを一番上に置く事で間接セレクタを利用できるようにしている-->
-        <label class="bl_menuBtn" for="checked">
-          <!-- forにチェックボックスのid名を指定→ボタン要素を押すと連動してチェックボックスをオンオフしてくれる。-->
-          <span class="bar top"></span>
-          <span class="bar middle"></span>
-          <span class="bar bottom"></span>
-          <span class="bl_menuBtn_txt">MENU</span>
-        </label>
+      <div class="ly_headerInner">
+        <div class="ly_headerInner_left">
+          <p>分かりやすいホームページ制作</p>
+          <p class="bl_headerLogo_wrapper">
+            <a href="../../index.html"><img src="../../img/text32.png" alt="サイトロゴ" /></a>
+          </p>
+        </div>
+        <!-- ly_headerInner_left -->
+        <div class="ly_headerInner_right">
+          <!-- メニューボタン -->
+          <input type="checkbox" class="bl_checkbox" id="checked" />
+          <!-- inputを一番上に置く事で間接セレクタを利用できるようにしている-->
+          <label class="bl_menuBtn" for="checked">
+            <!-- forにチェックボックスのid名を指定→ボタン要素を押すと連動してチェックボックスをオンオフしてくれる。-->
+            <span class="bar top"></span>
+            <span class="bar middle"></span>
+            <span class="bar bottom"></span>
+            <span class="bl_menuBtn_txt">MENU</span>
+          </label>
 
-        <!-- menuボタンclickで全画面展開 -->
-        <span class="bl_closeMenu" for="checked"> </span>
-        <!-- labelじゃなくspanでfor連携してるけどこれでいい・・・？ -->
+          <!-- menuボタンclickで全画面展開 -->
+          <span class="bl_closeMenu" for="checked"> </span>
+          <!-- labelじゃなくspanでfor連携してるけどこれでいい・・・？ -->
 
-        <!-- ドロワー -->
-        <!-- 仮 -->
-        <nav class="bl_drawerMenu" id="frame1" for="checked">
-          <!-- ここにjqueryでis_fixedが追加される -->
-          <ul id="nav_menu" class="bl_navItems">
-            <li class="bl_navItem"><a href="../../index.html" class="link-close" class="link-close">ホーム</a></li>
-            <li class="bl_navItem"><a href="../information/index.html" class="link-close">お知らせ</a></li>
-            <li class="bl_navItem"><a href="../greeting/index.html" class="link-close">ごあいさつ</a></li>
-            <li class="bl_navItem"><a href="../servicePrice/index.html" class="link-close">サービス・料金</a></li>
-            <li class="bl_navItem"><a href="../workFlow/index.html" class="link-close">お見積もり流れ</a></li>
-            <li class="bl_navItem"><a href="../../index.html#partWorks" class="link-close">作品紹介</a></li>
-            <li class="bl_navItem"><a href="../Q&A/index.html" class="link-close">よくある質問</a></li>
-            <li class="bl_navItem"><a href="../../index.html#partAbout" class="link-close">Tsumugiyaについて</a></li>
-            <li class="bl_navItem"><a href="../commentary/index.html" class="link-close">用語解説</a></li>
-            <li class="bl_navItem"><a href="#partContact" class="link-close">お問い合わせ</a></li>
-          </ul>
-        </nav>
-        <!-- header-nav -->
+          <!-- ドロワー -->
+          <!-- 仮 -->
+          <nav class="bl_drawerMenu" id="frame1" for="checked">
+            <!-- ここにjqueryでis_fixedが追加される -->
+            <ul id="nav_menu" class="bl_navItems">
+              <li class="bl_navItem"><a href="../../index.html" class="link-close" class="link-close">ホーム</a></li>
+              <li class="bl_navItem"><a href="../information/index.html" class="link-close">お知らせ</a></li>
+              <li class="bl_navItem"><a href="../greeting/index.html" class="link-close">ごあいさつ</a></li>
+              <li class="bl_navItem"><a href="../servicePrice/index.html" class="link-close">サービス・料金</a></li>
+              <li class="bl_navItem"><a href="../workFlow/index.html" class="link-close">発注〜納品の流れ</a></li>
+              <li class="bl_navItem"><a href="../../index.html#partWorks" class="link-close">作品紹介</a></li>
+              <li class="bl_navItem"><a href="../Q&A/index.html" class="link-close">FAQ</a></li>
+              <li class="bl_navItem"><a href="../commentary/index.html" class="link-close">用語解説</a></li>
+              <li class="bl_navItem"><a href="#partContact" class="link-close">お問合せ</a></li>
+            </ul>
+          </nav>
+          <!-- header-nav -->
+        </div>
       </div>
+      <!-- ly_headerInner_right -->
       <!-- .ly_header_inner -->
     </header>
 
     <main class="content">
       <!-- service -->
-      <section class="service" id="partService">
-        <div class="ly_content">
+      <section class="commentary">
+        <div class="ly_content ly_commentary_content">
           <h2 class="bl_sectTtl">用語解説</h2>
-          <div class="bl_serviceItems">
-            <div class="bl_card">
+          <p class="bl_sectIntro_article">当ホームページでは、インターネットに不慣れなお客様にも分かりやすいような説明、設計を心がけておりますが、説明中どうしても補足が必要な用語や単語が出てきます。このページでは、それらの用語を個別に説明させていただいておりますので、ご参照いただければ幸いです。</p>
+          <div class="bl_commentaryItems">
+            <div class="bl_card bl_commentaryItem">
               <h3 class="bl_WF_card_ttl">WordPress（ワードプレス）について</h3>
               <figure class="bl_card_imgWrapper">
                 <img src="../../img/commentary_WordPress_img.png" width="80%" alt="web-designのイラスト" />
@@ -74,33 +79,35 @@
                 マネジメント システム）と呼び、国内Webサイトの6割以上が、このCMSを使って作られています。<br />WordPressは、2020年時点で国内のCMSにおけるシェア率が83％以上と、圧倒的に多くのユーザーがホームページの作成にWordPressを選んでいます。
               </p>
             </div>
-            <div class="bl_card">
+            <div class="bl_card bl_commentaryItem">
               <h3 class="bl_WF_card_ttl">サーバー、ドメインについて</h3>
               <figure class="bl_card_imgWrapper">
                 <img src="../../img/commentary_server_img.png" width="80%" alt="web-designのイラスト" />
               </figure>
               <p class="bl_WF_card_txt">
-                Webサイト（ホームページ）をインターネット上に公開する時に、作成したWebサイトのデータの他に用意しなければならないものが、２つあります。<br />それが「Webサーバー」と「ドメイン」です。<br />Webサーバーは、作成したWebサイトのデータをWeb上に保管する場所のことで、ドメインは、Webサイトがインターネット上のどこにあるのかを識別するための名前のことです。<br />ホームページを「家」に例えた場合、家を建てる「土地」に当たるのがサーバーで、「住所」に当たるのがドメインになります。<br />この２つは、オンラインでレンタル業者と月（年）契約するのが一般的で、登録時に、ドメインとサーバー、WordPressの紐付けなどの作業が必要になります。
+                Webサイト（ホームページ）をインターネット上に公開する時に、作成したWebサイトのデータの他に用意しなければならないものが、２つあります。<br />それが「Webサーバー」と「ドメイン」です。<br />Webサーバーは、作成したWebサイトのデータをWeb上に保管する場所のことで、ドメインは、Webサイトがインターネット上のどこにあるのかを識別するための名前のことです。<br />ホームページを「家」に例えた場合、家を建てる「土地」に当たるのがサーバーで、「住所」に当たるのがドメインになります。<br />この２つは、オンラインでレンタル業者と月（年）契約するのが一般的で、登録時に、ドメインとサーバー、WordPressの紐付けなどの作業が必要になります。<br />インターネットに不慣れなお客様にとっては少々面倒な手続きとなりますが、制作会社によっては、この部分のみお客様に行っていただくケースがありますのでご注意ください。Tsunagiyaのパッケージプランには、これらの作業も全て含まれておりますので、ご検討の判断材料にしていただければ幸いです。
               </p>
             </div>
-            <div class="bl_card">
+            <div class="bl_card bl_commentaryItem">
               <h3 class="bl_WF_card_ttl">下層ページについて</h3>
               <figure class="bl_card_imgWrapper">
                 <img src="../../img/workFlow_img3.png" width="80%" alt="web-designのイラスト" />
               </figure>
               <p class="bl_WF_card_txt">
-                下層ページとは、トップページとは別に作る、会社概要、商品情報、お知らせなどの個別のページのことです。トップページだけでは説明しきれない内容や、詳細な説明を必要とする物を下層ページに記述します。<br />本サイトで言えば、今ご覧いただいているこのページも下層ページで、この他「サービス・料金」「お見積りからの流れ」「よくある質問」も下層ページということになります。<br />例として、以下のようなコンテンツを下層ページに設定するケースがあります。<br />注意しなければならないのは、個別ページは多ければ良いというわけではなく、サイトの目的や訪問者の導線を考えて、適切に配置しなければならないということです。<br />Tsunagiyaでは、その辺りも含めてご相談を承りますので、サイト設計に不安がある方もどうぞご安心ください。
+                下層ページとは、トップページとは別に作る、会社概要、商品情報、お知らせなどの個別のページのことです。トップページだけでは説明しきれない内容や、詳細な説明を必要とする物を下層ページに記述します。<br />本サイトで言えば、今ご覧いただいているこのページも下層ページで、この他「サービス・料金」「発注〜納品の流れ」「FAQ」も下層ページということになります。<br />例として、以下のようなコンテンツを下層ページに設定するケースがあります。</p</div>
+                <ul>
+                  <li>会社案内</li>
+                  <li>代表あいさつ</li>
+                  <li>商品・サービス紹介</li>
+                  <li>お知らせ</li>
+                  <li>採用情報</li>
+                  <li>お問合せ</li>
+                  <li>プライバシーポリシー</li>
+                  <li>etc</li>
+                </ul>
+                <p class="bl_WF_card_txt">注意しなければならないのは、個別ページは多ければ良いというわけではなく、サイトの目的や訪問者の導線を考えて、適切に配置しなければならないということです。<br />Tsunagiyaでは、適切なページの配置も含めてご相談を承りますので、サイト設計に不安がある方もどうぞご安心ください。
               </p>
-              <ul>
-                <li>会社案内</li>
-                <li>代表あいさつ</li>
-                <li>商品・サービス紹介</li>
-                <li>お知らせ</li>
-                <li>採用情報</li>
-                <li>お問い合わせ</li>
-                <li>プライバシーポリシー</li>
-                <li>etc</li>
-              </ul>
+
             </div>
           </div>
           <!-- bl_serviceItems -->
@@ -133,7 +140,7 @@
               <dd class="ly_CL_right">
                 <span><input type="text" name="phone-number" value size="40" placeholder="半角で入力" class="bl_inputbox" required /></span>
               </dd>
-              <dt class="ly_CL_left">お問い合わせ内容<span class="required">必須</span></dt>
+              <dt class="ly_CL_left">お問合せ内容<span class="required">必須</span></dt>
               <dd class="ly_CL_right">
                 <span><textarea name="your-message" placeholder="メッセージを入力" cols="40" rows="8" class="bl_inputbox" required></textarea></span>
               </dd>
@@ -157,12 +164,11 @@
           <li class="ly_footerNav_item"><a href="../information/index.html" class="">お知らせ</a></li>
           <li class="ly_footerNav_item"><a href="../greeting/index.html" class="">ごあいさつ</a></li>
           <li class="ly_footerNav_item"><a href="../servicePrice/index.html">サービス・料金</a></li>
-          <li class="ly_footerNav_item"><a href="../workFlow/index.html" class="">お見積りからの流れ</a></li>
+          <li class="ly_footerNav_item"><a href="../workFlow/index.html" class="">発注〜納品の流れ</a></li>
           <li class="ly_footerNav_item"><a href="../../index.html#partWorks" class="">作品紹介</a></li>
-          <li class="ly_footerNav_item"><a href="../Q&A/index.html" class="">よくある質問</a></li>
-          <li class="ly_footerNav_item"><a href="../../index.html#partAbout" class="">Tsumugiyaについて</a></li>
+          <li class="ly_footerNav_item"><a href="../Q&A/index.html" class="">FAQ</a></li>
           <li class="ly_footerNav_item"><a href="#">用語解説</a></li>
-          <li class="ly_footerNav_item"><a href="#partContact">お問い合わせ</a></li>
+          <li class="ly_footerNav_item"><a href="#partContact">お問合せ</a></li>
         </ul>
         <p class="ly_copyright">
           <small>&copy; 2021 Tsumugiya All Rights Reserved.</small>

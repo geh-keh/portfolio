@@ -9,6 +9,7 @@
 //header
 .ly_header {
   height: 8rem;
+  background-color: #fff;
 }
 
 // header,footer及びfullwidthのimg以外のレイアウト
@@ -29,19 +30,54 @@
   .ly_header {
     height: 10rem;
   }
-  .ly_content {
-    max-width: 90%;
+
+  .ly_greeting_content {
+    max-width: 78rem;
   }
-  .ly_content_col {
-    // display: flex;
+  .ly_workFlow_content {
+    width: 78rem;
+  }
+  .ly_commentary_content {
+    width: 78rem;
+  }
+  .ly_workContent > p {
+    margin-left: 10%;
   }
 }
 
 // 960px以上共通設定
 @media screen and (min-width: 960px) {
-  .ly_content {
-    max-width: 65%;
+  .ly_header {
+    height: auto;
+    position: fixed;
+    z-index: 5;
+    .ly_headerInner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .ly_headerInner_left {
+        flex-basis: 30%;
+      }
+      .ly_headerInner_right {
+        flex-basis: 68%;
+      }
+    }
   }
+  .content {
+    padding-top: 10rem; //固定ヘッダーの高さ分だけコンテンツを下に表示
+    .ly_serviceContent {
+      width: 88rem;
+      margin: 0 auto;
+    }
+  }
+}
+
+.ly_content_col {
+  // display: flex;
+  max-width: 85%;
+}
+.ly_greeting_content {
+  max-width: 72rem;
 }
 
 // // タブレットサイズ設定
@@ -79,7 +115,7 @@
   max-width: 100%;
   background-image: url(../img/bg-works.jpeg);
   padding: 5rem 2rem;
-  & p {
+  & > p {
     margin-bottom: 5rem;
   }
 }
@@ -92,7 +128,7 @@
 
 @media screen and (min-width: 960px) {
   .ly_workContent {
-    padding: 6rem 14rem;
+    padding: 5% 6%;
   }
 }
 
@@ -100,7 +136,8 @@
 
 /*  コンタクトフォーム  */
 .ly_contactTxt {
-  margin-bottom: 8%;
+  max-width: 68rem;
+  margin: 8% auto;
 }
 
 .ly_contactList {
@@ -130,12 +167,12 @@
 // 768px以上共通設定
 @media screen and (min-width: 768px) {
   .ly_contactTxt {
-    margin-right: 10%;
-    margin-left: 10%;
+    //要修正
+    // margin-left: 15rem;
   }
   .ly_contactList {
     // flex-direction: row;
-    width: 80%;
+    max-width: 80rem;
     margin: 0 auto;
   }
 }
@@ -151,14 +188,15 @@
 
 /* faq price compare */
 
-.ly_PC_left {
-  flex-basis: 70%;
+.ly_basicService_left {
+  flex-basis: 64%;
   border-bottom: 1px solid #ccc;
   margin-bottom: 5%;
+  padding-left: 2%;
 }
 
-.ly_PC_right {
-  flex-basis: 30%;
+.ly_basicService_right {
+  flex-basis: 35%;
   border-bottom: 1px solid #ccc;
   padding-bottom: 2%;
   margin-bottom: 5%;
