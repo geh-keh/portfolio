@@ -2,3 +2,10 @@
   padding-top: 20px;
   border-bottom: 1px solid #ddd;
 }
+
+// 960px以上共通設定
+@media screen and (min-width: 960px) {
+  .ly-header {
+    box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.5);
+  }
+}
